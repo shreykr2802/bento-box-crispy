@@ -2,7 +2,7 @@
     export let image_url = 'AWS';
 </script>
 
-<div class="stack-box" style="--image-url: url(src/lib/images/{image_url}.png)"></div>
+<div class="stack-box" style="--image-url: url(../../lib/images/{image_url}.png)"></div>
 
 <style>
 	.stack-box {
