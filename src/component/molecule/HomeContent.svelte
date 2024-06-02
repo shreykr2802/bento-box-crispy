@@ -1,6 +1,7 @@
 <script>
 	import DarkLightMode from '../atoms/DarkLightMode.svelte';
 	import profileImg from '../../lib/images/shrey.png';
+	import StackBox from '../atoms/StackBox.svelte';
 </script>
 
 <div class="home-content">
@@ -33,7 +34,7 @@
 			<div class="box32">
 				<section>
 					<h2 class="box-title">Stack I use</h2>
-					
+					<StackBox />
 				</section>
 			</div>
 		</div>

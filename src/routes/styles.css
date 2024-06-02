@@ -11,6 +11,7 @@
     --color-box-background: rgba(172, 172, 172, 0.1);
     --color-text-dark: #cccccc;
     --color-text-light: rgb(102, 102, 102);
+    --color-stack-box: #4a4a4a;
     --box-border: 1px solid var(--color-border);
     --box-position: relative;
     --diff-factor: 1.5rem;
