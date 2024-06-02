@@ -34,7 +34,8 @@
 			<div class="box32">
 				<section>
 					<h2 class="box-title">Stack I use</h2>
-					<StackBox />
+					<StackBox image_url='AWS'/>
+					<StackBox image_url='CSS3'/>
 				</section>
 			</div>
 		</div>
