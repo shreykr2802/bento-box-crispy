@@ -1,0 +1,28 @@
+:root {
+    --box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.2);
+    --outer-box-border-radius: 2.2rem;
+    --outer-box-padding: 0.5rem;
+    --outer-box-margin: 1rem;
+    --inner-box-border-radius: 1.5rem;
+    --inner-box-margin: 0.5rem;
+    --inner-box-padding: 0.25rem;
+    --color-background: #090909;
+    --color-border: #242424;
+    --color-box-background: rgba(172, 172, 172, 0.1);
+    --color-text-dark: #cccccc;
+    --color-text-light: rgb(102, 102, 102);
+    --box-border: 1px solid var(--color-border);
+    --box-position: relative;
+    --diff-factor: 1.5rem;
+    --font-basic: "DM Sans", sans-serif;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    background-color: black;
+    color: white;
+    font-family: var(--font-basic);
+    font-weight: 400;
+    font-style: normal;
+}
