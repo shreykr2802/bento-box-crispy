@@ -1,8 +1,12 @@
 <script>
-    export let stackName;
+	export let stackName;
 </script>
 
-<div class="stack-box" style="background-image: url(/images/{stackName}.png);"  {...$$restProps}></div>
+<div
+	class="stack-box"
+	style="background-image: url(/images/{stackName}.png);"
+	{...$$restProps}
+></div>
 
 <style lang="scss">
 	.stack-box {
@@ -14,8 +18,8 @@
 		background-repeat: no-repeat;
 		background-position: center;
 
-        &:hover {
-            background-color: var(--color-stack-box-hover);
-        }
+		&:hover {
+			background-color: var(--color-stack-box-hover);
+		}
 	}
 </style>

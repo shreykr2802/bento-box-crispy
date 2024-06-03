@@ -35,59 +35,59 @@
 				<section>
 					<h2 class="box-title">Stack I use</h2>
 					<div class="stack-images">
-					<div class="stacks-used">
-						<StackBox stackName="AWS" />
-						<StackBox stackName="CSS3" />
-						<StackBox stackName="JavaScript" />
-						<StackBox stackName="Express" />
-						<StackBox stackName="Git" />
-						<StackBox stackName="HTML5" />
-						<StackBox stackName="React" />
-						<StackBox stackName="Redux" />
-						<StackBox stackName="CodePen" />
-						<StackBox stackName="Docker" />
-						<StackBox stackName="ESLint" />
-						<StackBox stackName="Figma" />
-						<StackBox stackName="Jest" />
-						<StackBox stackName="Knex.js" />
-						<StackBox stackName="Kubernetes" />
-						<StackBox stackName="Next.js" />
-						<StackBox stackName="Svelte" />
-						<StackBox stackName="Sass" />
-						<StackBox stackName="PostgresSQL" />
-						<StackBox stackName="Terraform" />
-						<StackBox stackName="Vite.js" />
-						<StackBox stackName="TypeScript" />
-						<StackBox stackName="VSCode" />
-						<StackBox stackName="Helm" />
+						<div class="stacks-used">
+							<StackBox stackName="AWS" />
+							<StackBox stackName="CSS3" />
+							<StackBox stackName="JavaScript" />
+							<StackBox stackName="Express" />
+							<StackBox stackName="Git" />
+							<StackBox stackName="HTML5" />
+							<StackBox stackName="React" />
+							<StackBox stackName="Redux" />
+							<StackBox stackName="CodePen" />
+							<StackBox stackName="Docker" />
+							<StackBox stackName="ESLint" />
+							<StackBox stackName="Figma" />
+							<StackBox stackName="Jest" />
+							<StackBox stackName="Knex.js" />
+							<StackBox stackName="Kubernetes" />
+							<StackBox stackName="Next.js" />
+							<StackBox stackName="Svelte" />
+							<StackBox stackName="Sass" />
+							<StackBox stackName="PostgresSQL" />
+							<StackBox stackName="Terraform" />
+							<StackBox stackName="Vite.js" />
+							<StackBox stackName="TypeScript" />
+							<StackBox stackName="VSCode" />
+							<StackBox stackName="Helm" />
+						</div>
+						<div class="stacks-used" aria-hidden="true">
+							<StackBox stackName="AWS" />
+							<StackBox stackName="CSS3" />
+							<StackBox stackName="JavaScript" />
+							<StackBox stackName="Express" />
+							<StackBox stackName="Git" />
+							<StackBox stackName="HTML5" />
+							<StackBox stackName="React" />
+							<StackBox stackName="Redux" />
+							<StackBox stackName="CodePen" />
+							<StackBox stackName="Docker" />
+							<StackBox stackName="ESLint" />
+							<StackBox stackName="Figma" />
+							<StackBox stackName="Jest" />
+							<StackBox stackName="Knex.js" />
+							<StackBox stackName="Kubernetes" />
+							<StackBox stackName="Next.js" />
+							<StackBox stackName="Svelte" />
+							<StackBox stackName="Sass" />
+							<StackBox stackName="PostgresSQL" />
+							<StackBox stackName="Terraform" />
+							<StackBox stackName="Vite.js" />
+							<StackBox stackName="TypeScript" />
+							<StackBox stackName="VSCode" />
+							<StackBox stackName="Helm" />
+						</div>
 					</div>
-					<div class="stacks-used" aria-hidden="true">
-						<StackBox stackName="AWS" />
-						<StackBox stackName="CSS3" />
-						<StackBox stackName="JavaScript" />
-						<StackBox stackName="Express" />
-						<StackBox stackName="Git" />
-						<StackBox stackName="HTML5" />
-						<StackBox stackName="React" />
-						<StackBox stackName="Redux" />
-						<StackBox stackName="CodePen" />
-						<StackBox stackName="Docker" />
-						<StackBox stackName="ESLint" />
-						<StackBox stackName="Figma" />
-						<StackBox stackName="Jest" />
-						<StackBox stackName="Knex.js" />
-						<StackBox stackName="Kubernetes" />
-						<StackBox stackName="Next.js" />
-						<StackBox stackName="Svelte" />
-						<StackBox stackName="Sass" />
-						<StackBox stackName="PostgresSQL" />
-						<StackBox stackName="Terraform" />
-						<StackBox stackName="Vite.js" />
-						<StackBox stackName="TypeScript" />
-						<StackBox stackName="VSCode" />
-						<StackBox stackName="Helm" />
-					</div>
-				</div>
 				</section>
 			</div>
 		</div>
@@ -261,20 +261,19 @@
 						.stacks-used {
 							flex-shrink: 0;
 							display: flex;
-
 							animation:
-								sidescroll linear infinite 20s,
-								sidescroll linear infinite 40s reverse paused;
+								// sidescroll linear infinite 30s reverse paused,
+								sidescroll linear infinite 20s;
 							animation-composition: add;
 							will-change: transform;
 							gap: 0.5rem;
 
 							@keyframes sidescroll {
 								from {
-									transform: translateX(-10%);
+									transform: translateX(0);
 								}
 								to {
-									transform: translateX(calc(-100% + 20%));
+									transform: translateX(-100%);
 								}
 							}
 						}
