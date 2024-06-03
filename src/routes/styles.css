@@ -12,6 +12,7 @@
     --color-text-dark: #cccccc;
     --color-text-light: rgb(102, 102, 102);
     --color-stack-box: #4a4a4a;
+    --color-stack-box-hover: #8a8a8a;
     --box-border: 1px solid var(--color-border);
     --box-position: relative;
     --diff-factor: 1.5rem;
