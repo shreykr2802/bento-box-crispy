@@ -1,7 +1,7 @@
 <script>
 	import DarkLightMode from '../atoms/DarkLightMode.svelte';
-	import profileImg from '../../lib/images/shrey.png';
-	import StackBox from '../atoms/StackBox.svelte';
+	import HomeSomeWords from './HomeSomeWords.svelte';
+	import HomeStackUse from './HomeStackUse.svelte';
 </script>
 
 <div class="home-content">
@@ -30,66 +30,8 @@
 			<div class="box23"></div>
 		</div>
 		<div class="row">
-			<div class="box31"></div>
-			<div class="box32">
-				<section>
-					<h2 class="box-title">Stack I use</h2>
-					<div class="stack-images">
-						<div class="stacks-used">
-							<StackBox stackName="AWS" />
-							<StackBox stackName="CSS3" />
-							<StackBox stackName="JavaScript" />
-							<StackBox stackName="Express" />
-							<StackBox stackName="Git" />
-							<StackBox stackName="HTML5" />
-							<StackBox stackName="React" />
-							<StackBox stackName="Redux" />
-							<StackBox stackName="CodePen" />
-							<StackBox stackName="Docker" />
-							<StackBox stackName="ESLint" />
-							<StackBox stackName="Figma" />
-							<StackBox stackName="Jest" />
-							<StackBox stackName="Knex.js" />
-							<StackBox stackName="Kubernetes" />
-							<StackBox stackName="Next.js" />
-							<StackBox stackName="Svelte" />
-							<StackBox stackName="Sass" />
-							<StackBox stackName="PostgresSQL" />
-							<StackBox stackName="Terraform" />
-							<StackBox stackName="Vite.js" />
-							<StackBox stackName="TypeScript" />
-							<StackBox stackName="VSCode" />
-							<StackBox stackName="Helm" />
-						</div>
-						<div class="stacks-used" aria-hidden="true">
-							<StackBox stackName="AWS" />
-							<StackBox stackName="CSS3" />
-							<StackBox stackName="JavaScript" />
-							<StackBox stackName="Express" />
-							<StackBox stackName="Git" />
-							<StackBox stackName="HTML5" />
-							<StackBox stackName="React" />
-							<StackBox stackName="Redux" />
-							<StackBox stackName="CodePen" />
-							<StackBox stackName="Docker" />
-							<StackBox stackName="ESLint" />
-							<StackBox stackName="Figma" />
-							<StackBox stackName="Jest" />
-							<StackBox stackName="Knex.js" />
-							<StackBox stackName="Kubernetes" />
-							<StackBox stackName="Next.js" />
-							<StackBox stackName="Svelte" />
-							<StackBox stackName="Sass" />
-							<StackBox stackName="PostgresSQL" />
-							<StackBox stackName="Terraform" />
-							<StackBox stackName="Vite.js" />
-							<StackBox stackName="TypeScript" />
-							<StackBox stackName="VSCode" />
-							<StackBox stackName="Helm" />
-						</div>
-					</div>
-				</section>
-			</div>
+			<HomeSomeWords />
+			<HomeStackUse />
 		</div>
 	</div>
 	<div class="right">
@@ -211,74 +153,6 @@
 					padding: var(--inner-box-padding);
 					background-color: var(--color-box-background);
 				}
-
-				.box31 {
-					border: var(--box-border);
-					display: flex;
-					border-radius: var(--inner-box-border-radius);
-					height: calc(100% - var(--diff-factor));
-					width: calc(60% - var(--diff-factor));
-					margin: var(--inner-box-margin);
-					padding: var(--inner-box-padding);
-					background-color: var(--color-box-background);
-				}
-
-				.box32 {
-					border: var(--box-border);
-					display: flex;
-					flex-direction: column;
-					border-radius: var(--inner-box-border-radius);
-					height: calc(100% - var(--diff-factor));
-					width: calc(40% - var(--diff-factor));
-					margin: var(--inner-box-margin);
-					padding: var(--inner-box-padding);
-					background-color: var(--color-box-background);
-
-					section {
-						margin: 1rem;
-						display: flex;
-						flex-direction: column;
-						overflow: hidden;
-						max-width: 90%;
-						position: relative;
-						user-select: none;
-						height: 100%;
-
-						&:hover {
-							.stacks-used {
-								animation-play-state: running;
-							}
-						}
-
-						.stack-images {
-							display: flex;
-							flex-direction: row;
-							position: absolute;
-							align-items: center;
-							height: 100%;
-							gap: 0.5rem;
-						}
-						.stacks-used {
-							flex-shrink: 0;
-							display: flex;
-							animation:
-								// sidescroll linear infinite 30s reverse paused,
-								sidescroll linear infinite 20s;
-							animation-composition: add;
-							will-change: transform;
-							gap: 0.5rem;
-
-							@keyframes sidescroll {
-								from {
-									transform: translateX(0);
-								}
-								to {
-									transform: translateX(-100%);
-								}
-							}
-						}
-					}
-				}
 			}
 		}
 		.right {
@@ -328,21 +202,5 @@
 				background-color: var(--color-box-background);
 			}
 		}
-	}
-
-	.box-title {
-		font-weight: 300;
-		color: var(--color-text-light);
-		letter-spacing: 5px;
-		margin: 0;
-		padding: 0;
-	}
-
-	.box-description {
-		font-size: 1.25rem;
-		color: var(--color-text-dark);
-		letter-spacing: 2px;
-		margin-top: 2rem;
-		padding: 0;
 	}
 </style>
