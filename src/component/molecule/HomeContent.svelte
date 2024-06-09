@@ -1,5 +1,7 @@
 <script>
+	import ArrowButton from '../atoms/ArrowButton.svelte';
 	import DarkLightMode from '../atoms/DarkLightMode.svelte';
+	import HomeSocials from './HomeSocials.svelte';
 	import HomeSomeWords from './HomeSomeWords.svelte';
 	import HomeStackUse from './HomeStackUse.svelte';
 </script>
@@ -25,6 +27,7 @@
 				<section>
 					<h2 class="box-title">About</h2>
 					<p class="box-description">Passionate about design and enjoy problem solving.</p>
+					<ArrowButton navigateTo="about"/>
 				</section>
 			</div>
 			<div class="box23"></div>
@@ -35,7 +38,7 @@
 		</div>
 	</div>
 	<div class="right">
-		<div class="box41"></div>
+		<HomeSocials />
 		<div class="box42"></div>
 		<div class="box43"><DarkLightMode /></div>
 		<div class="box44"></div>
@@ -142,6 +145,7 @@
 						display: flex;
 						flex-direction: column;
 						width: 100%;
+						position: relative;
 					}
 				}
 
@@ -164,16 +168,6 @@
 			height: 100%;
 			width: 25%;
 
-			.box41 {
-				border: var(--box-border);
-				display: flex;
-				border-radius: var(--inner-box-border-radius);
-				height: calc(25% - var(--diff-factor));
-				width: calc(100% - var(--diff-factor));
-				margin: var(--inner-box-margin);
-				padding: var(--inner-box-padding);
-				background-color: var(--color-box-background);
-			}
 			.box42 {
 				border: var(--box-border);
 				display: flex;
