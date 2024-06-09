@@ -110,6 +110,7 @@
 					display: flex;
 					border-radius: var(--inner-box-border-radius);
 					height: calc(100% - var(--diff-factor));
+					flex-grow: 1;
 					width: calc(30% - var(--diff-factor));
 					margin: var(--inner-box-margin);
 					overflow: hidden;
@@ -130,6 +131,7 @@
 					display: flex;
 					border-radius: var(--inner-box-border-radius);
 					height: calc(100% - var(--diff-factor));
+					flex-grow: 2;
 					width: calc(40% - var(--diff-factor));
 					margin: var(--inner-box-margin);
 					padding: var(--inner-box-padding);
@@ -148,6 +150,7 @@
 					display: flex;
 					border-radius: var(--inner-box-border-radius);
 					height: calc(100% - var(--diff-factor));
+					flex-grow: 1;
 					width: calc(30% - var(--diff-factor));
 					margin: var(--inner-box-margin);
 					padding: var(--inner-box-padding);

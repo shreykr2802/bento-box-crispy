@@ -103,10 +103,10 @@
 				flex-shrink: 0;
 				display: flex;
 				animation:
-					sidescroll linear infinite 30s reverse paused,
+					// sidescroll linear infinite 30s reverse paused,
 					sidescroll linear infinite 20s;
 				animation-composition: add;
-				transform: translateX(100%);
+				transform: translateX(0%);
 				will-change: transform;
 				gap: 0.5rem;
 
