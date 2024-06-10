@@ -1,5 +1,5 @@
 <script>
-	import StackBox from '../atoms/StackBox.svelte';
+	import StackBox from '../../atoms/StackBox.svelte';
 </script>
 
 <div class="box32">

@@ -70,7 +70,7 @@
 		.socials {
 			border: var(--box-border);
 			border-radius: var(--small-box-border-radius);
-			width: max(5rem, 25%);
+			width: max(5rem, 23%);
 			aspect-ratio: 1/1;
 			background-color: var(--color-box-background);
 			place-content: center;

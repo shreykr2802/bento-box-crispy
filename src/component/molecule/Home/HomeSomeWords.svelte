@@ -1,7 +1,7 @@
 <script>
-	import person1 from '../../lib/images/memoji1.png';
-	import person2 from '../../lib/images/memoji2.png';
-	import person3 from '../../lib/images/memoji3.png';
+	import person1 from '../../../lib/images/memoji1.png';
+	import person2 from '../../../lib/images/memoji2.png';
+	import person3 from '../../../lib/images/memoji3.png';
 	let activeTab = 0;
 
 	function nextClick() {

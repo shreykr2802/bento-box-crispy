@@ -1,6 +1,6 @@
 <script>
-	import ArrowButton from '../atoms/ArrowButton.svelte';
-	import DarkLightMode from '../atoms/DarkLightMode.svelte';
+	import ArrowButton from '../../atoms/ArrowButton.svelte';
+	import DarkLightMode from '../../atoms/DarkLightMode.svelte';
 	import HomeSocials from './HomeSocials.svelte';
 	import HomeSomeWords from './HomeSomeWords.svelte';
 	import HomeStackUse from './HomeStackUse.svelte';
@@ -122,7 +122,7 @@
 					.img-wrapper {
 						height: 100%;
 						width: 100%;
-						background-image: url('../../lib/images/shrey.png');
+						background-image: url('../../../lib/images/shrey.png');
 						background-position: top;
 						background-repeat: no-repeat;
 						background-size: cover;

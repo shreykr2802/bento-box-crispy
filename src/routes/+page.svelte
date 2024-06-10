@@ -1,5 +1,5 @@
 <script>
-	import Main from '../component/molecule/Main.svelte';
+	import HomeMain from '../component/molecule/Home/HomeMain.svelte';
 </script>
 
 <svelte:head>
@@ -7,7 +7,7 @@
 	<meta name="description" content="Svelte demo app" />
 </svelte:head>
 
-<Main />
+<HomeMain />
 
 <style>
 </style>
