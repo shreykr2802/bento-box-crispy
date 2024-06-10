@@ -1,4 +1,6 @@
 <script>
+	import AboutMain from "../../component/molecule/About/AboutMain.svelte";
+
 </script>
 
 <svelte:head>
@@ -6,7 +8,7 @@
 	<meta name="description" content="Svelte demo app" />
 </svelte:head>
 
-<div>hello about</div>
+<AboutMain />
 
 <style>
 </style>
