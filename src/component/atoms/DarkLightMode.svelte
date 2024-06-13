@@ -1,13 +1,36 @@
 <script>
+	import { onMount } from 'svelte';
+	let lightModeEnabled;
+
 	function toggle() {
-		window.document.body.classList.toggle('dark-mode');
+		const lightMode = localStorage.getItem('light-mode');
+		if (lightMode === 'off') {
+			localStorage.setItem('light-mode', 'on');
+			lightModeEnabled = true;
+		} else {
+			localStorage.setItem('light-mode', 'off');
+			lightModeEnabled = false;
+		}
+		window.document.body.classList.toggle('light-mode');
 	}
+
+	onMount(() => {
+		const lightMode = localStorage.getItem('light-mode');
+		if (lightMode && lightMode === 'on') {
+			lightModeEnabled = true;
+			if (!window.document.body.classList.contains('light-mode'))
+				window.document.body.classList.toggle('light-mode');
+		} else {
+			lightModeEnabled = false;
+			localStorage.setItem('light-mode', 'off');
+		}
+	});
 </script>
 
 <div class="darkligtmode">
 	<div class="daynight">
 		<label for="checkbox">
-			<input type="checkbox" id="checkbox" on:change={toggle} checked />
+			<input type="checkbox" id="checkbox" on:change={toggle} checked={!lightModeEnabled} />
 			<div class="toggle">
 				<div class="cloud"></div>
 				<div class="star"></div>

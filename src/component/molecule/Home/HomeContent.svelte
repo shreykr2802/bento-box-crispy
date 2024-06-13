@@ -27,14 +27,16 @@
 				<section>
 					<h2 class="box-title">About</h2>
 					<p class="box-description">Passionate about design and enjoy problem solving.</p>
-					<ArrowButton navigateTo="about"/>
+					<ArrowButton navigateTo="about" />
 				</section>
 			</div>
 			<div class="box23"></div>
 		</div>
 		<div class="row">
 			<HomeSomeWords />
-			<HomeStackUse />
+			<div class="box32">
+				<HomeStackUse />
+			</div>
 		</div>
 	</div>
 	<div class="right">
@@ -156,6 +158,18 @@
 					height: calc(100% - var(--diff-factor));
 					flex-grow: 1;
 					width: calc(30% - var(--diff-factor));
+					margin: var(--inner-box-margin);
+					padding: var(--inner-box-padding);
+					background-color: var(--color-box-background);
+				}
+
+				.box32 {
+					border: var(--box-border);
+					display: flex;
+					flex-direction: column;
+					border-radius: var(--inner-box-border-radius);
+					height: calc(100% - var(--diff-factor));
+					width: calc(40% - var(--diff-factor));
 					margin: var(--inner-box-margin);
 					padding: var(--inner-box-padding);
 					background-color: var(--color-box-background);
