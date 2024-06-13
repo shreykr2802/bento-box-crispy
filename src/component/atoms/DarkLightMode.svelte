@@ -1,10 +1,13 @@
 <script>
+	function toggle() {
+		window.document.body.classList.toggle('dark-mode');
+	}
 </script>
 
 <div class="darkligtmode">
 	<div class="daynight">
 		<label for="checkbox">
-			<input type="checkbox" id="checkbox"/>
+			<input type="checkbox" id="checkbox" on:change={toggle} checked />
 			<div class="toggle">
 				<div class="cloud"></div>
 				<div class="star"></div>

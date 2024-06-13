@@ -2,22 +2,63 @@
 	import person1 from '../../../lib/images/memoji1.png';
 	import person2 from '../../../lib/images/memoji2.png';
 	import person3 from '../../../lib/images/memoji3.png';
-	let activeTab = 0;
+	let activeIndex = 0;
+	let carouselInner;
+
+	function showSlide(index) {
+		const slides = carouselInner.children;
+		const totalSlides = slides.length;
+
+		if (index >= totalSlides) {
+			activeIndex = 1;
+			carouselInner.style.transition = 'none';
+			carouselInner.style.transform = `translateX(-${activeIndex * 100}%)`;
+			setTimeout(() => {
+				carouselInner.style.transition = 'transform 1s ease';
+				activeIndex++;
+				carouselInner.style.transform = `translateX(-${activeIndex * 100}%)`;
+			}, 50);
+		} else if (index < 0) {
+			activeIndex = totalSlides - 2;
+			carouselInner.style.transition = 'none';
+			carouselInner.style.transform = `translateX(-${activeIndex * 100}%)`;
+			setTimeout(() => {
+				carouselInner.style.transition = 'transform 1s ease';
+				activeIndex--;
+				carouselInner.style.transform = `translateX(-${activeIndex * 100}%)`;
+			}, 50);
+		} else {
+			activeIndex = index;
+			carouselInner.style.transform = `translateX(-${activeIndex * 100}%)`;
+		}
+	}
 
 	function nextClick() {
-		activeTab = activeTab === 2 ? 0 : activeTab + 1;
+		showSlide(activeIndex + 1);
 	}
 
 	function prevClick() {
-		activeTab = activeTab === 0 ? 2 : activeTab - 1;
+		showSlide(activeIndex - 1);
 	}
+
+	const drag = (e) => {
+		console.log(e)
+	} 
 </script>
 
 <div class="box31">
 	<section>
 		<h2 class="box-title">Some Words</h2>
 		<div class="carousel">
-			<div class="carousel-inner" style="--tab:{activeTab}">
+			<div class="carousel-inner" bind:this={carouselInner}>
+				<div>
+					<img style="background-color: salmon;" src={person3} alt="person3" />
+					<span style="color: var(--color-text-dark);">Neha Sharma</span>
+					<span class="description"
+						>Shrey's skills in JavaScript and fullstack development are top-notch. He delivered
+						exceptional results, on time and beyond expectations. An invaluable asset to our team!</span
+					>
+				</div>
 				<div>
 					<img style="background-color: bisque;" src={person1} alt="person1" />
 					<span style="color: var(--color-text-dark);">Arjun Mehta</span>
@@ -42,7 +83,14 @@
 						exceptional results, on time and beyond expectations. An invaluable asset to our team!</span
 					>
 				</div>
-
+				<div>
+					<img style="background-color: bisque;" src={person1} alt="person1" />
+					<span style="color: var(--color-text-dark);">Arjun Mehta</span>
+					<span class="description"
+						>Shrey's expertise in JavaScript and fullstack development transformed our project. His
+						innovative solutions and commitment to quality were outstanding. Highly recommend!</span
+					>
+				</div>
 				<!-- <div c><button /><button /><button /></div> -->
 			</div>
 			<div class="carousel-button">
@@ -105,8 +153,7 @@
 					height: 100%;
 					width: 100%;
 					display: flex;
-					transform: translateX(calc(var(--tab) * -100%));
-					transition: all 1s ease-in-out;
+					transition: transform 1s ease-in-out;
 
 					div {
 						min-width: 100%;
@@ -114,6 +161,7 @@
 						flex-direction: column;
 						align-items: center;
 						justify-content: space-between;
+						user-select: none;
 
 						img {
 							width: 5rem;

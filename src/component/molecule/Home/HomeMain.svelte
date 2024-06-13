@@ -11,8 +11,7 @@
 <style>
 	.main-container {
 		display: grid;
-		height: 100%;
+		min-height: 100vh;
 		width: 100%;
-		place-self: center;
 	}
 </style>

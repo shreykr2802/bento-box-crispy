@@ -7,27 +7,31 @@
     --small-box-border-radius: 1rem;
     --inner-box-margin: 0.5rem;
     --inner-box-padding: 0.25rem;
-    --color-background: #090909;
-    --color-border: #242424;
-    --color-box-background: rgba(172, 172, 172, 0.1);
-    --color-text-dark: #cccccc;
-    --color-text-light: rgb(102, 102, 102);
-    --color-stack-box: #4a4a4a;
-    --color-stack-box-hover: #8a8a8a;
-    --box-border: 1px solid var(--color-border);
     --box-position: relative;
     --diff-factor: 1.5rem;
     --font-basic: "DM Sans", sans-serif;
 }
 
 body {
+    --color-background: #090909;
+    --color-border: #242424;
+    --color-box-background: #141414;
+    --color-box-background-hover: rgba(172, 172, 172, 0.1);
+    --color-text-dark: #cccccc;
+    --color-text-light: rgb(102, 102, 102);
+    --color-stack-box: #4a4a4a;
+    --color-stack-box-hover: #8a8a8a;
+    --box-border: 1px solid var(--color-border);
     margin: 0;
-    height: 100vh;
-    background-color: black;
-    color: white;
+    min-height: 100vh;
     font-family: var(--font-basic);
     font-weight: 400;
     font-style: normal;
+    position: relative;
+}
+
+body.dark-mode {
+    --color-background: #f4f4f4;
 }
 
 .box-title {
