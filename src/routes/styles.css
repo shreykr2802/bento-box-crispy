@@ -23,6 +23,7 @@ body {
 	--color-stack-box: #4a4a4a;
 	--color-stack-box-hover: #8a8a8a;
 	--color-divider-background: #2d2d2d;
+	--color-carousel-indicator-background: #373737;
 	--box-border: 1px solid var(--color-border);
 	margin: 0;
 	min-height: 100vh;
@@ -42,6 +43,15 @@ body.light-mode {
 	--color-stack-box: #bababa;
 	--color-stack-box-hover: #4c4c4c;
 	--color-divider-background: #2d2d2d;
+}
+
+img {
+	user-drag: none;
+	-webkit-user-drag: none;
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
 }
 
 .box-title {
