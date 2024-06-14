@@ -46,7 +46,19 @@
 			</div>
 		</div>
 		<div class="column">
-			<div class="box3"></div>
+			<div class="box3">
+				<section>
+					<h5 class="box-sub-title">WHAT I DO BEST</h5>
+					<p class="box-description-small">
+						My passion for technology began at the age of 12 when I discovered C++. Since then, I
+						have continually pursued knowledge and exploration in technology and programming
+						languages. With a diverse skill set, I consistently deliver comprehensive solutions
+						across both front-end and back-end development. My journey is fueled by a commitment to
+						innovation and excellence. I approach every task with meticulous attention to detail and
+						a strong problem-solving mindset.
+					</p>
+				</section>
+			</div>
 			<div class="box4">
 				<HomeStackUse />
 			</div>
