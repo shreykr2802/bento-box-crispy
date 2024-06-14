@@ -1,7 +1,33 @@
 <script>
+	import Carousel from '../../atoms/Carousel.svelte';
 	import CrossHomeButton from '../../atoms/CrossHomeButton.svelte';
 	import Divider from '../../atoms/Divider.svelte';
 	import HomeStackUse from '../Home/HomeStackUse.svelte';
+
+	const slidesData = [
+		{
+			content: `
+        <span style="color: var(--color-text-dark);align-self: flex-start;margin:0 0.5rem;font-size: 1.5rem;">Javascript Expert</span>
+        <span style="color: var(--color-text-light);margin: 0.5rem 0.5rem;font-size: 1.15rem;">
+			I've immersed myself in the depths of JavaScript for an extended duration, systematically unraveling its myriad concepts to achieve a comprehensive mastery.
+        </span>`
+		},
+		{
+			content: `
+        <span style="color: var(--color-text-dark);align-self: flex-start;margin:0 0.5rem;font-size: 1.5rem;">Frontend Libraries</span>
+        <span style="color: var(--color-text-light);margin: 0.5rem 0.5rem;font-size: 1.15rem;">
+			Whether it's React.js, Next.js, or Svelte, I delve into frontend libraries with an insatiable curiosity to learn and ultimately master their intricacies. 
+        </span>`
+		},
+		{
+			content: `
+        <span style="color: var(--color-text-dark);align-self: flex-start;margin:0 0.5rem;font-size: 1.5rem;">Take Challenge Personally</span>
+        <span style="color: var(--color-text-light);margin: 0.5rem 0.5rem;font-size: 1.15rem;">
+			Taking on challenges personally drives my growth and learning, pushing boundaries to achieve deeper understanding and mastery.
+        </span>`
+		}
+	];
+	const slidesToDisplay = slidesData.map((slide) => ({ content: slide.content }));
 </script>
 
 <div class="about-content">
@@ -49,14 +75,7 @@
 			<div class="box3">
 				<section>
 					<h5 class="box-sub-title">WHAT I DO BEST</h5>
-					<p class="box-description-small">
-						My passion for technology began at the age of 12 when I discovered C++. Since then, I
-						have continually pursued knowledge and exploration in technology and programming
-						languages. With a diverse skill set, I consistently deliver comprehensive solutions
-						across both front-end and back-end development. My journey is fueled by a commitment to
-						innovation and excellence. I approach every task with meticulous attention to detail and
-						a strong problem-solving mindset.
-					</p>
+					<Carousel {slidesToDisplay} showButtons={false} />
 				</section>
 			</div>
 			<div class="box4">
@@ -143,7 +162,15 @@
 				}
 
 				.box3 {
-					flex-grow: 1.1;
+					width: 100%;
+					section {
+						overflow: hidden;
+						margin: 0.5rem;
+
+						.box-sub-title {
+							margin: 0.5rem 0 2rem 0.5rem;
+						}
+					}
 				}
 
 				.box4 {
