@@ -78,7 +78,7 @@ img {
 }
 
 .box-description-small {
-	font-size: clamp(0.75rem, 1rem, 1.5rem);
+	font-size: 1rem;
 	color: var(--color-text-dark);
 	margin-top: 0.5rem;
 	padding: 0;
@@ -87,4 +87,15 @@ img {
 	word-spacing: 2px;
 	word-break: break-word;
 	overflow-wrap: break-word;
+}
+
+@media (max-width: 850px) {
+	.box-title,
+	.box-sub-title,
+	.box-description-small  {
+		font-size: 0.75rem;
+	}
+	.box-description {
+		font-size: 1rem;
+	}
 }

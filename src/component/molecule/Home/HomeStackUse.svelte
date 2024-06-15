@@ -66,7 +66,6 @@
 		display: flex;
 		flex-direction: column;
 		overflow: hidden;
-		max-width: 90%;
 		position: relative;
 		user-select: none;
 		height: 100%;
@@ -105,6 +104,11 @@
 					transform: translateX(-100%);
 				}
 			}
+		}
+	}
+	@media (max-width: 1100px) {
+		.stack-i-use {
+			max-width: 100%;
 		}
 	}
 </style>
