@@ -1,4 +1,6 @@
 <script>
+	import { onDestroy, onMount } from 'svelte';
+
 	export let slidesToDisplay;
 	export let showButtons = true;
 	let activeIndex = 0;
@@ -42,6 +44,7 @@
 			carouselInner.style.transform = `translateX(-${activeIndex * 100}%)`;
 			updateIndicators();
 		}
+		resetInterval();
 	}
 
 	function nextClick() {
@@ -78,6 +81,15 @@
 	function handleTouchEnd() {
 		isDragging = false;
 	}
+
+	let interval;
+	function resetInterval() {
+		clearInterval(interval);
+		interval = setInterval(() => showSlide(activeIndex + 1), 4000);
+	}
+
+	onMount(() => resetInterval());
+	onDestroy(() => clearInterval(interval));
 </script>
 
 <!-- svelte-ignore a11y-no-static-element-interactions -->
@@ -204,6 +216,7 @@
 			background-color: rgba(255, 255, 255, 0.5);
 			border-radius: 50%;
 			margin: 0 5px;
+			cursor: default;
 		}
 
 		.carousel-indicators li.active {

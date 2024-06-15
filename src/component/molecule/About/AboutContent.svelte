@@ -3,8 +3,11 @@
 	import CrossHomeButton from '../../atoms/CrossHomeButton.svelte';
 	import Divider from '../../atoms/Divider.svelte';
 	import HomeStackUse from '../Home/HomeStackUse.svelte';
+	import Outside1 from '../../../lib/images/Outside1.webp';
+	import Outside2 from '../../../lib/images/Outside2.webp';
+	import Outside3 from '../../../lib/images/Outside3.webp';
 
-	const slidesData = [
+	const slidesToDisplay = [
 		{
 			content: `
         <span style="color: var(--color-text-dark);align-self: flex-start;margin:0 0.5rem;font-size: 1.5rem;">Javascript Expert</span>
@@ -27,7 +30,18 @@
         </span>`
 		}
 	];
-	const slidesToDisplay = slidesData.map((slide) => ({ content: slide.content }));
+
+	const imagesToDisplay = [
+		{
+			content: `<div style="border-radius: 1rem;"><img src="${Outside1}" style="width:100%;border-radius: 1rem;" alt="outisde1"/></div>`
+		},
+		{
+			content: `<div style="border-radius: 1rem;"><img src="${Outside2}" style="width:100%;border-radius: 1rem;" alt="outisde2"/></div>`
+		},
+		{
+			content: `<div style="border-radius: 1rem;"><img src="${Outside3}" style="width:100%;border-radius: 1rem;" alt="outisde3"/></div>`
+		}
+	];
 </script>
 
 <div class="about-content">
@@ -81,7 +95,11 @@
 			<div class="box4">
 				<HomeStackUse />
 			</div>
-			<div class="box5"></div>
+			<div class="box5">
+				<section>
+					<Carousel slidesToDisplay={imagesToDisplay} showButtons={false} />
+				</section>
+			</div>
 			<div class="box6"></div>
 		</div>
 	</div>
@@ -178,11 +196,68 @@
 				}
 
 				.box5 {
-					flex-grow: 1;
+					// flex-grow: 1;
+					width: 100%;
+					section {
+						overflow: hidden;
+						margin: 0rem;
+					}
 				}
 
 				.box6 {
 					flex-grow: 0.8;
+				}
+			}
+		}
+
+		@media (max-width: 1200px) {
+			.container {
+				flex-flow: column wrap;
+
+				.column {
+					flex-flow: row wrap;
+					gap: 1rem;
+					width: 100%;
+
+					div {
+						padding: 0.75rem;
+						section {
+							margin: 1.5rem;
+						}
+					}
+
+					.box1 {
+						height: 100%;
+						width: 100%;
+					}
+
+					.box2 {
+						width: 100%;
+					}
+				}
+			}
+		}
+
+		@media (max-width: 1100px) {
+			.container {
+				margin: 4rem 1rem 1rem 1rem;
+
+				.column {
+					.box4 {
+						flex-grow: 1;
+					}
+				}
+			}
+		}
+
+		@media (max-width: 850px) {
+			.container {
+				margin: 3rem 0.25rem 0.25rem 0.25rem;
+
+				.column {
+					.box4 {
+						flex-grow: 1;
+					}
 				}
 			}
 		}
