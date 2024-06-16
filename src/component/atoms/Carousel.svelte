@@ -168,6 +168,10 @@
 				justify-content: center;
 				gap: 10px;
 				user-select: none;
+
+				span {
+					font-size: 1rem !important;
+				}
 			}
 		}
 		.carousel-button {

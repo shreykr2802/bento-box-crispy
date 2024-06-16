@@ -89,13 +89,33 @@ img {
 	overflow-wrap: break-word;
 }
 
+.carousel-title {
+	color: var(--color-text-dark);
+	align-self: flex-start;
+	margin: 0 0.5rem;
+	font-size: 1.5rem;
+}
+
+.carousel-description {
+	color: var(--color-text-light);
+	margin: 0.5rem 0.5rem;
+	font-size: 1.15rem;
+}
+
 @media (max-width: 850px) {
 	.box-title,
 	.box-sub-title,
-	.box-description-small  {
+	.box-description-small,
+	.carousel-description {
 		font-size: 0.75rem;
 	}
-	.box-description {
+	.box-description,
+	.carousel-title {
 		font-size: 1rem;
+	}
+
+	body {
+		--outer-box-padding: 0.25rem;
+		--outer-box-margin: 0.75rem;
 	}
 }

@@ -10,22 +10,22 @@
 	const slidesToDisplay = [
 		{
 			content: `
-        <span style="color: var(--color-text-dark);align-self: flex-start;margin:0 0.5rem;font-size: 1.5rem;">Javascript Expert</span>
-        <span style="color: var(--color-text-light);margin: 0.5rem 0.5rem;font-size: 1.15rem;">
+        <span class="carousel-title">Javascript Expert</span>
+        <span class="carousel-description">
 			I've immersed myself in the depths of JavaScript for an extended duration, systematically unraveling its myriad concepts to achieve a comprehensive mastery.
         </span>`
 		},
 		{
 			content: `
-        <span style="color: var(--color-text-dark);align-self: flex-start;margin:0 0.5rem;font-size: 1.5rem;">Frontend Libraries</span>
-        <span style="color: var(--color-text-light);margin: 0.5rem 0.5rem;font-size: 1.15rem;">
+        <span class="carousel-title">Frontend Libraries</span>
+        <span class="carousel-description">
 			Whether it's React.js, Next.js, or Svelte, I delve into frontend libraries with an insatiable curiosity to learn and ultimately master their intricacies. 
         </span>`
 		},
 		{
 			content: `
-        <span style="color: var(--color-text-dark);align-self: flex-start;margin:0 0.5rem;font-size: 1.5rem;">Take Challenge Personally</span>
-        <span style="color: var(--color-text-light);margin: 0.5rem 0.5rem;font-size: 1.15rem;">
+        <span class="carousel-title">Take Challenge Personally</span>
+        <span class="carousel-description">
 			Taking on challenges personally drives my growth and learning, pushing boundaries to achieve deeper understanding and mastery.
         </span>`
 		}
@@ -304,7 +304,16 @@
 		}
 
 		@media(max-width: 780px) {
-			
+			.container {
+				margin: 4rem 1% 1% 1%;
+				.column:nth-child(2) {
+					.col-group:nth-child(2) {
+						div {
+							min-height: auto;
+						}
+					}
+				}
+			}
 		}
 	}
 </style>
