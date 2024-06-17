@@ -151,7 +151,7 @@
 					}
 
 					.box1 {
-						height: 40rem;
+						height: max-content;
 					}
 
 					.box2 {

@@ -169,7 +169,7 @@
 			flex-direction: row;
 			justify-content: space-between;
 			order: 2;
-			margin-top: 1rem;
+			margin: 1rem 0;
 			.row {
 				width: 45%;
 				justify-content: space-between;

@@ -26,13 +26,13 @@
 				<div class="box21">
 					<div class="img-wrapper" />
 				</div>
-				<div class="box22">
+				<a class="box22" href="/about">
 					<section>
 						<h2 class="box-title">About</h2>
 						<p class="box-description">Passionate about design and enjoy problem solving.</p>
 						<ArrowButton navigateTo="about" />
 					</section>
-				</div>
+				</a>
 			</div>
 			<div class="box23"></div>
 		</div>
@@ -46,7 +46,13 @@
 	<div class="right">
 		<HomeSocials />
 		<div class="group-right">
-			<div class="box42"></div>
+			<a class="box42" href="/blog">
+				<section>
+					<h2 class="box-title">Blogs</h2>
+					<p class="box-description">In my free time I do write quite a few blogs.</p>
+					<ArrowButton navigateTo="blog" />
+				</section>
+			</a>
 			<div class="box43"><DarkLightMode /></div>
 			<div class="box44"></div>
 		</div>
@@ -80,7 +86,7 @@
 					flex-direction: column;
 					border-radius: var(--inner-box-border-radius);
 					height: calc(100% - var(--diff-factor));
-					width: 50%;
+					width: 80%;
 					margin: var(--inner-box-margin);
 					padding: var(--inner-box-padding);
 					background-color: var(--color-box-background);
@@ -97,7 +103,7 @@
 				.group {
 					display: flex;
 					height: 100%;
-					width: 50%;
+					width: 80%;
 					.box12 {
 						border: var(--box-border);
 						display: flex;
@@ -135,7 +141,7 @@
 					.img-wrapper {
 						height: 100%;
 						width: 100%;
-						background-image: url('../../../lib/images/shrey.png');
+						background-image: url('$lib/images/shrey.png');
 						background-position: top;
 						background-repeat: no-repeat;
 						background-size: cover;
@@ -152,6 +158,7 @@
 					margin: var(--inner-box-margin);
 					padding: var(--inner-box-padding);
 					background-color: var(--color-box-background);
+					text-decoration: none;
 
 					section {
 						margin: 1rem;
@@ -159,6 +166,10 @@
 						flex-direction: column;
 						width: 100%;
 						position: relative;
+					}
+
+					&:hover {
+						background-color: var(--color-box-background-hover);
 					}
 				}
 
@@ -207,6 +218,19 @@
 					margin: var(--inner-box-margin);
 					padding: var(--inner-box-padding);
 					background-color: var(--color-box-background);
+					text-decoration: none;
+
+					section {
+						margin: 1rem;
+						display: flex;
+						flex-direction: column;
+						width: 100%;
+						position: relative;
+					}
+
+					&:hover {
+						background-color: var(--color-box-background-hover);
+					}
 				}
 				.box43 {
 					border: var(--box-border);
