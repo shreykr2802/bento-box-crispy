@@ -16,19 +16,23 @@
 					<p style="color: var(--color-text-light)">MERN Stack | Javascript | ReactJs</p>
 				</section>
 			</div>
-			<div class="box12"></div>
-			<div class="box13"></div>
+			<div class="group">
+				<div class="box12"></div>
+				<div class="box13"></div>
+			</div>
 		</div>
 		<div class="row">
-			<div class="box21">
-				<div class="img-wrapper" />
-			</div>
-			<div class="box22">
-				<section>
-					<h2 class="box-title">About</h2>
-					<p class="box-description">Passionate about design and enjoy problem solving.</p>
-					<ArrowButton navigateTo="about" />
-				</section>
+			<div class="group">
+				<div class="box21">
+					<div class="img-wrapper" />
+				</div>
+				<div class="box22">
+					<section>
+						<h2 class="box-title">About</h2>
+						<p class="box-description">Passionate about design and enjoy problem solving.</p>
+						<ArrowButton navigateTo="about" />
+					</section>
+				</div>
 			</div>
 			<div class="box23"></div>
 		</div>
@@ -41,9 +45,11 @@
 	</div>
 	<div class="right">
 		<HomeSocials />
-		<div class="box42"></div>
-		<div class="box43"><DarkLightMode /></div>
-		<div class="box44"></div>
+		<div class="group-right">
+			<div class="box42"></div>
+			<div class="box43"><DarkLightMode /></div>
+			<div class="box44"></div>
+		</div>
 	</div>
 </div>
 
@@ -54,6 +60,7 @@
 		border-radius: var(--outer-box-border-radius);
 		border: var(--box-border);
 		display: flex;
+		min-width: 0;
 
 		.left {
 			display: flex;
@@ -73,7 +80,7 @@
 					flex-direction: column;
 					border-radius: var(--inner-box-border-radius);
 					height: calc(100% - var(--diff-factor));
-					width: calc(46% - var(--diff-factor));
+					width: 50%;
 					margin: var(--inner-box-margin);
 					padding: var(--inner-box-padding);
 					background-color: var(--color-box-background);
@@ -87,27 +94,31 @@
 						height: 100%;
 					}
 				}
-
-				.box12 {
-					border: var(--box-border);
+				.group {
 					display: flex;
-					border-radius: var(--inner-box-border-radius);
-					height: calc(100% - var(--diff-factor));
-					width: calc(27% - var(--diff-factor));
-					margin: var(--inner-box-margin);
-					padding: var(--inner-box-padding);
-					background-color: var(--color-box-background);
-				}
+					height: 100%;
+					width: 50%;
+					.box12 {
+						border: var(--box-border);
+						display: flex;
+						border-radius: var(--inner-box-border-radius);
+						height: calc(100% - var(--diff-factor));
+						width: calc(50% - var(--diff-factor));
+						margin: var(--inner-box-margin);
+						padding: var(--inner-box-padding);
+						background-color: var(--color-box-background);
+					}
 
-				.box13 {
-					border: var(--box-border);
-					display: flex;
-					border-radius: var(--inner-box-border-radius);
-					height: calc(100% - var(--diff-factor));
-					width: calc(27% - var(--diff-factor));
-					margin: var(--inner-box-margin);
-					padding: var(--inner-box-padding);
-					background-color: var(--color-box-background);
+					.box13 {
+						border: var(--box-border);
+						display: flex;
+						border-radius: var(--inner-box-border-radius);
+						height: calc(100% - var(--diff-factor));
+						width: calc(50% - var(--diff-factor));
+						margin: var(--inner-box-margin);
+						padding: var(--inner-box-padding);
+						background-color: var(--color-box-background);
+					}
 				}
 
 				.box21 {
@@ -181,36 +192,117 @@
 			flex-flow: column;
 			height: 100%;
 			width: 25%;
+			.group-right {
+				display: flex;
+				flex-direction: column;
+				height: 100%;
+				width: 100%;
+				justify-content: flex-end;
+				.box42 {
+					border: var(--box-border);
+					display: flex;
+					border-radius: var(--inner-box-border-radius);
+					height: calc(35% - var(--diff-factor));
+					width: calc(100% - var(--diff-factor));
+					margin: var(--inner-box-margin);
+					padding: var(--inner-box-padding);
+					background-color: var(--color-box-background);
+				}
+				.box43 {
+					border: var(--box-border);
+					display: flex;
+					border-radius: var(--inner-box-border-radius);
+					height: calc(28% - var(--diff-factor));
+					width: calc(100% - var(--diff-factor));
+					margin: var(--inner-box-margin);
+					padding: var(--inner-box-padding);
+					background-color: var(--color-box-background);
+				}
+				.box44 {
+					border: var(--box-border);
+					display: flex;
+					border-radius: var(--inner-box-border-radius);
+					height: calc(33% - var(--diff-factor));
+					width: calc(100% - var(--diff-factor));
+					margin: var(--inner-box-margin);
+					padding: var(--inner-box-padding);
+					background-color: var(--color-box-background);
+				}
+			}
+		}
+	}
 
-			.box42 {
-				border: var(--box-border);
-				display: flex;
-				border-radius: var(--inner-box-border-radius);
-				height: calc(30% - var(--diff-factor));
-				width: calc(100% - var(--diff-factor));
-				margin: var(--inner-box-margin);
-				padding: var(--inner-box-padding);
-				background-color: var(--color-box-background);
+	@media (max-width: 1024px) {
+		.home-content {
+			flex-direction: column;
+			margin: 0.75rem;
+			padding: 0.25rem;
+			.left {
+				width: 100%;
+				justify-content: space-between;
+				.row {
+					height: 33%;
+				}
 			}
-			.box43 {
-				border: var(--box-border);
-				display: flex;
-				border-radius: var(--inner-box-border-radius);
-				height: calc(20% - var(--diff-factor));
-				width: calc(100% - var(--diff-factor));
-				margin: var(--inner-box-margin);
-				padding: var(--inner-box-padding);
-				background-color: var(--color-box-background);
+			.right {
+				flex-direction: column;
+				width: 100%;
+				.group-right {
+					flex-direction: row;
+					height: 100%;
+					order: 1;
+					.box42,
+					.box43,
+					.box44 {
+						height: calc(100% - var(--diff-factor));
+					}
+				}
 			}
-			.box44 {
-				border: var(--box-border);
-				display: flex;
-				border-radius: var(--inner-box-border-radius);
-				height: calc(25% - var(--diff-factor));
-				width: calc(100% - var(--diff-factor));
-				margin: var(--inner-box-margin);
-				padding: var(--inner-box-padding);
-				background-color: var(--color-box-background);
+		}
+	}
+
+	@media (max-width: 750px) {
+		.home-content {
+			flex-direction: column;
+			margin: 0.75rem;
+			padding: 0.25rem;
+			.left {
+				width: 100%;
+				.row {
+					flex-flow: column nowrap;
+					height: 100%;
+					.box11 {
+						width: calc(100% - var(--diff-factor));
+						section {
+							margin: 1rem;
+							padding: 0.5rem;
+						}
+					}
+					.group {
+						width: 100%;
+						min-height: 15rem;
+						align-items: center;
+					}
+					.box23,
+					.box32 {
+						width: calc(100% - var(--diff-factor));
+						min-height: 12rem;
+					}
+				}
+			}
+		}
+	}
+
+	@media (max-width: 640px) {
+		.home-content {
+			.right {
+				.group-right {
+					flex-direction: column;
+
+					.box42, .box44 {
+						min-height: 5rem;
+					}
+				}
 			}
 		}
 	}

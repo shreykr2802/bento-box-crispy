@@ -99,7 +99,23 @@ img {
 .carousel-description {
 	color: var(--color-text-light);
 	margin: 0.5rem 0.5rem;
-	font-size: 1.15rem;
+	font-size: 1rem;
+}
+
+.carousel-img {
+	width: 5rem;
+}
+
+@media (max-width: 1200px) {
+	.carousel-description {
+		font-size: 0.875rem;
+	}
+	.carousel-title {
+		font-size: 1.25rem;
+	}
+	.carousel-img {
+		width: 3rem;
+	}
 }
 
 @media (max-width: 850px) {
@@ -112,6 +128,9 @@ img {
 	.box-description,
 	.carousel-title {
 		font-size: 1rem;
+	}
+	.carousel-img {
+		width: 3rem;
 	}
 
 	body {

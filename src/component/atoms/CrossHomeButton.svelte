@@ -24,9 +24,7 @@
 <style lang="scss">
 	a {
 		position: absolute;
-		top: 2rem;
-		left: 50%;
-		height: 3rem;
+		left: calc(50% - var(--diff-factor));
 		width: 3rem;
 		background: transparent;
 		fill: var(--color-text-dark);

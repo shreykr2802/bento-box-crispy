@@ -7,27 +7,27 @@
 	const slidesData = [
 		{
 			content: `
-        <img style="background-color: bisque; width: 5rem; border-radius: 50%;" src="${person1}" alt="person1" />
-        <span style="color: var(--color-text-dark);">Arjun Mehta</span>
-        <span style="color: var(--color-text-light);margin: 0.5rem 0.5rem;text-align: justify;">
+        <img class="carousel-img" style="background-color: bisque; border-radius: 50%;" src="${person1}" alt="person1" />
+        <span class="carousel-title" style="align-self: center;">Arjun Mehta</span>
+        <span class="carousel-description">
           Shrey's expertise in JavaScript and fullstack development transformed our project. His
           innovative solutions and commitment to quality were outstanding. Highly recommend!
         </span>`
 		},
 		{
 			content: `
-        <img style="background-color: aquamarine; width: 5rem; border-radius: 50%" src="${person2}" alt="person2" />
-        <span style="color: var(--color-text-dark);">Ravi Patel</span>
-        <span style="color: var(--color-text-light);margin: 0.5rem 0.5rem;text-align: justify;">
+        <img class="carousel-img" style="background-color: aquamarine; border-radius: 50%" src="${person2}" alt="person2" />
+        <span class="carousel-title" style="align-self: center;">Ravi Patel</span>
+        <span class="carousel-description">
           Shrey is a phenomenal fullstack developer. His proficiency in both front-end and
           back-end technologies ensured our project was a success. Truly a pleasure to work with!
         </span>`
 		},
 		{
 			content: `
-        <img style="background-color: salmon; width: 5rem; border-radius: 50%" src="${person3}" alt="person3" />
-        <span style="color: var(--color-text-dark);">Neha Sharma</span>
-        <span style="color: var(--color-text-light);margin: 0.5rem 0.5rem;text-align: justify;">
+        <img class="carousel-img" style="background-color: salmon; border-radius: 50%" src="${person3}" alt="person3" />
+        <span class="carousel-title" style="align-self: center;">Neha Sharma</span>
+        <span class="carousel-description">
           Shrey's skills in JavaScript and fullstack development are top-notch. He delivered
           exceptional results, on time and beyond expectations. An invaluable asset to our team!
         </span>`
@@ -59,6 +59,15 @@
 			flex-direction: column;
 			height: 90%;
 			overflow: hidden;
+		}
+	}
+	@media (max-width: 750px) {
+		.box31 {
+			width: calc(100% - var(--diff-factor));
+			height: 100%; 
+			section {
+				height: 100%;
+			}
 		}
 	}
 </style>

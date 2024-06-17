@@ -122,7 +122,7 @@
 		min-width: 0;
 
 		.container {
-			margin: 10%;
+			margin: 4rem 10%;
 			display: flex;
 			flex-direction: row;
 			gap: 1rem;
