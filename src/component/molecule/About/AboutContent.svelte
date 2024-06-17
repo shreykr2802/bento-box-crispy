@@ -119,6 +119,7 @@
 		padding: var(--outer-box-padding);
 		border-radius: var(--outer-box-border-radius);
 		border: var(--box-border);
+		min-width: 0;
 
 		.container {
 			margin: 10%;
