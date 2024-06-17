@@ -1,4 +1,5 @@
 <script>
+	import BlogPostInfoBox from '../../atoms/BlogPostInfoBox.svelte';
 	import CrossHomeButton from '../../atoms/CrossHomeButton.svelte';
 	export let data;
 </script>
@@ -7,9 +8,7 @@
 	<CrossHomeButton />
 	<div class="container">
 		{#each data.posts as post}
-			<li>
-				<a href={`/blog/${post.slug}`}>{post.title}</a>
-			</li>
+			<BlogPostInfoBox {post} />
 		{/each}
 	</div>
 </div>
@@ -25,9 +24,7 @@
 		.container {
 			margin: 4rem 10%;
 			display: flex;
-			flex-direction: row;
-			gap: 1rem;
-			justify-content: center;
+			flex-flow: row wrap;
 		}
 	}
 </style>

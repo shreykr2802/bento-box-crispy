@@ -4,10 +4,10 @@
 </script>
 
 <div class="blog-content">
-	<CrossHomeButton />
+	<CrossHomeButton goBackTo="/blog" />
 	<div class="container">
 		<h1>{data.post.title}</h1>
-	<div>{data.post.content}</div>
+		<div>{data.post.content}</div>
 	</div>
 </div>
 
