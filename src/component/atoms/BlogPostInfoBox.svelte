@@ -14,7 +14,7 @@
 <style lang="scss">
 	.blog-post-info-box {
 		border: var(--box-border);
-		flex: 1 1 30%;
+		flex: 1 1 10%;
 		border-radius: var(--inner-box-border-radius);
 		padding: 1rem;
 		margin: 1rem;

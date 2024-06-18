@@ -11,7 +11,6 @@
 		display: flex;
 		align-items: center;
 		justify-content: flex-start;
-        width: 60%;
 
 		.bubble {
 			height: 1.5rem;

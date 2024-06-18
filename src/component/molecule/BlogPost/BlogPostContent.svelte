@@ -27,6 +27,9 @@
 							<p class="box-description-small">
 								{Date(data.post.date).substring(0, 15)}
 							</p>
+							<p class="box-description-small">
+								{data.post.readTime}
+							</p>
 						</div>
 						<div>
 							<h5 class="box-sub-title">Tags</h5>
@@ -47,7 +50,10 @@
 			</div>
 		</div>
 		<div class="main-image">
-			<img src="/blogImages/1/main-image.png" alt="hoisting and closure javascript" />
+			<img
+				src="/blogImages/{data.post.slug}/main-image.png"
+				alt="hoisting and closure javascript"
+			/>
 		</div>
 		<div class="introduction">
 			<h2>Introduction</h2>
@@ -59,6 +65,9 @@
 			{#each data.post.content as content}
 				<div class="each-content">
 					<p class="box-sub-title">{content.heading}</p>
+					{#if content.html}
+						{@html content.html}
+					{/if}
 					{#if content.code}
 						<pre><code class="language-javascript">{content.code}</code></pre>
 					{/if}
@@ -131,9 +140,6 @@
 					margin-bottom: 1rem;
 					width: 100%;
 				}
-				.description {
-					width: 100%;
-				}
 				.date-tag {
 					display: flex;
 					width: 100%;
@@ -142,7 +148,8 @@
 					.blog-tags {
 						display: flex;
 						width: 100%;
-						flex-direction: row;
+						flex-flow: row wrap;
+						gap: 10px;
 					}
 				}
 			}
@@ -153,6 +160,9 @@
 			}
 			.main-image {
 				align-self: center;
+				img {
+					width: 100%;
+				}
 			}
 			.content {
 				.each-content {
@@ -161,6 +171,9 @@
 
 					.box-sub-title {
 						color: var(--color-red-neon);
+					}
+					.html-text {
+						color: white;
 					}
 				}
 			}
@@ -171,7 +184,7 @@
 					width: 100%;
 				}
 				a {
-					color: var(--color-red-neon)
+					color: var(--color-red-neon);
 				}
 			}
 		}

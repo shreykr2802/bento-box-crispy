@@ -7,18 +7,19 @@
         "date": "18-06-2024",
         "mainImage": "./hoisting-closures.png",
         "tags": ["tech", "javascript", "hoisting", "closures"],
+        "readTime": "2 min read",
         "content": [
           {
             "slNo": "1",
             "heading": "What is Hoisting?",
-            "html": "",
+            "html": "<div class=\"box-description-small\">JavaScript Hoisting refers to the process whereby the interpreter appears to move the declaration of functions, variables, classes, or imports to the top of their scope, prior to execution of the code.</div>",
             "code": "console.log(x); // Output: undefined\nvar x = 5;\nconsole.log(x); // Output: 5",
             "image": ""
           },
           {
             "slNo": "2",
             "heading": "Hoisting of Functions",
-            "html": "",
+            "html": "<div class=\"box-description-small\">The below code runs without any error, despite the hoistedFunction() function being called before it's declared. This is because the JavaScript interpreter hoists the entire function declaration to the top of the current scope.</div>",
             "code": "hoistedFunction(); // Output: 'This function has been hoisted.'\n\nfunction hoistedFunction() {\n  console.log('This function has been hoisted.');\n}",
             "image": ""
           },

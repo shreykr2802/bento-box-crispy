@@ -109,10 +109,20 @@ img {
 }
 
 pre[class*="language-"] {
-	width: 100%;
 	height: 100%;
 	border-radius: var(--inner-box-border-radius);
-	background-color: #141414;
+	background-color: #3c3c3c !important;
+	text-shadow: none !important;
+
+	code[class*="language-"] {
+		text-shadow: none !important;
+		color: white !important;
+
+		.token.operator {
+			color: #c16800 !important;
+			background: hsl(0deg 0.99% 21.54% / 50%) !important;
+		}
+	}
 }
 
 @media (max-width: 1200px) {
@@ -145,5 +155,9 @@ pre[class*="language-"] {
 	body {
 		--outer-box-padding: 0.25rem;
 		--outer-box-margin: 0.75rem;
+	}
+
+	pre[class*="language-"] {
+		font-size: 0.875rem !important;
 	}
 }

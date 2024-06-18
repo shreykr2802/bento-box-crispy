@@ -9,13 +9,15 @@
   "content": [
     {
       "slNo": "1",
-      "content": "This is the first code",
+      "title": "First Code",
+      "html": "<div>content</div>",
       "code": "<script>export let language = \"Svelte\";</script><main>Welcome to {language}</main><style></style>",
       "image": ""
     },
     {
       "slNo": "2",
-      "content": "This is the first image",
+      "title": "Second Code",
+      "html": "<div>content</div>",
       "code": "",
       "image": "./image2.png"
     }
