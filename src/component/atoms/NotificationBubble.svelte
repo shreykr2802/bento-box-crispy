@@ -1,11 +1,9 @@
 <script>
-	export let totalCount;
-	export let description;
+	export let tag;
 </script>
 
 <div class="notification-bubble">
-	<span class="bubble">{totalCount}</span>
-	<span class="text">{description}</span>
+	<span class="bubble">{tag}</span>
 </div>
 
 <style lang="scss">
@@ -17,19 +15,17 @@
 
 		.bubble {
 			height: 1.5rem;
-			width: 2rem;
+			padding: 0.25rem;
+			width: auto;
+			min-width: 4rem;
 			border-radius: 1rem;
-			background-color: var(--color-orange-100);
+			background-color: var(--color-orange);
+			color: var(--color-text-dark);
 			display: flex;
 			align-items: center;
 			justify-content: center;
             font-size: 0.75em;
             margin-right: 0.25rem;
 		}
-
-        .text {
-            font-size: 0.75em;
-            color: var(--color-green-200);
-        }
 	}
 </style>

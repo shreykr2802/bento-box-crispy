@@ -281,8 +281,6 @@
 						}
 						.box4 {
 							flex-grow: 1;
-							section {
-							}
 						}
 						.box2 {
 							ul {

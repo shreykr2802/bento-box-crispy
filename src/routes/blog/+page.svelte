@@ -1,7 +1,6 @@
 <script>
 	import BlogsMain from "../../component/molecule/Blog/BlogsMain.svelte";
 	export let data;
-	console.log("blog", data)
 </script>
 
 <svelte:head>

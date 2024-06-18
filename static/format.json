@@ -1,0 +1,25 @@
+{
+  "slug": "",
+  "title": "My First Post",
+  "description": "First Blog for test",
+  "introduction": "This is the content of my first post.",
+  "date": "18-06-2024",
+  "mainImage": "./image1.png",
+  "tags": ["tech", "svelte", "javascript"],
+  "content": [
+    {
+      "slNo": "1",
+      "content": "This is the first code",
+      "code": "<script>export let language = \"Svelte\";</script><main>Welcome to {language}</main><style></style>",
+      "image": ""
+    },
+    {
+      "slNo": "2",
+      "content": "This is the first image",
+      "code": "",
+      "image": "./image2.png"
+    }
+  ],
+  "conclusion": "This was the first blog to test",
+  "artifacts": ["https://someurl.com", "https://guthub.com/some-code"]
+}
