@@ -19,12 +19,14 @@
 		padding: var(--outer-box-padding);
 		border-radius: var(--outer-box-border-radius);
 		border: var(--box-border);
-		min-width: 0;
+		min-width: 0; 
 
 		.container {
 			margin: 4rem 10%;
-			display: flex;
-			flex-flow: row wrap;
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			grid-template-rows: auto auto auto auto;
+			gap: 1rem;
 		}
 	}
 </style>

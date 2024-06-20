@@ -3,6 +3,7 @@
 	import CrossHomeButton from '../../atoms/CrossHomeButton.svelte';
 	import Divider from '../../atoms/Divider.svelte';
 	import NotificationBubble from '../../atoms/NotificationBubble.svelte';
+	import HomeSocials from '../Home/HomeSocials.svelte';
 	export let data;
 
 	import Prism from 'prismjs';
@@ -66,10 +67,10 @@
 				<div class="each-content">
 					<p class="box-sub-title">{content.heading}</p>
 					{#if content.html}
-						{@html content.html}
+						<div class="box-description-small">{@html content.html}</div>
 					{/if}
 					{#if content.code}
-						<pre><code class="language-javascript">{content.code}</code></pre>
+						<pre><code class={`language-${content.codeType}`}>{content.code}</code></pre>
 					{/if}
 				</div>
 			{/each}
