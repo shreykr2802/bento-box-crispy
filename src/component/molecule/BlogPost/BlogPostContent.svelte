@@ -6,7 +6,6 @@
 
 	import Prism from 'prismjs';
 	import 'prismjs/themes/prism.css';
-	import Header from '../../atoms/Header.svelte';
 
 	onMount(() => {
 		Prism.highlightAll();
@@ -14,7 +13,6 @@
 </script>
 
 <div class="blog-content">
-	<Header goBackTo="/blog" />
 	<section class="container">
 		<div class="header">
 			<div class="blog-data-box title-details">
@@ -123,7 +121,7 @@
 		min-width: 0;
 
 		.container {
-			margin: 4rem 10%;
+			margin: 5rem 10%;
 			display: flex;
 			flex-direction: column;
 			gap: 1rem;

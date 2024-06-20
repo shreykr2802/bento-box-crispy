@@ -5,7 +5,6 @@
 	import Outside1 from '../../../lib/images/Outside1.webp';
 	import Outside2 from '../../../lib/images/Outside2.webp';
 	import Outside3 from '../../../lib/images/Outside3.webp';
-	import Header from '../../atoms/Header.svelte';
 
 	const slidesToDisplay = [
 		{
@@ -45,7 +44,6 @@
 </script>
 
 <div class="about-content">
-	<Header />
 	<div class="container">
 		<div class="column">
 			<div class="col-group">

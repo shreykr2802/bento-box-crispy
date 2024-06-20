@@ -1,7 +1,13 @@
 <script>
 	import './styles.css';
+	import { page } from '$app/stores';
+	import Header from './Header.svelte';
+	$: console.log('page', $page);
 </script>
 
+{#if $page.route.id !== '/'}
+	<Header goBackTo={$page.route.id === '/blog' || $page.route.id === '/about' ? '/' : '/blog'} />
+{/if}
 <main>
 	<slot />
 </main>

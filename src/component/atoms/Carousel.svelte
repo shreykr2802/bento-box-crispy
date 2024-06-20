@@ -197,8 +197,8 @@
 			}
 		}
 		.carousel-indicators {
-			position: relative;
-			bottom: 0px;
+			position: absolute;
+			bottom: 10px;
 			left: 50%;
 			width: max-content;
 			transform: translateX(-50%);

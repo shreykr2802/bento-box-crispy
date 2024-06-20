@@ -1,12 +1,9 @@
 <script>
 	import BlogPostInfoBox from '../../atoms/BlogPostInfoBox.svelte';
-	import CrossHomeButton from '../../atoms/CrossHomeButton.svelte';
-	import Header from '../../atoms/Header.svelte';
 	export let data;
 </script>
 
 <div class="blog-content">
-	<Header />
 	<div class="container">
 		{#each data.posts as post}
 			<BlogPostInfoBox {post} />
@@ -28,6 +25,13 @@
 			grid-template-columns: repeat(4, 1fr);
 			grid-template-rows: auto auto auto auto;
 			gap: 1rem;
+		}
+	}
+	@media(max-width: 768px) {
+		.blog-content {
+			.container {
+				grid-template-columns: repeat(3, 1fr);
+			}
 		}
 	}
 </style>
