@@ -1,11 +1,11 @@
 <script>
 	import Carousel from '../../atoms/Carousel.svelte';
-	import CrossHomeButton from '../../atoms/CrossHomeButton.svelte';
 	import Divider from '../../atoms/Divider.svelte';
 	import HomeStackUse from '../Home/HomeStackUse.svelte';
 	import Outside1 from '../../../lib/images/Outside1.webp';
 	import Outside2 from '../../../lib/images/Outside2.webp';
 	import Outside3 from '../../../lib/images/Outside3.webp';
+	import Header from '../../atoms/Header.svelte';
 
 	const slidesToDisplay = [
 		{
@@ -45,7 +45,7 @@
 </script>
 
 <div class="about-content">
-	<CrossHomeButton />
+	<Header />
 	<div class="container">
 		<div class="column">
 			<div class="col-group">

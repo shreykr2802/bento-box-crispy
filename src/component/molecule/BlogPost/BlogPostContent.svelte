@@ -1,13 +1,12 @@
 <script>
 	import { onMount } from 'svelte';
-	import CrossHomeButton from '../../atoms/CrossHomeButton.svelte';
 	import Divider from '../../atoms/Divider.svelte';
 	import NotificationBubble from '../../atoms/NotificationBubble.svelte';
-	import HomeSocials from '../Home/HomeSocials.svelte';
 	export let data;
 
 	import Prism from 'prismjs';
 	import 'prismjs/themes/prism.css';
+	import Header from '../../atoms/Header.svelte';
 
 	onMount(() => {
 		Prism.highlightAll();
@@ -15,7 +14,7 @@
 </script>
 
 <div class="blog-content">
-	<CrossHomeButton goBackTo="/blog" />
+	<Header goBackTo="/blog" />
 	<section class="container">
 		<div class="header">
 			<div class="blog-data-box title-details">

@@ -2,7 +2,7 @@
 	import { onDestroy, onMount } from 'svelte';
 
 	export let slidesToDisplay;
-	export let showButtons = true;
+	export let showButtons = false;
 	let activeIndex = 0;
 	let carouselInner;
 	let carouselIndicators;

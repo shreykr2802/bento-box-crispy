@@ -1,5 +1,6 @@
 <script>
 	import Background from '../../atoms/Background.svelte';
+	import Header from '../../atoms/Header.svelte';
 	import BlogContent from './BlogContent.svelte';
 	export let data;
 </script>

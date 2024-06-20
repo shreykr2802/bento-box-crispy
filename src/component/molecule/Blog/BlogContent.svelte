@@ -1,11 +1,12 @@
 <script>
 	import BlogPostInfoBox from '../../atoms/BlogPostInfoBox.svelte';
 	import CrossHomeButton from '../../atoms/CrossHomeButton.svelte';
+	import Header from '../../atoms/Header.svelte';
 	export let data;
 </script>
 
 <div class="blog-content">
-	<CrossHomeButton />
+	<Header />
 	<div class="container">
 		{#each data.posts as post}
 			<BlogPostInfoBox {post} />
