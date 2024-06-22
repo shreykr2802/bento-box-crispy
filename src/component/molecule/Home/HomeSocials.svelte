@@ -78,7 +78,7 @@
 			align-items: center;
 
 			svg {
-				fill: var(--color-text-dark);
+				fill: var(--color-red-neon);
 				height: 24px;
 				width: 24px;
 			}

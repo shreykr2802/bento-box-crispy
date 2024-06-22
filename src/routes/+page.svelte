@@ -3,8 +3,8 @@
 </script>
 
 <svelte:head>
-	<title>Bento Box</title>
-	<meta name="description" content="Svelte demo app" />
+	<title>Shrey Kumar | shreykr2802</title>
+	<meta name="description" content="MERN Stack | Javascript | ReactJs" />
 </svelte:head>
 
 <HomeMain />

@@ -92,7 +92,7 @@
 				<div class="box3">
 					<section>
 						<h5 class="box-sub-title">WHAT I DO BEST</h5>
-						<Carousel {slidesToDisplay} showButtons={false} />
+						<Carousel {slidesToDisplay} showButtons={false} indicatorPosition="bottom"/>
 					</section>
 				</div>
 				<div class="box4">
@@ -195,6 +195,7 @@
 						section {
 							overflow: hidden;
 							margin: 0.5rem;
+							height: 100%;
 
 							.box-sub-title {
 								margin: 0.5rem 0 2rem 0.5rem;

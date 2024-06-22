@@ -2,7 +2,7 @@
 	export let navigateTo;
 </script>
 
-<a href="/{navigateTo}">
+<a href="/{navigateTo}" class="arrow-button">
 	<svg
 		clip-rule="evenodd"
 		fill-rule="evenodd"
@@ -18,14 +18,14 @@
 </a>
 
 <style lang="scss">
-	a {
+	.arrow-button {
 		position: absolute;
+		top: 0;
 		right: 0;
-		bottom: 0;
 		height: 3rem;
 		width: 3rem;
 		background: transparent;
-		fill: var(--color-text-dark);
+		fill: var(--color-red-neon);
 		outline: none;
 		border: none;
 		transform: rotate(-30deg);
@@ -34,8 +34,14 @@
 		transition: all 0.2s;
 		cursor: pointer;
 
-		&:hover {
-			transform: scale(1.2);
+		@media (max-width: 1024px) {
+			height: 2.5rem;
+			width: 2.5rem;
+		}
+
+		@media (max-width: 750px) {
+			height: 2rem;
+			width: 2rem;
 		}
 	}
 </style>

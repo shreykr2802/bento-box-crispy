@@ -1,6 +1,9 @@
 <script>
 	import ArrowButton from '../../atoms/ArrowButton.svelte';
 	import DarkLightMode from '../../atoms/DarkLightMode.svelte';
+	import HomeAbout from './HomeAbout.svelte';
+	import HomeBlog from './HomeBlog.svelte';
+	import HomeNameDetails from './HomeNameDetails.svelte';
 	import HomeSocials from './HomeSocials.svelte';
 	import HomeSomeWords from './HomeSomeWords.svelte';
 	import HomeStackUse from './HomeStackUse.svelte';
@@ -9,13 +12,7 @@
 <div class="home-content">
 	<div class="left">
 		<div class="row">
-			<div class="box11">
-				<section>
-					<h1 style="color: var(--color-text-dark)">Hi, There I am Shrey</h1>
-					<p style="color: var(--color-text-light)">Senior Software Engineer</p>
-					<p style="color: var(--color-text-light)">MERN Stack | Javascript | ReactJs</p>
-				</section>
-			</div>
+			<HomeNameDetails />
 			<div class="group">
 				<div class="box12"></div>
 				<div class="box13"></div>
@@ -26,13 +23,7 @@
 				<div class="box21">
 					<div class="img-wrapper" />
 				</div>
-				<a class="box22" href="/about">
-					<section>
-						<h2 class="box-title">About</h2>
-						<p class="box-description">Passionate about design and enjoy problem solving.</p>
-						<ArrowButton navigateTo="about" />
-					</section>
-				</a>
+				<HomeAbout />
 			</div>
 			<div class="box23"></div>
 		</div>
@@ -46,13 +37,7 @@
 	<div class="right">
 		<HomeSocials />
 		<div class="group-right">
-			<a class="box42" href="/blog">
-				<section>
-					<h2 class="box-title">Blogs</h2>
-					<p class="box-description">In my free time I do write quite a few blogs.</p>
-					<ArrowButton navigateTo="blog" />
-				</section>
-			</a>
+			<HomeBlog />
 			<div class="box43"><DarkLightMode /></div>
 			<div class="box44"></div>
 		</div>
@@ -80,30 +65,11 @@
 				justify-content: space-between;
 				height: calc(100% - var(--diff-factor));
 
-				.box11 {
-					border: var(--box-border);
-					display: flex;
-					flex-direction: column;
-					border-radius: var(--inner-box-border-radius);
-					height: calc(100% - var(--diff-factor));
-					width: 80%;
-					margin: var(--inner-box-margin);
-					padding: var(--inner-box-padding);
-					background-color: var(--color-box-background);
-
-					section {
-						margin: 2rem;
-						padding: 1rem;
-						display: flex;
-						flex-direction: column;
-						justify-content: space-around;
-						height: 100%;
-					}
-				}
 				.group {
 					display: flex;
 					height: 100%;
 					width: 80%;
+
 					.box12 {
 						border: var(--box-border);
 						display: flex;
@@ -148,31 +114,6 @@
 					}
 				}
 
-				.box22 {
-					border: var(--box-border);
-					display: flex;
-					border-radius: var(--inner-box-border-radius);
-					height: calc(100% - var(--diff-factor));
-					flex-grow: 2;
-					width: calc(40% - var(--diff-factor));
-					margin: var(--inner-box-margin);
-					padding: var(--inner-box-padding);
-					background-color: var(--color-box-background);
-					text-decoration: none;
-
-					section {
-						margin: 1rem;
-						display: flex;
-						flex-direction: column;
-						width: 100%;
-						position: relative;
-					}
-
-					&:hover {
-						background-color: var(--color-box-background-hover);
-					}
-				}
-
 				.box23 {
 					border: var(--box-border);
 					display: flex;
@@ -209,29 +150,7 @@
 				height: 100%;
 				width: 100%;
 				justify-content: flex-end;
-				.box42 {
-					border: var(--box-border);
-					display: flex;
-					border-radius: var(--inner-box-border-radius);
-					height: calc(35% - var(--diff-factor));
-					width: calc(100% - var(--diff-factor));
-					margin: var(--inner-box-margin);
-					padding: var(--inner-box-padding);
-					background-color: var(--color-box-background);
-					text-decoration: none;
-
-					section {
-						margin: 1rem;
-						display: flex;
-						flex-direction: column;
-						width: 100%;
-						position: relative;
-					}
-
-					&:hover {
-						background-color: var(--color-box-background-hover);
-					}
-				}
+				
 				.box43 {
 					border: var(--box-border);
 					display: flex;
@@ -323,7 +242,8 @@
 				.group-right {
 					flex-direction: column;
 
-					.box42, .box44 {
+					.box42,
+					.box44 {
 						min-height: 5rem;
 					}
 				}

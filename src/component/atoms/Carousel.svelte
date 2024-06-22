@@ -3,6 +3,7 @@
 
 	export let slidesToDisplay;
 	export let showButtons = false;
+	export let indicatorPosition = 'onTop';
 	let activeIndex = 0;
 	let carouselInner;
 	let carouselIndicators;
@@ -141,7 +142,11 @@
 			</button>
 		</div>
 	{/if}
-	<ul class="carousel-indicators" bind:this={carouselIndicators}>
+	<ul
+		class="carousel-indicators"
+		class:onTop={indicatorPosition === 'onTop'}
+		bind:this={carouselIndicators}
+	>
 		{#each slidesToDisplay as _, index}
 			<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
 			<!-- svelte-ignore a11y-click-events-have-key-events -->
@@ -198,7 +203,7 @@
 		}
 		.carousel-indicators {
 			position: absolute;
-			bottom: 10px;
+			bottom: -10px;
 			left: 50%;
 			width: max-content;
 			transform: translateX(-50%);
@@ -208,6 +213,10 @@
 			margin: 0;
 			border-radius: 16px;
 			background-color: var(--color-carousel-indicator-background);
+
+			&.onTop {
+				bottom: 10px;
+			}
 		}
 
 		.carousel-indicators li {

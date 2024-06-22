@@ -39,7 +39,7 @@
 <div class="box31">
 	<section>
 		<h2 class="box-title">Some Words</h2>
-		<Carousel {slidesToDisplay} />
+		<Carousel {slidesToDisplay} indicatorPosition="bottom"/>
 	</section>
 </div>
 
