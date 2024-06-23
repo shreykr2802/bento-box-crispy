@@ -73,13 +73,13 @@
 					<section>
 						<h5 class="box-sub-title">EXPERIENCE</h5>
 						<ul>
-							<li>Chimera Technologies</li>
+							<li style="color: var(--color-red-neon);">Chimera Technologies</li>
 							<li>Senior Software Engineer</li>
 							<li>Nov-2021 - current</li>
-							<li>Pepperfry</li>
+							<li style="color: var(--color-red-neon);">Pepperfry</li>
 							<li>Senior Software Engineer</li>
 							<li>Aug-2021 - Nov-2021</li>
-							<li>Tavant</li>
+							<li style="color: var(--color-red-neon);">Tavant</li>
 							<li>Senior Software Engineer</li>
 							<li>Jan-2017 - Aug 2021</li>
 						</ul>

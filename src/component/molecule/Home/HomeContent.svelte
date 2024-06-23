@@ -1,6 +1,7 @@
 <script>
 	import ArrowButton from '../../atoms/ArrowButton.svelte';
 	import DarkLightMode from '../../atoms/DarkLightMode.svelte';
+	import StackBox from '../../atoms/StackBox.svelte';
 	import HomeAbout from './HomeAbout.svelte';
 	import HomeBlog from './HomeBlog.svelte';
 	import HomeNameDetails from './HomeNameDetails.svelte';
@@ -14,7 +15,10 @@
 		<div class="row">
 			<HomeNameDetails />
 			<div class="group">
-				<div class="box12"></div>
+				<a class="box12" href="/case-study">
+					<p class="case-title">Ecommerce - SSR, SSG, ISR, CSR</p>
+					<ArrowButton />
+				</a>
 				<div class="box13"></div>
 			</div>
 		</div>
@@ -39,7 +43,13 @@
 		<div class="group-right">
 			<HomeBlog />
 			<div class="box43"><DarkLightMode /></div>
-			<div class="box44"></div>
+			<div class="box44">
+				<StackBox stackName="Svelte" />
+				<div>
+					<span>made with ♥️ in&nbsp;</span> <span class="svelte">svelte</span>
+				</div>
+				<div>created with the idea of <span class="svelte">bento-box</span></div>
+			</div>
 		</div>
 	</div>
 </div>
@@ -78,7 +88,35 @@
 						width: calc(50% - var(--diff-factor));
 						margin: var(--inner-box-margin);
 						padding: var(--inner-box-padding);
-						background-color: var(--color-box-background);
+						background: url('$lib/images/casestudy1.png');
+						background-size: cover;
+						background-repeat: no-repeat;
+						background-position: center;
+						transition: all 1s;
+						cursor: pointer;
+						position: relative;
+						text-decoration: none;
+
+						.case-title {
+							position: absolute;
+							bottom: 0;
+							left: 0;
+							font-size: 1.5rem;
+							font-weight: 700;
+							color: var(--color-red-neon);
+							display: none;
+							background-color: var(--color-box-background);
+						}
+
+						&:hover {
+							opacity: 0.9;
+							.case-title {
+								display: block;
+							}
+							:global(.arrow-button) {
+								transform: scale(1.2);
+							}
+						}
 					}
 
 					.box13 {
@@ -149,13 +187,13 @@
 				flex-direction: column;
 				height: 100%;
 				width: 100%;
-				justify-content: flex-end;
-				
+				justify-content: space-between;
+
 				.box43 {
 					border: var(--box-border);
 					display: flex;
 					border-radius: var(--inner-box-border-radius);
-					height: calc(28% - var(--diff-factor));
+					height: 100%;
 					width: calc(100% - var(--diff-factor));
 					margin: var(--inner-box-margin);
 					padding: var(--inner-box-padding);
@@ -164,12 +202,24 @@
 				.box44 {
 					border: var(--box-border);
 					display: flex;
+					flex-direction: column;
+					align-items: center;
+					justify-content: center;
 					border-radius: var(--inner-box-border-radius);
-					height: calc(33% - var(--diff-factor));
+					height: 100%;
 					width: calc(100% - var(--diff-factor));
 					margin: var(--inner-box-margin);
 					padding: var(--inner-box-padding);
 					background-color: var(--color-box-background);
+					color: var(--color-text-dark);
+
+					div {
+						margin: 1rem;
+						text-align: center;
+					}
+					.svelte {
+						color: var(--color-red-neon);
+					}
 				}
 			}
 		}
@@ -182,14 +232,16 @@
 			padding: 0.25rem;
 			.left {
 				width: 100%;
+				height: 100%;
 				justify-content: space-between;
 				.row {
-					height: 33%;
+					height: 100%;
 				}
 			}
 			.right {
 				flex-direction: column;
 				width: 100%;
+				height: auto;
 				.group-right {
 					flex-direction: row;
 					height: 100%;

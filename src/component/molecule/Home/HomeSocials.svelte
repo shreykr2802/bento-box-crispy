@@ -54,7 +54,7 @@
 	.box41 {
 		display: flex;
 		flex-direction: column;
-		height: calc(30% - var(--diff-factor));
+		gap: 1rem;
 		width: calc(100% - var(--diff-factor));
 		margin: var(--inner-box-margin);
 		padding: var(--inner-box-padding);

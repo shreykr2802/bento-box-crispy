@@ -93,7 +93,7 @@ img {
 }
 
 .carousel-title {
-	color: var(--color-text-dark);
+	color: var(--color-red-neon);
 	align-self: flex-start;
 	margin: 0 0.5rem;
 	font-size: 1.5rem;
@@ -126,7 +126,7 @@ pre[class*="language-"] {
 	}
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1024px) {
 	.carousel-description {
 		font-size: 0.875rem;
 	}

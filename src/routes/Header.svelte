@@ -72,5 +72,37 @@
 				}
 			}
 		}
+
+		@media (max-width: 768px) {
+			.logo {
+				img {
+					height: 2.5rem;
+				}
+			}
+		}
+
+		@media (max-width: 640px) {
+			.logo {
+				img {
+					height: 2rem;
+				}
+			}
+			.links {
+				width: 35%;
+				margin-right: 1rem;
+			}
+		}
+
+		@media (max-width: 480px) {
+			.logo {
+				img {
+					height: 1.5rem;
+				}
+			}
+			.links {
+				width: 40%;
+				margin-right: 0.5rem;
+			}
+		}
 	}
 </style>

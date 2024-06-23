@@ -37,17 +37,17 @@
 				stroke-linejoin="round"
 			></g><g id="SVGRepo_iconCarrier">
 				<rect id="Icons" x="-1088" y="-64" width="1280" height="800" style="fill:none;"></rect>
-				<g id="Icons1" serif:id="Icons">
+				<g id="Icons1" serifid="Icons">
 					<g id="Strike"> </g> <g id="H1"> </g> <g id="H2"> </g> <g id="H3"> </g>
 					<g id="list-ul"> </g> <g id="hamburger-1"> </g> <g id="hamburger-2"> </g>
 					<g id="list-ol"> </g> <g id="list-task"> </g> <g id="trash"> </g>
 					<g id="vertical-menu"> </g> <g id="horizontal-menu"> </g> <g id="sidebar-2"> </g>
-					<g id="Pen"> </g> <g id="Pen1" serif:id="Pen"> </g> <g id="clock"> </g>
+					<g id="Pen"> </g> <g id="Pen1" serifid="Pen"> </g> <g id="clock"> </g>
 					<g id="external-link"> </g> <g id="hr"> </g> <g id="info"> </g> <g id="warning"> </g>
 					<g id="plus-circle"> </g> <g id="minus-circle"> </g> <g id="vue"> </g> <g id="cog"> </g>
 					<g id="logo"> </g> <g id="radio-check"> </g> <g id="eye-slash"> </g> <g id="eye"> </g>
 					<g id="toggle-off"> </g> <g id="shredder"> </g>
-					<g id="spinner--loading--dots-" serif:id="spinner [loading, dots]"> </g>
+					<g id="spinner--loading--dots-" serifid="spinner [loading, dots]"> </g>
 					<g id="react">
 						<circle cx="32.001" cy="31.955" r="4.478" style="fill:#ff3131;"></circle>
 						<path
@@ -64,9 +64,9 @@
 						></path>
 					</g> <g id="check-selected"> </g> <g id="turn-off"> </g> <g id="code-block"> </g>
 					<g id="user"> </g> <g id="coffee-bean"> </g>
-					<g id="coffee-beans"> <g id="coffee-bean1" serif:id="coffee-bean"> </g> </g>
+					<g id="coffee-beans"> <g id="coffee-bean1" serifid="coffee-bean"> </g> </g>
 					<g id="coffee-bean-filled"> </g>
-					<g id="coffee-beans-filled"> <g id="coffee-bean2" serif:id="coffee-bean"> </g> </g>
+					<g id="coffee-beans-filled"> <g id="coffee-bean2" serifid="coffee-bean"> </g> </g>
 					<g id="clipboard"> </g> <g id="clipboard-paste"> </g> <g id="clipboard-copy"> </g>
 					<g id="Layer1"> </g>
 				</g>
@@ -139,8 +139,8 @@
 			viewBox="0 0 30 30"
 			version="1.1"
 			id="svg822"
-			inkscape:version="0.92.4 (f8dce91, 2019-08-02)"
-			sodipodi:docname="developer-mode.svg"
+			inkscapeversion="0.92.4 (f8dce91, 2019-08-02)"
+			sodipodidocname="developer-mode.svg"
 			fill="#000000"
 			><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g
 				id="SVGRepo_tracerCarrier"
@@ -153,35 +153,35 @@
 					pagecolor="#ff3131fffff"
 					bordercolor="#666666"
 					borderopacity="1.0"
-					inkscape:pageopacity="0.0"
-					inkscape:pageshadow="2"
-					inkscape:zoom="17.833333"
-					inkscape:cx="7.4859812"
-					inkscape:cy="15"
-					inkscape:document-units="px"
-					inkscape:current-layer="layer1"
+					inkscapepageopacity="0.0"
+					inkscapepageshadow="2"
+					inkscapezoom="17.833333"
+					inkscapecx="7.4859812"
+					inkscapecy="15"
+					inkscapedocument-units="px"
+					inkscapecurrent-layer="layer1"
 					showgrid="true"
 					units="px"
-					inkscape:window-width="1366"
-					inkscape:window-height="713"
-					inkscape:window-x="0"
-					inkscape:window-y="0"
-					inkscape:window-maximized="1"
+					inkscapewindow-width="1366"
+					inkscapewindow-height="713"
+					inkscapewindow-x="0"
+					inkscapewindow-y="0"
+					inkscapewindow-maximized="1"
 				>
 					<inkscape:grid type="xygrid" id="grid816"></inkscape:grid>
 				</sodipodi:namedview>
 				<metadata id="metadata819">
 					<rdf:rdf>
-						<cc:work rdf:about="">
+						<cc:work rdfabout="">
 							<dc:format>image/svg+xml</dc:format>
-							<dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"></dc:type>
+							<dc:type rdfresource="http://purl.org/dc/dcmitype/StillImage"></dc:type>
 							<dc:title></dc:title>
 						</cc:work>
 					</rdf:rdf>
 				</metadata>
 				<g
-					inkscape:label="Layer 1"
-					inkscape:groupmode="layer"
+					inkscapelabel="Layer 1"
+					inkscapegroupmode="layer"
 					id="layer1"
 					transform="translate(0,-289.0625)"
 				>
@@ -190,7 +190,7 @@
 						d="M 15,3 A 12,12 0 0 0 3,15 12,12 0 0 0 15,27 12,12 0 0 0 27,15 12,12 0 0 0 15,3 Z m 1.800781,6 1.478516,0.6914062 -0.472656,0.9804688 6.048828,3.734375 v 1.380859 L 19.126953,18.720703 18.267578,17.412109 22.193359,15.097656 17.115234,12.126953 12.835938,21 11.345703,20.320312 11.830078,19.314453 6.1445312,15.787109 v -1.36914 l 4.7402348,-2.945313 0.847656,1.320313 -3.9394532,2.304687 4.7285152,2.775391 z"
 						transform="translate(0,289.0625)"
 						id="path1065"
-						inkscape:connector-curvature="0"
+						inkscapeconnector-curvature="0"
 					></path>
 					<g
 						aria-label="</>"

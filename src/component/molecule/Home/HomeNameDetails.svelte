@@ -19,7 +19,8 @@
 					<DownloadIcon />
 				</div>
 				<div class="me-details">
-					I'm a <span class="active">Developer</span>
+					I'm a&nbsp;
+					<span class="active">developer</span>
 				</div>
 			</div>
 		</div>
@@ -78,7 +79,7 @@
 					padding: 0.25rem;
 
 					h1 {
-						color: var(--color-red-neon); 
+						color: var(--color-red-neon);
 						font-size: 1rem;
 					}
 
@@ -221,69 +222,69 @@
 				}
 			}
 			@media (max-width: 1024px) {
-                .contact-now {
-                    margin: 0rem;
+				.contact-now {
+					margin: 0rem;
 					padding: 0;
-                    .link-button {
-                        height: 1.8rem;
-                    }
-                }
+					.link-button {
+						height: 1.8rem;
+					}
+				}
 			}
 
 			@media (max-width: 950px) {
-                .name-resume {
-                    margin: 0 0.5rem;
-                }
+				.name-resume {
+					margin: 0 0.5rem;
+				}
 				.about-me {
-                    margin: 0 0.5rem;
+					margin: 0 0.5rem;
 					.specific {
 						font-size: 0.75rem;
 					}
 				}
-                .contact-now {
-                    margin: 0rem;
-                    .link-button {
-                        height: 1.5rem;
-                        font-size: 0.75rem;
-                    }
-                }
+				.contact-now {
+					margin: 0rem;
+					.link-button {
+						height: 1.5rem;
+						font-size: 0.75rem;
+					}
+				}
 			}
 			@media (max-width: 850px) {
 				.name-resume {
-                    .name-details {
+					.name-details {
 						h1 {
 							margin: 0.25rem;
-							font-size: 0.875rem
+							font-size: 0.875rem;
 						}
 					}
-                }
-                .about-me {
-                    gap: 0.25rem;
+				}
+				.about-me {
+					gap: 0.25rem;
 					padding: 0;
 				}
 			}
-            @media (max-width: 750px) {
-                .name-resume {
-                    margin: 0.5rem;
-                }
+			@media (max-width: 750px) {
+				.name-resume {
+					margin: 0.5rem;
+				}
 				.about-me {
-                    margin: 0.5rem;
+					margin: 0.5rem;
 					padding: 0.25rem;
 					.specific {
 						font-size: 0.75rem;
 					}
 				}
-                .contact-now {
-                    margin: 0.5rem;
-                    .link-button {
-                        height: 1.5rem;
-                        font-size: 0.75rem;
-                    }
-                }
+				.contact-now {
+					margin: 0.5rem;
+					.link-button {
+						height: 1.5rem;
+						font-size: 0.75rem;
+					}
+				}
 			}
 		}
 		@media (max-width: 750px) {
-               width: calc(100% - var(--diff-factor));
-			}
+			width: calc(100% - var(--diff-factor));
+		}
 	}
 </style>

@@ -15,7 +15,7 @@
 		border: var(--box-border);
 		display: flex;
 		border-radius: var(--inner-box-border-radius);
-		height: calc(35% - var(--diff-factor));
+		height: 100%;
 		width: calc(100% - var(--diff-factor));
 		margin: var(--inner-box-margin);
 		padding: var(--inner-box-padding);
