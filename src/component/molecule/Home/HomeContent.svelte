@@ -17,7 +17,7 @@
 			<div class="group">
 				<a class="box12" href="/case-study">
 					<p class="case-title">Ecommerce - SSR, SSG, ISR, CSR</p>
-					<ArrowButton />
+					<ArrowButton navigateTo="/case-study"/>
 				</a>
 				<div class="box13"></div>
 			</div>
