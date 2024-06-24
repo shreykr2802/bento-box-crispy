@@ -14,10 +14,10 @@
 				</div>
 			</div>
 			<div class="resume">
-				<div class="resume-download">
+				<a class="resume-download" href="/Shrey-Kumar-Resume.pdf" download="Shrey-Kumar-Resume.pdf">
 					<span>Resume</span>
 					<DownloadIcon />
-				</div>
+				</a>
 				<div class="me-details">
 					I'm a&nbsp;
 					<span class="active">developer</span>
@@ -134,6 +134,8 @@
 						border-radius: 12px;
 						background-color: var(--color-box-background);
 						width: 50%;
+						cursor: pointer;
+						text-decoration: none;
 					}
 
 					.me-details {

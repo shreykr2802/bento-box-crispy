@@ -30,7 +30,11 @@
 				</div>
 				<HomeAbout />
 			</div>
-			<div class="box23"></div>
+			<a class="box23" href="/case-study/migrating-javascript-to-typescript">
+				<div class="case-study-1-img"></div>
+				<p class="case-title">Migrating a Legacy JavaScript Project to TypeScript</p>
+				<ArrowButton navigateTo="/case-study/migrating-javascript-to-typescript" />
+			</a>
 		</div>
 		<div class="row">
 			<HomeSomeWords />
@@ -168,8 +172,45 @@
 					flex-grow: 1;
 					width: calc(30% - var(--diff-factor));
 					margin: var(--inner-box-margin);
-					padding: var(--inner-box-padding);
+					margin: calc(var(--inner-box-margin) + var(--inner-box-padding));
+					transition: all 0.3s ease-in-out;
+					cursor: pointer;
+					position: relative;
+					text-decoration: none;
+					overflow: hidden;
 					background-color: var(--color-box-background);
+
+					.case-study-1-img {
+						height: 100%;
+						width: 100%;
+						background: url('$lib/images/casestudy2.png');
+						background-size: contain;
+						background-repeat: no-repeat;
+						background-position: center;
+					}
+
+					.case-title {
+						position: absolute;
+						bottom: 0;
+						left: 0;
+						font-size: 1.5rem;
+						font-weight: 700;
+						color: var(--color-red-neon);
+						display: block;
+						background-color: var(--color-box-background-hover);
+					}
+
+					&:hover {
+						.case-study-1-img {
+							opacity: 0.8;
+						}
+						.case-title {
+							display: block;
+						}
+						:global(.arrow-button) {
+							transform: scale(1.2);
+						}
+					}
 				}
 
 				.box32 {
@@ -254,7 +295,6 @@
 					flex-direction: row;
 					height: 100%;
 					order: 1;
-					.box42,
 					.box43,
 					.box44 {
 						height: calc(100% - var(--diff-factor));
@@ -274,13 +314,6 @@
 				.row {
 					flex-flow: column nowrap;
 					height: 100%;
-					.box11 {
-						width: calc(100% - var(--diff-factor));
-						section {
-							margin: 1rem;
-							padding: 0.5rem;
-						}
-					}
 					.group {
 						width: 100%;
 						min-height: 15rem;
@@ -301,8 +334,6 @@
 			.right {
 				.group-right {
 					flex-direction: column;
-
-					.box42,
 					.box44 {
 						min-height: 5rem;
 					}

@@ -126,6 +126,10 @@ pre[class*="language-"] {
 	}
 }
 
+a {
+	text-decoration: none;
+}
+
 @media (max-width: 1024px) {
 	.carousel-description {
 		font-size: 0.875rem;

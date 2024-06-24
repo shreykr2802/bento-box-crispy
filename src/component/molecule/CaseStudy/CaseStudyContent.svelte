@@ -1,5 +1,12 @@
 <script>
 	export let caseStudy;
+	import Prism from 'prismjs';
+	import 'prismjs/themes/prism.css';
+	import { onMount } from 'svelte';
+
+	onMount(() => {
+		Prism.highlightAll();
+	});
 </script>
 
 <div class="about-content">
@@ -34,25 +41,39 @@
 				<p class="box-description-small">{caseStudyContent.title}</p>
 				<h5 class="box-sub-title">{caseStudyContent.useCase}</h5>
 			</div>
-			<div class="section-image">
-				<img src="/casestudyImages/{caseStudy.slug}/{caseStudyContent.image}" alt="Products Page" />
-			</div>
+			{#if caseStudyContent.image}
+				<div class="section-image">
+					<img
+						src="/casestudyImages/{caseStudy.slug}/{caseStudyContent.image}"
+						alt={caseStudyContent.useCase}
+					/>
+				</div>
+			{/if}
 			<div>
 				<h4 class="box-title">{caseStudyContent.title1}</h4>
 				{@html caseStudyContent.html1}
 				<h4 class="box-title">{caseStudyContent.title2}</h4>
 				{@html caseStudyContent.html2}
 			</div>
+			{#if caseStudyContent.codeSnippets}
+				<p class="box-description-small">{caseStudyContent.codeTitle}</p>
+				{#each caseStudyContent.codeSnippets as codeSnippet}
+					<div>
+						<h4 class="box-title">{codeSnippet.title}</h4>
+						<pre><code class={`language-${codeSnippet.codeType}`}>{codeSnippet.code}</code></pre>
+					</div>
+				{/each}
+			{/if}
 		{/each}
 		<div class="benefits-outcomes">
 			<h2 class="box-title">Benefits and Outcomes</h2>
 			<div>{@html caseStudy.benefitsAndOutcomes}</div>
 		</div>
 		<div class="conclusion">
-				<h5 class="box-sub-title">Conclusion</h5>
-				<p class="box-description-small">
-					{caseStudy.conclusion}
-				</p>
+			<h5 class="box-sub-title">Conclusion</h5>
+			<p class="box-description-small">
+				{caseStudy.conclusion}
+			</p>
 		</div>
 	</div>
 </div>
@@ -104,7 +125,7 @@
 					flex-direction: column;
 					.basic-details,
 					.basic-description {
-						width: 100%;
+						width: calc(100% - var(--diff-factor));
 					}
 				}
 			}
@@ -138,6 +159,9 @@
 				padding: var(--inner-box-margin);
 				background-color: var(--color-box-background);
 				color: var(--color-text-dark);
+			}
+			@media (max-width: 800px) {
+				margin: 4rem 5%;
 			}
 		}
 	}

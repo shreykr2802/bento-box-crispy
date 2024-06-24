@@ -2,7 +2,6 @@
 	import Background from '../../atoms/Background.svelte';
 	import CaseStudyContent from './CaseStudyContent.svelte';
 	export let data;
-	console.log("data", data);
 </script>
 
 <div class="main-container">

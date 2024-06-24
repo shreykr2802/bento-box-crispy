@@ -242,9 +242,6 @@
 						}
 					}
 				}
-				.column:first-child.col-group:nth-child(2) {
-					width: 35%;
-				}
 			}
 		}
 
