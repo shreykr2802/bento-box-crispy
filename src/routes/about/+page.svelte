@@ -4,8 +4,8 @@
 </script>
 
 <svelte:head>
-	<title>Bento Box</title>
-	<meta name="description" content="Svelte demo app" />
+	<title>Shrey Kumar | About</title>
+	<meta name="description" content="Lets find out some details about me - Shrey Kumar" />
 </svelte:head>
 
 <AboutMain />

@@ -4,7 +4,7 @@
 </script>
 
 <svelte:head>
-	<title>Shrey Kumar | Ecommerce Case Study</title>
+	<title>Shrey Kumar | Case Study</title>
 	<meta name="description" content={data.caseStudy.title} />
 </svelte:head>
 
