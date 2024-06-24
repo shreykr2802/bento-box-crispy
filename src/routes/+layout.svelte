@@ -5,7 +5,7 @@
 </script>
 
 {#if $page.route.id !== '/'}
-	<Header goBackTo={$page.route.id === '/blog' || $page.route.id === '/about' || $page.route.id === '/case-study' ? '/' : '/blog'} />
+	<Header goBackTo={$page.route.id === '/blog' || $page.route.id === '/about' || $page.route.id.includes('/case-study') ? '/' : '/blog'} />
 {/if}
 <main>
 	<slot />

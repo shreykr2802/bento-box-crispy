@@ -16,8 +16,9 @@
 			<HomeNameDetails />
 			<div class="group">
 				<a class="box12" href="/case-study/ssr-ssg-isr-csr-ecommerce">
+					<div class="case-study-1-img"></div>
 					<p class="case-title">Ecommerce - SSR, SSG, ISR, CSR</p>
-					<ArrowButton navigateTo="/case-study/ssr-ssg-isr-csr-ecommerce"/>
+					<ArrowButton navigateTo="/case-study/ssr-ssg-isr-csr-ecommerce" />
 				</a>
 				<div class="box13"></div>
 			</div>
@@ -84,18 +85,22 @@
 						border: var(--box-border);
 						display: flex;
 						border-radius: var(--inner-box-border-radius);
-						height: calc(100% - var(--diff-factor));
 						width: calc(50% - var(--diff-factor));
 						margin: var(--inner-box-margin);
-						padding: var(--inner-box-padding);
-						background: url('$lib/images/casestudy1.png');
-						background-size: cover;
-						background-repeat: no-repeat;
-						background-position: center;
-						transition: all 1s;
+						transition: all 0.3s ease-in-out;
 						cursor: pointer;
 						position: relative;
 						text-decoration: none;
+						overflow: hidden;
+
+						.case-study-1-img {
+							height: 100%;
+							width: 100%;
+							background: url('$lib/images/casestudy1.png');
+							background-size: cover;
+							background-repeat: no-repeat;
+							background-position: center;
+						}
 
 						.case-title {
 							position: absolute;
@@ -104,12 +109,15 @@
 							font-size: 1.5rem;
 							font-weight: 700;
 							color: var(--color-red-neon);
-							display: none;
-							background-color: var(--color-box-background);
+							display: block;
+							background-color: var(--color-box-background-hover);
 						}
 
 						&:hover {
-							opacity: 0.9;
+							.case-study-1-img {
+								opacity: 0.8;
+								scale: 1.2;
+							}
 							.case-title {
 								display: block;
 							}
