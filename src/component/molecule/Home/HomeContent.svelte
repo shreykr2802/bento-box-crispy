@@ -15,9 +15,9 @@
 		<div class="row">
 			<HomeNameDetails />
 			<div class="group">
-				<a class="box12" href="/case-study">
+				<a class="box12" href="/case-study/ssr-ssg-isr-csr-ecommerce">
 					<p class="case-title">Ecommerce - SSR, SSG, ISR, CSR</p>
-					<ArrowButton navigateTo="/case-study"/>
+					<ArrowButton navigateTo="/case-study/ssr-ssg-isr-csr-ecommerce"/>
 				</a>
 				<div class="box13"></div>
 			</div>
