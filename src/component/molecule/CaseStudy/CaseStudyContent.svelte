@@ -89,11 +89,6 @@
 					min-height: 12rem;
 					padding: 0.75rem;
 					width: 30%;
-
-					ul {
-						list-style: none;
-						padding: 0;
-					}
 				}
 
 				.basic-description {

@@ -86,7 +86,8 @@
 						display: flex;
 						border-radius: var(--inner-box-border-radius);
 						width: calc(50% - var(--diff-factor));
-						margin: var(--inner-box-margin);
+						height: calc(100% - var(--diff-factor));
+						margin: calc(var(--inner-box-margin) + var(--inner-box-padding));
 						transition: all 0.3s ease-in-out;
 						cursor: pointer;
 						position: relative;
@@ -116,7 +117,6 @@
 						&:hover {
 							.case-study-1-img {
 								opacity: 0.8;
-								scale: 1.2;
 							}
 							.case-title {
 								display: block;
