@@ -198,7 +198,7 @@
 							height: 100%;
 
 							.box-sub-title {
-								margin: 0.5rem 0 2rem 0.5rem;
+								margin: 0.5rem 0 0.5rem 0.5rem;
 							}
 						}
 					}

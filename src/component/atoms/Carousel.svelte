@@ -158,6 +158,11 @@
 <style lang="scss">
 	.carousel {
 		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+		height: calc(90% - var(--diff-factor));
 
 		.carousel-inner {
 			height: 100%;
@@ -202,11 +207,8 @@
 			}
 		}
 		.carousel-indicators {
-			position: absolute;
-			bottom: -10px;
-			left: 50%;
 			width: max-content;
-			transform: translateX(-50%);
+
 			display: flex;
 			list-style: none;
 			padding: 4px;
@@ -216,6 +218,9 @@
 
 			&.onTop {
 				bottom: 10px;
+				position: absolute;
+				left: 50%;
+				transform: translateX(-50%);
 			}
 		}
 

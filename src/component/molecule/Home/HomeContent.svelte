@@ -92,7 +92,6 @@
 						width: calc(50% - var(--diff-factor));
 						height: calc(100% - var(--diff-factor));
 						margin: calc(var(--inner-box-margin) + var(--inner-box-padding));
-						transition: all 0.3s ease-in-out;
 						cursor: pointer;
 						position: relative;
 						text-decoration: none;
@@ -105,6 +104,8 @@
 							background-size: cover;
 							background-repeat: no-repeat;
 							background-position: center;
+							transition: all 0.3s ease-in-out;
+							opacity: 0.4;
 						}
 
 						.case-title {
@@ -114,16 +115,18 @@
 							font-size: 1.5rem;
 							font-weight: 700;
 							color: var(--color-red-neon);
-							display: block;
+							transform: translateY(200px);
 							background-color: var(--color-box-background-hover);
+							transition: all 0.3s ease-in-out;
 						}
 
 						&:hover {
 							.case-study-1-img {
-								opacity: 0.8;
+								scale: 1.2;
+								opacity: 0.2;
 							}
 							.case-title {
-								display: block;
+								transform: translateY(0px);
 							}
 							:global(.arrow-button) {
 								transform: scale(1.2);
@@ -173,7 +176,6 @@
 					width: calc(30% - var(--diff-factor));
 					margin: var(--inner-box-margin);
 					margin: calc(var(--inner-box-margin) + var(--inner-box-padding));
-					transition: all 0.3s ease-in-out;
 					cursor: pointer;
 					position: relative;
 					text-decoration: none;
@@ -187,6 +189,8 @@
 						background-size: contain;
 						background-repeat: no-repeat;
 						background-position: center;
+						transition: all 0.3s ease-in-out;
+						opacity: 0.4;
 					}
 
 					.case-title {
@@ -196,16 +200,18 @@
 						font-size: 1.5rem;
 						font-weight: 700;
 						color: var(--color-red-neon);
-						display: block;
+						transform: translateY(200px);
 						background-color: var(--color-box-background-hover);
+						transition: all 0.3s ease-in-out;
 					}
 
 					&:hover {
 						.case-study-1-img {
-							opacity: 0.8;
+							scale: 1.2;
+							opacity: 0.2;
 						}
 						.case-title {
-							display: block;
+							transform: translateY(0px);
 						}
 						:global(.arrow-button) {
 							transform: scale(1.2);

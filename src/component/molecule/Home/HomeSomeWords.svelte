@@ -67,11 +67,6 @@
 			overflow: hidden;
 		}
 	}
-	@media (max-width: 1024px) {
-		.box31 {
-			margin: 0;
-		}
-	}
 	@media (max-width: 750px) {
 		.box31 {
 			width: calc(100% - var(--diff-factor));
