@@ -5,6 +5,7 @@
 	import Outside1 from '../../../lib/images/Outside1.webp';
 	import Outside2 from '../../../lib/images/Outside2.webp';
 	import Outside3 from '../../../lib/images/Outside3.webp';
+	import DarkLightMode from '../../atoms/DarkLightMode.svelte';
 
 	const slidesToDisplay = [
 		{
@@ -92,7 +93,7 @@
 				<div class="box3">
 					<section>
 						<h5 class="box-sub-title">WHAT I DO BEST</h5>
-						<Carousel {slidesToDisplay} showButtons={false} indicatorPosition="bottom"/>
+						<Carousel {slidesToDisplay} showButtons={false} indicatorPosition="bottom" />
 					</section>
 				</div>
 				<div class="box4">
@@ -105,7 +106,13 @@
 						<Carousel slidesToDisplay={imagesToDisplay} showButtons={false} />
 					</section>
 				</div>
-				<div class="box6"></div>
+				<div class="box6">
+					<DarkLightMode />
+					<div class="made-text">
+						<span>made with ♥️ in&nbsp;</span> <span class="svelte">svelte</span>
+					</div>
+					<div class="made-text">created with the idea of <span class="svelte">bento-box</span></div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -215,7 +222,22 @@
 					}
 
 					.box6 {
-						flex-grow: 0.8;
+						flex-grow: 1;
+						width: 100%;
+						display: flex;
+						flex-direction: column;
+						align-items: center;
+						justify-content: center;
+						.made-text {
+							width: 100% !important;
+							min-height: auto;
+							border: 0;
+							text-align: center;
+							color: var(--color-text-darker);
+						}
+						.svelte {
+							color: var(--color-red-neon);
+						}
 					}
 				}
 			}
@@ -298,13 +320,16 @@
 			}
 		}
 
-		@media(max-width: 780px) {
+		@media (max-width: 780px) {
 			.container {
 				margin: 4rem 1% 1% 1%;
 				.column:nth-child(2) {
 					.col-group:nth-child(2) {
+						flex-direction: column;
+						width: 100%;
 						div {
 							min-height: auto;
+							width: calc(100% - var(--diff-factor));
 						}
 					}
 				}

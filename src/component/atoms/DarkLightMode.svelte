@@ -43,10 +43,9 @@
 
 <style lang="scss">
 	.darkligtmode {
-		height: 100%;
-		width: 100%;
 		display: grid;
 		place-items: center;
+		width: 100%;
 
 		#checkbox {
 			display: none;

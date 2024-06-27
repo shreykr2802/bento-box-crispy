@@ -3,7 +3,7 @@
 </script>
 
 <svelte:head>
-	<title>Shrey Kumar | shreykr2802</title>
+	<title>Shrey Kumar | FullStackDev | shreykr2802</title>
 	<meta name="description" content="MERN Stack | Javascript | ReactJs" />
 </svelte:head>
 

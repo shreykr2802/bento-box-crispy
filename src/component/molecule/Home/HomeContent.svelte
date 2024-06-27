@@ -118,6 +118,7 @@
 							transform: translateY(200px);
 							background-color: var(--color-box-background-hover);
 							transition: all 0.3s ease-in-out;
+							margin: 0.25rem;
 						}
 
 						&:hover {
@@ -130,6 +131,12 @@
 							}
 							:global(.arrow-button) {
 								transform: scale(1.2);
+							}
+						}
+						@media (max-width: 768px) {
+							.case-title {
+								transform: translateY(0px);
+								font-size: 0.875rem;
 							}
 						}
 					}
@@ -203,6 +210,7 @@
 						transform: translateY(200px);
 						background-color: var(--color-box-background-hover);
 						transition: all 0.3s ease-in-out;
+						margin: 0.25rem;
 					}
 
 					&:hover {
@@ -215,6 +223,12 @@
 						}
 						:global(.arrow-button) {
 							transform: scale(1.2);
+						}
+					}
+					@media (max-width: 768px) {
+						.case-title {
+							transform: translateY(0px);
+							font-size: 0.875rem;
 						}
 					}
 				}
@@ -342,6 +356,7 @@
 					flex-direction: column;
 					.box44 {
 						min-height: 5rem;
+						flex-flow: row wrap;
 					}
 				}
 			}
