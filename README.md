@@ -1,38 +1,53 @@
-# create-svelte
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+# bento-box-crispy
 
-## Creating a project
+So I have gone through many iterations of my website and I wanted to settle on something finally. I had an idea, how about Bento-Box, apparantly it makes everything apealling and how a little crispy look to it?? Hence the name `bento-box-crispy`.
 
-If you're seeing this, you've probably already done this step. Congrats!
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+## Features
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+- Created this to learn Svelte.
+- Not the world class code (obviously 🤷🏻).
+- Written in Javascript like a 12 year old's code. Who cares about typescript (😰).
+- Many issues and not even utlized svelte to its full extent.
 
-## Developing
+## Installation
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+Install bento-box-crispy with bun (yeah I wanted to be cool)
 
 ```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+  bun install bento-box-crispy
+  cd bento-box-crispy
 ```
+    
+## Run Locally
 
-## Building
-
-To create a production version of your app:
+Clone the project
 
 ```bash
-npm run build
+  git clone https://github.com/shreykr2802/bento-box-crispy.git
 ```
 
-You can preview the production build with `npm run preview`.
+Go to the project directory
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+```bash
+  cd bento-box-crispy
+```
+
+Install dependencies
+
+```bash
+  bun install
+```
+
+Start the server
+
+```bash
+  bun run dev
+```
+
+
+## Running Tests
+
+Tested in Production (😎).
+

@@ -1,6 +1,9 @@
 <script>
 	import DownloadIcon from '../../Icons/DownloadIcon.svelte';
 	import HomeDetailsIcon from '../../Icons/HomeDetailsIcon.svelte';
+	import {
+		PUBLIC_ASSETS_ENDPOINT_URL,
+	} from '$env/static/public';
 </script>
 
 <div class="box11">
@@ -14,7 +17,7 @@
 				</div>
 			</div>
 			<div class="resume">
-				<a class="resume-download" href="/Shrey-Kumar-Resume.pdf" download="Shrey-Kumar-Resume.pdf">
+				<a class="resume-download" href="{PUBLIC_ASSETS_ENDPOINT_URL}/Shrey-Kumar-Resume.pdf" download="Shrey-Kumar-Resume.pdf">
 					<span>Resume</span>
 					<DownloadIcon />
 				</a>
