@@ -2,6 +2,9 @@
 	import { onMount } from 'svelte';
 	import Divider from '../../atoms/Divider.svelte';
 	import NotificationBubble from '../../atoms/NotificationBubble.svelte';
+	import {
+		PUBLIC_ASSETS_ENDPOINT_URL,
+	} from '$env/static/public';
 	export let data;
 
 	import Prism from 'prismjs';
@@ -23,7 +26,7 @@
 						<div>
 							<h5 class="box-sub-title">Date</h5>
 							<p class="box-description-small">
-								{Date(data.post.date).substring(0, 15)}
+								{data.post.date}
 							</p>
 							<p class="box-description-small">
 								{data.post.readTime}
@@ -49,7 +52,7 @@
 		</div>
 		<div class="main-image">
 			<img
-				src="/blogImages/{data.post.slug}/main-image.png"
+				src="{PUBLIC_ASSETS_ENDPOINT_URL}/blogImages/{data.post.slug}/main-image.png"
 				alt="hoisting and closure javascript"
 			/>
 		</div>
@@ -67,7 +70,7 @@
 						<div class="box-description-small">{@html content.html}</div>
 					{/if}
 					{#if content.code}
-						<pre><code class={`language-${content.codeType}`}>{content.code}</code></pre>
+						<pre><code class={`language-${content.codeType ?? 'javascript'}`}>{content.code}</code></pre>
 					{/if}
 				</div>
 			{/each}

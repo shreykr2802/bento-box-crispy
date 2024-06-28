@@ -1,13 +1,16 @@
 <script>
 	import ArrowButton from './ArrowButton.svelte';
 	export let post;
+	import {
+		PUBLIC_ASSETS_ENDPOINT_URL,
+	} from '$env/static/public';
 </script>
 
 <a class="blog-post-info-box" href={`/blog/${post.slug}`}>
 	<h2 class="blog-title">{post.title}</h2>
 	<p class="blog-description">{post.description}</p>
 	<div class="main-image">
-		<img src="/blogImages/{post.slug}/main-image.png" alt={post.slug} />
+		<img src="{PUBLIC_ASSETS_ENDPOINT_URL}/blogImages/{post.slug}/main-image.png" alt={post.slug} />
 	</div>
 	<div class="small-info">
 			{post.readTime}

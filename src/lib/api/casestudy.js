@@ -1,5 +1,9 @@
+import {
+    PUBLIC_ASSETS_ENDPOINT_URL,
+} from '$env/static/public';
+
 async function getCaseStudies(fetch) {
-    const res = await fetch('/casestudy.json');
+    const res = await fetch(`${PUBLIC_ASSETS_ENDPOINT_URL}/casestudy.json`);
     const casestudies = await res.json();
     return casestudies;
 }
