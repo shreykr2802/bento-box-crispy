@@ -26,6 +26,7 @@
   },
   "type": "module",
   "dependencies": {
+    "@sveltejs/enhanced-img": "^0.3.0",
     "@vercel/analytics": "^1.3.1",
     "@vercel/speed-insights": "^1.0.12",
     "prismjs": "^1.29.0"

@@ -3,9 +3,7 @@
 	import Prism from 'prismjs';
 	import 'prismjs/themes/prism.css';
 	import { onMount } from 'svelte';
-	import {
-		PUBLIC_ASSETS_ENDPOINT_URL,
-	} from '$env/static/public';
+	import { PUBLIC_ASSETS_ENDPOINT_URL } from '$env/static/public';
 
 	onMount(() => {
 		Prism.highlightAll();

@@ -8,6 +8,9 @@
 	import HomeSocials from './HomeSocials.svelte';
 	import HomeSomeWords from './HomeSomeWords.svelte';
 	import HomeStackUse from './HomeStackUse.svelte';
+	import Shrey from '$lib/images/shrey.png?enhanced';
+	import CaseStudy1 from '$lib/images/casestudy1.png?enhanced';
+	import CaseStudy2 from '$lib/images/casestudy2.png?enhanced';
 </script>
 
 <div class="home-content">
@@ -16,7 +19,7 @@
 			<HomeNameDetails />
 			<div class="group">
 				<a class="box12" href="/case-study/ssr-ssg-isr-csr-ecommerce">
-					<div class="case-study-1-img"></div>
+					<enhanced:img class="case-study-1-img" src={CaseStudy1} />
 					<p class="case-title">Ecommerce - SSR, SSG, ISR, CSR</p>
 					<ArrowButton navigateTo="/case-study/ssr-ssg-isr-csr-ecommerce" />
 				</a>
@@ -26,12 +29,12 @@
 		<div class="row">
 			<div class="group">
 				<div class="box21">
-					<div class="img-wrapper" />
+					<enhanced:img src={Shrey} alt="Shrey" class="img-wrapper" />
 				</div>
 				<HomeAbout />
 			</div>
 			<a class="box23" href="/case-study/migrating-javascript-to-typescript">
-				<div class="case-study-1-img"></div>
+				<enhanced:img class="case-study-1-img" src={CaseStudy2} />
 				<p class="case-title">Migrating a Legacy JavaScript Project to TypeScript</p>
 				<ArrowButton navigateTo="/case-study/migrating-javascript-to-typescript" />
 			</a>
@@ -90,8 +93,8 @@
 						display: flex;
 						border-radius: var(--inner-box-border-radius);
 						width: calc(50% - var(--diff-factor));
-						height: calc(100% - var(--diff-factor));
-						margin: calc(var(--inner-box-margin) + var(--inner-box-padding));
+						height: calc(100% - 1rem);
+						margin: calc(var(--inner-box-margin));
 						cursor: pointer;
 						position: relative;
 						text-decoration: none;
@@ -100,10 +103,8 @@
 						.case-study-1-img {
 							height: 100%;
 							width: 100%;
-							background: url('$lib/images/casestudy1.png');
-							background-size: cover;
-							background-repeat: no-repeat;
-							background-position: center;
+							object-fit: cover;
+							object-position: center;
 							transition: all 0.3s ease-in-out;
 							opacity: 0.4;
 						}
@@ -167,21 +168,20 @@
 					.img-wrapper {
 						height: 100%;
 						width: 100%;
-						background-image: url('$lib/images/shrey.png');
-						background-position: top;
-						background-repeat: no-repeat;
-						background-size: cover;
+						object-fit: cover;
+						object-position: top;
 					}
 				}
 
 				.box23 {
 					border: var(--box-border);
 					display: flex;
+					align-items: center;
+					justify-content: center;
 					border-radius: var(--inner-box-border-radius);
 					height: calc(100% - var(--diff-factor));
 					flex-grow: 1;
 					width: calc(30% - var(--diff-factor));
-					margin: var(--inner-box-margin);
 					margin: calc(var(--inner-box-margin) + var(--inner-box-padding));
 					cursor: pointer;
 					position: relative;
@@ -190,12 +190,8 @@
 					background-color: var(--color-box-background);
 
 					.case-study-1-img {
-						height: 100%;
-						width: 100%;
-						background: url('$lib/images/casestudy2.png');
-						background-size: contain;
-						background-repeat: no-repeat;
-						background-position: center;
+						object-fit: cover;
+						object-position: center;
 						transition: all 0.3s ease-in-out;
 						opacity: 0.4;
 					}
@@ -342,7 +338,7 @@
 					.box23,
 					.box32 {
 						width: calc(100% - var(--diff-factor));
-						min-height: 12rem;
+						min-height: 15rem;
 					}
 				}
 			}

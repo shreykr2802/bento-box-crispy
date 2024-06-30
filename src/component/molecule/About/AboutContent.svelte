@@ -2,9 +2,9 @@
 	import Carousel from '../../atoms/Carousel.svelte';
 	import Divider from '../../atoms/Divider.svelte';
 	import HomeStackUse from '../Home/HomeStackUse.svelte';
-	import Outside1 from '../../../lib/images/Outside1.webp';
-	import Outside2 from '../../../lib/images/Outside2.webp';
-	import Outside3 from '../../../lib/images/Outside3.webp';
+	import Outside1 from '$lib/images/Outside1.webp';
+	import Outside2 from '$lib/images/Outside2.webp';
+	import Outside3 from '$lib/images/Outside3.webp';
 	import DarkLightMode from '../../atoms/DarkLightMode.svelte';
 
 	const slidesToDisplay = [
