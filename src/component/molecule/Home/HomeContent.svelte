@@ -19,7 +19,7 @@
 			<HomeNameDetails />
 			<div class="group">
 				<a class="box12" href="/case-study/ssr-ssg-isr-csr-ecommerce">
-					<enhanced:img class="case-study-1-img" src={CaseStudy1} />
+					<enhanced:img class="case-study-1-img" src={CaseStudy1} alt="Ecommerce - SSR, SSG, ISR, CSR" />
 					<p class="case-title">Ecommerce - SSR, SSG, ISR, CSR</p>
 					<ArrowButton navigateTo="/case-study/ssr-ssg-isr-csr-ecommerce" />
 				</a>
@@ -34,7 +34,7 @@
 				<HomeAbout />
 			</div>
 			<a class="box23" href="/case-study/migrating-javascript-to-typescript">
-				<enhanced:img class="case-study-1-img" src={CaseStudy2} />
+				<enhanced:img class="case-study-1-img" src={CaseStudy2} alt="Migrating a Legacy JavaScript Project to TypeScript" />
 				<p class="case-title">Migrating a Legacy JavaScript Project to TypeScript</p>
 				<ArrowButton navigateTo="/case-study/migrating-javascript-to-typescript" />
 			</a>
