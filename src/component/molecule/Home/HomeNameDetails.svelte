@@ -1,9 +1,43 @@
 <script>
 	import DownloadIcon from '../../Icons/DownloadIcon.svelte';
 	import HomeDetailsIcon from '../../Icons/HomeDetailsIcon.svelte';
-	import {
-		PUBLIC_ASSETS_ENDPOINT_URL,
-	} from '$env/static/public';
+	import { PUBLIC_ASSETS_ENDPOINT_URL } from '$env/static/public';
+	import { onMount } from 'svelte';
+	let typedTextSpan;
+	let cursorSpan;
+	const textArray = ['JS Developer', 'Web Enthusiast', 'UI Dev', 'FullStack Dev'];
+	const typingDelay = 200;
+	const erasingDelay = 100;
+	const newTextDelay = 2000;
+	let textArrayIndex = 0;
+	let charIndex = 0;
+	onMount(() => {
+		if (textArray.length) setTimeout(type, newTextDelay + 250);
+	});
+	function type() {
+		if (charIndex < textArray[textArrayIndex].length) {
+			if (!cursorSpan.classList.contains('typing')) cursorSpan.classList.add('typing');
+			typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
+			charIndex++;
+			setTimeout(type, typingDelay);
+		} else {
+			cursorSpan.classList.remove('typing');
+			setTimeout(erase, newTextDelay);
+		}
+	}
+	function erase() {
+		if (charIndex > 0) {
+			if (!cursorSpan.classList.contains('typing')) cursorSpan.classList.add('typing');
+			typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex - 1);
+			charIndex--;
+			setTimeout(erase, erasingDelay);
+		} else {
+			cursorSpan.classList.remove('typing');
+			textArrayIndex++;
+			if (textArrayIndex >= textArray.length) textArrayIndex = 0;
+			setTimeout(type, typingDelay + 1100);
+		}
+	}
 </script>
 
 <div class="box11">
@@ -12,18 +46,26 @@
 			<div class="name-details">
 				<h1>Hi, there I am Shrey</h1>
 				<div class="available-to-work">
-					<span class="green-dot" />
+					<span class="outer-green-dot"><span class="green-dot" /></span>
 					<p>Available to Work</p>
 				</div>
 			</div>
 			<div class="resume">
-				<a class="resume-download" href="{PUBLIC_ASSETS_ENDPOINT_URL}/Shrey-Kumar-Resume.pdf" download="Shrey-Kumar-Resume.pdf">
+				<a
+					class="resume-download"
+					href="{PUBLIC_ASSETS_ENDPOINT_URL}/Shrey-Kumar-Resume.pdf"
+					download="Shrey-Kumar-Resume.pdf"
+				>
 					<span>Resume</span>
 					<DownloadIcon />
 				</a>
 				<div class="me-details">
-					I'm a&nbsp;
-					<span class="active">developer</span>
+					<p>
+						I'm a<span class="typed-text" bind:this={typedTextSpan}></span><span
+							class="cursor"
+							bind:this={cursorSpan}>&nbsp;</span
+						>
+					</p>
 				</div>
 			</div>
 		</div>
@@ -80,6 +122,7 @@
 					border-radius: 12px;
 					background-color: var(--color-box-background-hover);
 					padding: 0.25rem;
+					justify-content: space-between;
 
 					h1 {
 						color: var(--color-red-neon);
@@ -99,12 +142,36 @@
 						background-color: var(--color-box-background);
 						width: max-content;
 
-						.green-dot {
+						.outer-green-dot {
+							display: block;
+							position: relative;
 							height: 8px;
 							width: 8px;
-							background-color: var(--color-green-neon);
 							border-radius: 50%;
-							margin: 0 0.5rem;
+							background-color: var(--color-green-neon);
+							z-index: 10;
+
+							.green-dot {
+								display: block;
+								position: absolute;
+								height: 8px;
+								width: 8px;
+								background-color: rgba(109, 211, 61, 0.4);
+								border-radius: 50%;
+								animation: pulse 1s ease-in-out infinite;
+
+								@keyframes pulse {
+									0% {
+										transform: scale(0);
+									}
+									50% {
+										transform: scale(1.4);
+									}
+									100% {
+										transform: scale(0);
+									}
+								}
+							}
 						}
 
 						p {
@@ -146,30 +213,43 @@
 						color: var(--color-text-dark);
 						display: flex;
 
-						span {
-							color: var(--color-red-neon);
-							position: relative;
-							display: none;
-							margin-left: 0.25rem;
+						p {
+							font-size: 0.875rem;
+							text-align: center;
+							overflow: hidden;
+							margin: 0;
+							padding: 0;
 
-							&::after {
-								content: '|';
-								position: absolute;
-								right: 0;
-								width: 100%;
-								color: white;
-								background: var(--color-box-background);
-								animation: typing 4s steps(16) infinite;
+							span.typed-text {
+								color: var(--color-red-neon);
+								font-weight: normal;
+								margin-left: 0.25rem;
 							}
+							span.cursor {
+								display: inline-block;
+								background-color: #ccc;
+								margin-left: 0.1rem;
+								width: 3px;
+								animation: blink 1s infinite;
 
-							@keyframes typing {
-								to {
-									width: 0;
+								@keyframes blink {
+									0% {
+										background-color: #ccc;
+									}
+									49% {
+										background-color: #ccc;
+									}
+									50% {
+										background-color: transparent;
+									}
+									99% {
+										background-color: transparent;
+									}
+									100% {
+										background-color: #ccc;
+									}
 								}
 							}
-						}
-						.active {
-							display: block;
 						}
 					}
 				}
@@ -241,7 +321,6 @@
 					margin: 0 0.5rem;
 				}
 				.about-me {
-					margin: 0 0.5rem;
 					.specific {
 						font-size: 0.75rem;
 					}

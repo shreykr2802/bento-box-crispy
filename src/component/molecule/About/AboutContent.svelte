@@ -6,6 +6,7 @@
 	import Outside2 from '$lib/images/Outside2.webp';
 	import Outside3 from '$lib/images/Outside3.webp';
 	import DarkLightMode from '../../atoms/DarkLightMode.svelte';
+	import CircleProgress from '../../atoms/CircleProgress.svelte';
 
 	const slidesToDisplay = [
 		{
@@ -106,12 +107,40 @@
 						<Carousel slidesToDisplay={imagesToDisplay} showButtons={false} />
 					</section>
 				</div>
+				<div class="box7">
+					<section>
+						<h5 class="box-sub-title">SKILLS</h5>
+						<div class="skills">
+							<CircleProgress skillPercentage={90} skillName="Javascript" />
+							<CircleProgress skillPercentage={85} skillName="React" />
+							<CircleProgress skillPercentage={85} skillName="Redux" />
+							<CircleProgress skillPercentage={80} skillName="CSS/SCSS" />
+							<CircleProgress skillPercentage={85} skillName="Typescript" />
+							<CircleProgress skillPercentage={80} skillName="HTML" />
+							<CircleProgress skillPercentage={87} skillName="NodeJS" />
+							<CircleProgress skillPercentage={80} skillName="Express" />
+							<CircleProgress skillPercentage={78} skillName="Jest" />
+							<CircleProgress skillPercentage={75} skillName="NextJS" />
+							<CircleProgress skillPercentage={89} skillName="SQL" />
+							<CircleProgress skillPercentage={70} skillName="MongoDB" />
+							<CircleProgress skillPercentage={70} skillName="AWS/Cloud" />
+							<CircleProgress skillPercentage={60} skillName="K8S" />
+							<CircleProgress skillPercentage={50} skillName="Svelte" />
+						</div>
+					</section>
+				</div>
+			</div>
+		</div>
+		<div class="column">
+			<div class="col-group">
 				<div class="box6">
 					<DarkLightMode />
 					<div class="made-text">
 						<span>made with ♥️ in&nbsp;</span> <span class="svelte">svelte</span>
 					</div>
-					<div class="made-text">created with the idea of <span class="svelte">bento-box</span></div>
+					<div class="made-text">
+						created with the idea of <span class="svelte">bento-box</span>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -129,7 +158,7 @@
 		.container {
 			margin: 4rem 10%;
 			display: flex;
-			flex-direction: row;
+			flex-flow: row wrap;
 			gap: 1rem;
 			justify-content: center;
 
@@ -211,7 +240,26 @@
 					}
 
 					.box4 {
-						flex-grow: 0.7;
+						flex-grow: 1;
+					}
+
+					.box7 {
+						section {
+							overflow: hidden;
+							margin: 0.5rem;
+							height: 100%;
+							.box-sub-title {
+								margin: 0.5rem 0 0.5rem 0.5rem;
+							}
+							.skills {
+								display: flex;
+								flex-flow: row wrap;
+								align-items: center;
+								justify-content: space-between;
+								gap: 0.25rem;
+								border: 0;
+							}
+						}
 					}
 
 					.box5 {
@@ -223,7 +271,6 @@
 
 					.box6 {
 						flex-grow: 1;
-						width: 100%;
 						display: flex;
 						flex-direction: column;
 						align-items: center;
@@ -239,6 +286,9 @@
 							color: var(--color-red-neon);
 						}
 					}
+				}
+				&:nth-child(3) {
+					width: min((100% - 2rem), 60rem);
 				}
 			}
 		}
@@ -263,36 +313,62 @@
 							}
 						}
 					}
+					&:nth-child(1) {
+						.col-group:nth-child(2) {
+							width: 50%;
+						}
+					}
+					&:nth-child(2) {
+						.col-group:nth-child(1) {
+							width: 50%;
+						}
+						.col-group:nth-child(2) {
+							.box5 {
+								order: 2;
+							}
+							.box7 {
+								order: 1;
+							}
+						}
+					}
+					&:nth-child(3) {
+						width: 100%;
+					}
 				}
 			}
 		}
 
-		@media (max-width: 1100px) {
+		// @media (max-width: 850px) {
+		// 	.container {
+		// 		.column {
+		// 			flex-flow: row wrap;
+		// 			.box4 {
+		// 				flex-grow: 1;
+		// 			}
+		// 		}
+		// 		.column:nth-child(2) {
+		// 			.col-group:nth-child(2) {
+		// 				flex-flow: row nowrap;
+		// 				div {
+		// 					width: 50%;
+		// 				}
+		// 			}
+		// 		}
+		// 	}
+		// }
+
+		@media (max-width: 850px) {
 			.container {
+				margin: 5rem 1% 1% 1%;
+
 				.column {
 					flex-flow: row wrap;
 					.box4 {
 						flex-grow: 1;
 					}
-				}
-				.column:nth-child(2) {
-					.col-group:nth-child(2) {
-						flex-flow: row nowrap;
-						div {
-							width: 50%;
-						}
-					}
-				}
-			}
-		}
-
-		@media (max-width: 850px) {
-			.container {
-				margin: 3rem 1% 1% 1%;
-
-				.column {
 					.col-group {
 						div {
+							padding: 0.15rem;
 							section {
 								margin: 0.5rem !important;
 							}
@@ -316,20 +392,44 @@
 							}
 						}
 					}
+					&:nth-child(1) {
+						.col-group:nth-child(2) {
+							width: 100%;
+						}
+					}
+					&:nth-child(2) {
+						.col-group:nth-child(1) {
+							width: 100%;
+						}
+						.col-group:nth-child(2) {
+							flex-flow: row nowrap;
+							div {
+								width: 100%;
+							}
+							.box5 {
+								order: 2;
+							}
+							.box7 {
+								order: 1;
+							}
+						}
+					}
+					&:nth-child(3) {
+						width: 100%;
+					}
 				}
 			}
 		}
 
 		@media (max-width: 780px) {
 			.container {
-				margin: 4rem 1% 1% 1%;
 				.column:nth-child(2) {
 					.col-group:nth-child(2) {
 						flex-direction: column;
 						width: 100%;
 						div {
 							min-height: auto;
-							width: calc(100% - var(--diff-factor));
+							width: auto;
 						}
 					}
 				}
