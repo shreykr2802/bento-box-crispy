@@ -44,7 +44,6 @@
 			justify-content: center;
 			img {
 				height: 3rem;
-				width: 100%;
 			}
 		}
 		.back {
