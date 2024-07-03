@@ -11,6 +11,7 @@
 	import Shrey from '$lib/images/shrey.png?enhanced';
 	import CaseStudy1 from '$lib/images/casestudy1.png?enhanced';
 	import CaseStudy2 from '$lib/images/casestudy2.png?enhanced';
+	import HomeArrayVisual from './HomeArrayVisual.svelte';
 </script>
 
 <div class="home-content">
@@ -19,11 +20,15 @@
 			<HomeNameDetails />
 			<div class="group">
 				<a class="box12" href="/case-study/ssr-ssg-isr-csr-ecommerce">
-					<enhanced:img class="case-study-1-img" src={CaseStudy1} alt="Ecommerce - SSR, SSG, ISR, CSR" />
+					<enhanced:img
+						class="case-study-1-img"
+						src={CaseStudy1}
+						alt="Ecommerce - SSR, SSG, ISR, CSR"
+					/>
 					<p class="case-title">Ecommerce - SSR, SSG, ISR, CSR</p>
 					<ArrowButton navigateTo="/case-study/ssr-ssg-isr-csr-ecommerce" />
 				</a>
-				<div class="box13"></div>
+				<HomeBlog />
 			</div>
 		</div>
 		<div class="row">
@@ -34,7 +39,11 @@
 				<HomeAbout />
 			</div>
 			<a class="box23" href="/case-study/migrating-javascript-to-typescript">
-				<enhanced:img class="case-study-1-img" src={CaseStudy2} alt="Migrating a Legacy JavaScript Project to TypeScript" />
+				<enhanced:img
+					class="case-study-1-img"
+					src={CaseStudy2}
+					alt="Migrating a Legacy JavaScript Project to TypeScript"
+				/>
 				<p class="case-title">Migrating a Legacy JavaScript Project to TypeScript</p>
 				<ArrowButton navigateTo="/case-study/migrating-javascript-to-typescript" />
 			</a>
@@ -49,7 +58,7 @@
 	<div class="right">
 		<HomeSocials />
 		<div class="group-right">
-			<HomeBlog />
+			<HomeArrayVisual />
 			<div class="box43"><DarkLightMode /></div>
 			<div class="box44">
 				<StackBox stackName="Svelte" />
@@ -140,17 +149,6 @@
 								font-size: 0.875rem;
 							}
 						}
-					}
-
-					.box13 {
-						border: var(--box-border);
-						display: flex;
-						border-radius: var(--inner-box-border-radius);
-						height: calc(100% - var(--diff-factor));
-						width: calc(50% - var(--diff-factor));
-						margin: var(--inner-box-margin);
-						padding: var(--inner-box-padding);
-						background-color: var(--color-box-background);
 					}
 				}
 

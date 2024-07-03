@@ -15,12 +15,11 @@
 		border: var(--box-border);
 		display: flex;
 		border-radius: var(--inner-box-border-radius);
-		height: 100%;
-		width: calc(100% - var(--diff-factor));
+		height: calc(100% - var(--diff-factor));
+		width: calc(50% - var(--diff-factor));
 		margin: var(--inner-box-margin);
 		padding: var(--inner-box-padding);
 		background-color: var(--color-box-background);
-		text-decoration: none;
 
 		section {
 			margin: 1rem;
