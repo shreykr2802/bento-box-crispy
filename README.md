@@ -8,12 +8,12 @@ So I have gone through many iterations of my website and I wanted to settle on s
 
 - Created this to learn Svelte.
 - Not the world class code (obviously 🤷🏻).
-- Written in Javascript like a 12 year old's code. Who cares about typescript (😰).
+- Written in Javascript. Who cares about typescript (😰).
 - Many issues and not even utlized svelte to its full extent.
 
 ## Installation
 
-Install bento-box-crispy with bun (yeah I wanted to be cool)
+Install bento-box-crispy with bun
 
 ```bash
   bun install bento-box-crispy
