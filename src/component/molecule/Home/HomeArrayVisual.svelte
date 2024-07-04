@@ -24,6 +24,7 @@
 		});
 	};
 
+    /* Bubble Sort Algorithm */
 	async function bubbleSort(array) {
 		const bars = arrayContainer.children;
 		for (let i = 0; i < array.length; i++) {
@@ -47,6 +48,7 @@
 		}
 	}
 
+    /* Selection Sort Algorithm */
 	async function selectionSort(array) {
 		const bars = arrayContainer.children;
 		for (let i = 0; i < array.length; i++) {
@@ -74,6 +76,7 @@
 		}
 	}
 
+    /* Insertion Sort Algorithm */
 	async function insertionSort(array) {
 		const bars = arrayContainer.children;
 		for (let i = 1; i < array.length; i++) {
@@ -98,66 +101,71 @@
 		}
 	}
 
-	async function mergeSort(array) {
-		if (array.length < 2) return array;
-		const mid = Math.floor(array.length / 2);
-		const left = array.slice(0, mid);
-		const right = array.slice(mid);
+    /* Merge Sort Algorithm */
+	async function mergeSort(array, start = 0, end = array.length) {
+		if (end - start < 2) return array.slice(start, end);
 
-		await mergeSort(left);
-		await mergeSort(right);
+		const mid = Math.floor((start + end) / 2);
+		await mergeSort(array, start, mid);
+		await mergeSort(array, mid, end);
 
-		return await merge(array, left, right);
+		await merge(array, start, mid, end);
 	}
 
-	async function merge(array, left, right) {
-		let leftIndex = 0;
-		let rightIndex = 0;
+	async function merge(array, start, mid, end) {
+		let leftIndex = start;
+		let rightIndex = mid;
+		const sorted = [];
 		const bars = arrayContainer.children;
 
-		while (leftIndex < left.length && rightIndex < right.length) {
-			if (left[leftIndex] < right[rightIndex]) {
-				array[leftIndex + rightIndex] = left[leftIndex];
-				bars.item(leftIndex + rightIndex).style.height = `${left[leftIndex] * 2.5}px`;
+		while (leftIndex < mid && rightIndex < end) {
+			bars.item(leftIndex).style.backgroundColor = 'yellow';
+			bars.item(rightIndex).style.backgroundColor = 'yellow';
+			await new Promise((resolve) => setTimeout(resolve, ANIMATION_SPEED));
+
+			if (array[leftIndex] < array[rightIndex]) {
+				sorted.push(array[leftIndex]);
 				leftIndex++;
 			} else {
-				array[leftIndex + rightIndex] = right[rightIndex];
-				bars.item(leftIndex + rightIndex).style.height = `${right[rightIndex] * 2.5}px`;
+				sorted.push(array[rightIndex]);
 				rightIndex++;
 			}
-			bars.item(leftIndex + rightIndex - 1).style.backgroundColor = 'var(--color-red-neon)';
-			await new Promise((resolve) => setTimeout(resolve, ANIMATION_SPEED));
+			console.log('bars', bars, leftIndex);
+			if (leftIndex > 0) bars.item(leftIndex - 1).style.backgroundColor = '#3498db';
+			if (rightIndex > 0) bars.item(rightIndex - 1).style.backgroundColor = '#3498db';
 		}
 
-		while (leftIndex < left.length) {
-			array[leftIndex + rightIndex] = left[leftIndex];
-			bars.item(leftIndex + rightIndex).style.height = `${left[leftIndex] * 2.5}px`;
-			bars.item(leftIndex + rightIndex).style.backgroundColor = 'var(--color-red-neon)';
+		while (leftIndex < mid) {
+			sorted.push(array[leftIndex]);
 			leftIndex++;
-			await new Promise((resolve) => setTimeout(resolve, ANIMATION_SPEED));
 		}
 
-		while (rightIndex < right.length) {
-			array[leftIndex + rightIndex] = right[rightIndex];
-			bars.item(leftIndex + rightIndex).style.height = `${right[rightIndex] * 2.5}px`;
-			bars.item(leftIndex + rightIndex).style.backgroundColor = 'var(--color-red-neon)';
+		while (rightIndex < end) {
+			sorted.push(array[rightIndex]);
 			rightIndex++;
+		}
+
+		for (let i = start; i < end; i++) {
+			array[i] = sorted[i - start];
+			bars.item(i).style.height = `${sorted[i - start] * 2.5}px`;
+			bars.item(i).style.backgroundColor = 'red';
 			await new Promise((resolve) => setTimeout(resolve, ANIMATION_SPEED));
 		}
 
-		for (let i = 0; i < array.length; i++) {
+		for (let i = start; i < end; i++) {
 			bars.item(i).style.backgroundColor = '#2ecc71';
 		}
 	}
 
+    /* Quick Sort Algorithm */
 	async function quickSort(array, low = 0, high = array.length - 1) {
 		if (low < high) {
 			const pi = await partition(array, low, high);
 			await quickSort(array, low, pi - 1);
 			await quickSort(array, pi + 1, high);
 		}
-        const bars = arrayContainer.children;
-        for (let i = 0; i < bars.length; i++) {
+		const bars = arrayContainer.children;
+		for (let i = 0; i < bars.length; i++) {
 			bars.item(i).style.backgroundColor = '#2ecc71';
 		}
 	}
@@ -190,6 +198,7 @@
 
 		return i + 1;
 	}
+    
 	onMount(() => resetArray());
 
 	const resetArray = () => {
@@ -262,7 +271,7 @@
 				border-radius: 8px;
 				color: var(--color-text-light);
 				outline: none;
-                height: 1.5rem;
+				height: 1.5rem;
 			}
 
 			.sorting-button {
@@ -272,7 +281,7 @@
 				background-color: var(--color-red-neon);
 				border: none;
 				cursor: pointer;
-                height: 1.5rem;
+				height: 1.5rem;
 			}
 		}
 
