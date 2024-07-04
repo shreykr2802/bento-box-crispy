@@ -318,7 +318,7 @@
 		}
 	}
 
-	@media (max-width: 750px) {
+	@media (max-width: 790px) {
 		.home-content {
 			flex-direction: column;
 			margin: 0.75rem;
@@ -340,11 +340,6 @@
 					}
 				}
 			}
-		}
-	}
-
-	@media (max-width: 640px) {
-		.home-content {
 			.right {
 				.group-right {
 					flex-direction: column;

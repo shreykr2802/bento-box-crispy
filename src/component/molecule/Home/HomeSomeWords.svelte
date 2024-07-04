@@ -67,7 +67,7 @@
 			overflow: hidden;
 		}
 	}
-	@media (max-width: 750px) {
+	@media (max-width: 790px) {
 		.box31 {
 			width: calc(100% - var(--diff-factor));
 			height: 100%;

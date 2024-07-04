@@ -347,7 +347,7 @@
 					padding: 0;
 				}
 			}
-			@media (max-width: 750px) {
+			@media (max-width: 790px) {
 				.name-resume {
 					margin: 0.5rem;
 				}
@@ -367,7 +367,7 @@
 				}
 			}
 		}
-		@media (max-width: 750px) {
+		@media (max-width: 790px) {
 			width: calc(100% - var(--diff-factor));
 		}
 	}
