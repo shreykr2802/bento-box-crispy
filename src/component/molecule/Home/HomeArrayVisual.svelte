@@ -90,7 +90,7 @@
 				await new Promise((resolve) => setTimeout(resolve, ANIMATION_SPEED));
 			}
 			array[j + 1] = key;
-			bars.item(j + 1).style.height = `${key * 3}px`;
+			bars.item(j + 1).style.height = `${key * 2.5}px`;
 			bars.item(i).style.backgroundColor = '#3498db';
 			for (let k = 0; k <= i; k++) {
 				bars.item(k).style.backgroundColor = '#2ecc71';
@@ -118,11 +118,11 @@
 		while (leftIndex < left.length && rightIndex < right.length) {
 			if (left[leftIndex] < right[rightIndex]) {
 				array[leftIndex + rightIndex] = left[leftIndex];
-				bars.item(leftIndex + rightIndex).style.height = `${left[leftIndex] * 3}px`;
+				bars.item(leftIndex + rightIndex).style.height = `${left[leftIndex] * 2.5}px`;
 				leftIndex++;
 			} else {
 				array[leftIndex + rightIndex] = right[rightIndex];
-				bars.item(leftIndex + rightIndex).style.height = `${right[rightIndex] * 3}px`;
+				bars.item(leftIndex + rightIndex).style.height = `${right[rightIndex] * 2.5}px`;
 				rightIndex++;
 			}
 			bars.item(leftIndex + rightIndex - 1).style.backgroundColor = 'var(--color-red-neon)';
@@ -131,7 +131,7 @@
 
 		while (leftIndex < left.length) {
 			array[leftIndex + rightIndex] = left[leftIndex];
-			bars.item(leftIndex + rightIndex).style.height = `${left[leftIndex] * 3}px`;
+			bars.item(leftIndex + rightIndex).style.height = `${left[leftIndex] * 2.5}px`;
 			bars.item(leftIndex + rightIndex).style.backgroundColor = 'var(--color-red-neon)';
 			leftIndex++;
 			await new Promise((resolve) => setTimeout(resolve, ANIMATION_SPEED));
@@ -139,7 +139,7 @@
 
 		while (rightIndex < right.length) {
 			array[leftIndex + rightIndex] = right[rightIndex];
-			bars.item(leftIndex + rightIndex).style.height = `${right[rightIndex] * 3}px`;
+			bars.item(leftIndex + rightIndex).style.height = `${right[rightIndex] * 2.5}px`;
 			bars.item(leftIndex + rightIndex).style.backgroundColor = 'var(--color-red-neon)';
 			rightIndex++;
 			await new Promise((resolve) => setTimeout(resolve, ANIMATION_SPEED));
@@ -262,15 +262,17 @@
 				border-radius: 8px;
 				color: var(--color-text-light);
 				outline: none;
+                height: 1.5rem;
 			}
 
 			.sorting-button {
 				border-radius: 4px;
-				color: var(--color-text-dark);
+				color: white;
 				outline: none;
 				background-color: var(--color-red-neon);
 				border: none;
 				cursor: pointer;
+                height: 1.5rem;
 			}
 		}
 
