@@ -104,7 +104,6 @@
 						width: calc(50% - var(--diff-factor));
 						height: calc(100% - 1rem);
 						margin: calc(var(--inner-box-margin));
-						cursor: pointer;
 						position: relative;
 						text-decoration: none;
 						overflow: hidden;
@@ -115,7 +114,7 @@
 							object-fit: cover;
 							object-position: center;
 							transition: all 0.3s ease-in-out;
-							opacity: 0.4;
+							opacity: 1;
 						}
 
 						.case-title {
@@ -181,7 +180,6 @@
 					flex-grow: 1;
 					width: calc(30% - var(--diff-factor));
 					margin: calc(var(--inner-box-margin) + var(--inner-box-padding));
-					cursor: pointer;
 					position: relative;
 					text-decoration: none;
 					overflow: hidden;
@@ -191,7 +189,7 @@
 						object-fit: cover;
 						object-position: center;
 						transition: all 0.3s ease-in-out;
-						opacity: 0.4;
+						opacity: 1;
 					}
 
 					.case-title {

@@ -57,7 +57,6 @@
 			background: linear-gradient(to bottom, #6ec8ff, #1f73a7);
 			position: relative;
 			overflow: hidden;
-			cursor: pointer;
 			box-shadow: 6px 6px 10px #0000003d;
 		}
 		.mountains {

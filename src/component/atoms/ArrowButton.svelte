@@ -32,7 +32,6 @@
 		margin: 0;
 		padding: 0;
 		transition: all 0.2s;
-		cursor: pointer;
 
 		@media (max-width: 1024px) {
 			height: 2.5rem;

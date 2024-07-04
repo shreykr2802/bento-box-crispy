@@ -1,9 +1,11 @@
 <script>
 </script>
 
-<div class="background"><div /></div>
+<div class="background">
+	<div class="background-img" />
+</div>
 
-<style>
+<style lang="scss">
 	.background {
 		height: 100%;
 		pointer-events: none;
@@ -12,7 +14,7 @@
 		width: 100%;
 		z-index: 4;
 
-		& > div {
+		.background-img {
 			height: 100%;
 			background-size: 64px;
 			background-repeat: repeat;

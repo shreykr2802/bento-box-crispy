@@ -6,6 +6,7 @@
 	const ANIMATION_SPEED = 100;
 	let sortSelection = 'bubble';
 	let arrayContainer;
+	let sortingToBeClicked = true;
 
 	const generateRandomArray = (size) => {
 		const array = [];
@@ -24,7 +25,7 @@
 		});
 	};
 
-    /* Bubble Sort Algorithm */
+	/* Bubble Sort Algorithm */
 	async function bubbleSort(array) {
 		const bars = arrayContainer.children;
 		for (let i = 0; i < array.length; i++) {
@@ -48,7 +49,7 @@
 		}
 	}
 
-    /* Selection Sort Algorithm */
+	/* Selection Sort Algorithm */
 	async function selectionSort(array) {
 		const bars = arrayContainer.children;
 		for (let i = 0; i < array.length; i++) {
@@ -76,7 +77,7 @@
 		}
 	}
 
-    /* Insertion Sort Algorithm */
+	/* Insertion Sort Algorithm */
 	async function insertionSort(array) {
 		const bars = arrayContainer.children;
 		for (let i = 1; i < array.length; i++) {
@@ -101,7 +102,7 @@
 		}
 	}
 
-    /* Merge Sort Algorithm */
+	/* Merge Sort Algorithm */
 	async function mergeSort(array, start = 0, end = array.length) {
 		if (end - start < 2) return array.slice(start, end);
 
@@ -157,7 +158,7 @@
 		}
 	}
 
-    /* Quick Sort Algorithm */
+	/* Quick Sort Algorithm */
 	async function quickSort(array, low = 0, high = array.length - 1) {
 		if (low < high) {
 			const pi = await partition(array, low, high);
@@ -198,15 +199,17 @@
 
 		return i + 1;
 	}
-    
+
 	onMount(() => resetArray());
 
 	const resetArray = () => {
+		sortingToBeClicked = !sortingToBeClicked;
 		unsortedBarArray = generateRandomArray(ARRAY_SIZE);
 		createBars(unsortedBarArray);
 	};
 
 	const startSorting = () => {
+		sortingToBeClicked = !sortingToBeClicked;
 		switch (sortSelection) {
 			case 'bubble':
 				bubbleSort(unsortedBarArray);
@@ -238,8 +241,20 @@
 			<option value="quick">Quick Sort</option>
 		</select>
 
-		<button class="sorting-button" on:click={startSorting}>Start</button>
-		<button class="sorting-button" on:click={resetArray}>Reset</button>
+		<button
+			class="sorting-button"
+			on:click={startSorting}
+			style="--sort-background-color: {sortingToBeClicked
+				? 'var(--color-red-neon'
+				: 'var(--color-text-light)'}">Start 🐎</button
+		>
+		<button
+			class="sorting-button"
+			on:click={resetArray}
+			style="--sort-background-color: {sortingToBeClicked
+				? 'var(--color-text-light'
+				: 'var(--color-red-neon)'}">Reset 🧹</button
+		>
 	</div>
 	<div class="array-container" bind:this={arrayContainer}></div>
 </div>
@@ -254,6 +269,7 @@
 		background-color: var(--color-box-background);
 		text-decoration: none;
 		color: var(--color-text-dark);
+
 		.box-sub-title {
 			margin: 0.2rem;
 			padding: 0;
@@ -278,9 +294,8 @@
 				border-radius: 4px;
 				color: white;
 				outline: none;
-				background-color: var(--color-red-neon);
+				background-color: var(--sort-background-color);
 				border: none;
-				cursor: pointer;
 				height: 1.5rem;
 			}
 		}

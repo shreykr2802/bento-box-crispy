@@ -204,7 +204,6 @@
 						border-radius: 12px;
 						background-color: var(--color-box-background);
 						width: 50%;
-						cursor: pointer;
 						text-decoration: none;
 					}
 
@@ -301,7 +300,6 @@
 					padding: 0 0.5rem;
 					color: var(--color-text-dark);
 					border-radius: 12px;
-					cursor: pointer;
 					background-color: var(--color-box-background-hover);
 					text-decoration: none;
 				}

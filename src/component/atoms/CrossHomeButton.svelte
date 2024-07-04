@@ -30,7 +30,6 @@
 		background: transparent;
 		fill: var(--color-text-dark);
 		transition: all 0.2s;
-		cursor: pointer;
 
 		&:hover {
 			transform: scale(1.2);

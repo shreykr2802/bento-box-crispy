@@ -230,7 +230,6 @@
 			background-color: rgba(255, 255, 255, 0.5);
 			border-radius: 50%;
 			margin: 0 5px;
-			cursor: default;
 		}
 
 		.carousel-indicators li.active {

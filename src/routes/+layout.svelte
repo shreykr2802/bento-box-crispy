@@ -5,6 +5,7 @@
 	import { dev } from '$app/environment';
 	import { inject } from '@vercel/analytics';
 	import { injectSpeedInsights } from '@vercel/speed-insights/sveltekit';
+	import CustomCursor from '../component/atoms/CustomCursor.svelte';
 	inject({ mode: dev ? 'development' : 'production' });
 	injectSpeedInsights();
 </script>
@@ -18,6 +19,7 @@
 			: '/blog'}
 	/>
 {/if}
+<CustomCursor />
 <main>
 	<slot />
 </main>
