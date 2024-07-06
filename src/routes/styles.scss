@@ -27,6 +27,7 @@ body {
 	--color-orange: rgb(192, 117, 31);
 	--color-red-neon: #ff3131;
 	--color-green-neon: #6dd33d;
+	--color-cursor: #717171;
 	--box-border: 1px solid var(--color-border);
 	margin: 0;
 	min-height: 100vh;
@@ -47,6 +48,7 @@ body.light-mode {
 	--color-stack-box: #bababa;
 	--color-stack-box-hover: #4c4c4c;
 	--color-divider-background: #2d2d2d;
+	--color-cursor: #2f2f2f;
 }
 
 img {

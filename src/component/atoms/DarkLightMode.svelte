@@ -58,6 +58,7 @@
 			position: relative;
 			overflow: hidden;
 			box-shadow: 6px 6px 10px #0000003d;
+			cursor: none;
 		}
 		.mountains {
 			height: 100%;

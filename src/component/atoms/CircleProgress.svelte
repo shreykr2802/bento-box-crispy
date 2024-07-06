@@ -32,6 +32,7 @@
 				width: 65px;
 				height: 65px;
 				position: relative;
+				rotate: -90deg;
 				circle {
 					width: 65px;
 					height: 65px;
@@ -63,7 +64,7 @@
 				justify-content: center;
 				align-items: center;
 				position: absolute;
-				color: #fff;
+				color: var(--color-text-dark);
 
 				h2 {
 					font-size: 12px;
@@ -76,7 +77,7 @@
 				.text {
                     font-size: 8px;
 					padding:  0;
-					color: #999;
+					color: var(--color-text-light);
 					font-weight: 700;
 				}
 			}
