@@ -20,7 +20,7 @@
 		min-width: 0; 
 
 		.container {
-			margin: 4rem 10%;
+			margin: 5rem 5%;
 			display: grid;
 			grid-template-columns: repeat(4, 1fr);
 			grid-template-rows: auto auto auto auto;

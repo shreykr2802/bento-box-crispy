@@ -1,9 +1,7 @@
 <script>
 	import ArrowButton from './ArrowButton.svelte';
 	export let post;
-	import {
-		PUBLIC_ASSETS_ENDPOINT_URL,
-	} from '$env/static/public';
+	import { PUBLIC_ASSETS_ENDPOINT_URL } from '$env/static/public';
 </script>
 
 <a class="blog-post-info-box" href={`/blog/${post.slug}`}>
@@ -13,9 +11,9 @@
 		<img src="{PUBLIC_ASSETS_ENDPOINT_URL}/blogImages/{post.slug}/main-image.png" alt={post.slug} />
 	</div>
 	<div class="small-info">
-			{post.readTime}
+		{post.readTime}
 	</div>
-	<ArrowButton navigateTo={`blog/${post.slug}`} />
+	<ArrowButton navigateTo="blog/${post.slug}" s />
 </a>
 
 <style lang="scss">
@@ -60,8 +58,25 @@
 			margin: 0.25rem 0;
 			padding: 0;
 		}
+		:global(.arrow-button) {
+			bottom: 0;
+			right: 0;
+			top: unset;
+		}
 		&:hover {
 			background-color: var(--color-box-background-hover);
+			:global(.arrow-button) {
+				transform: scale(1.2);
+			}
+		}
+		@media (max-width: 768px) {
+			.blog-title {
+				font-size: 0.875rem;
+			}
+			.blog-description,
+			.small-info {
+				font-size: 0.65rem;
+			}
 		}
 	}
 </style>

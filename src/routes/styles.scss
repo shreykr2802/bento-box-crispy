@@ -136,6 +136,10 @@ select {
 	cursor: none;
 }
 
+code {
+	color: var(--color-green-neon);
+}
+
 div[class*='-content'] {
 	animation: animateOnLoad 1s ease 200ms backwards;
 

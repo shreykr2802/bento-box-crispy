@@ -5,6 +5,7 @@ import {
 export async function getPosts(fetch) {
     const res = await fetch(`${PUBLIC_ASSETS_ENDPOINT_URL}/posts.json`);
     const posts = await res.json();
+    console.log("post", posts.sort((a, b) => b.id - a.id))
     return posts;
 }
 
