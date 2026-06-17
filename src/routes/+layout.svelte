@@ -6,6 +6,7 @@
 	import { inject } from '@vercel/analytics';
 	import { injectSpeedInsights } from '@vercel/speed-insights/sveltekit';
 	import CustomCursor from '../component/atoms/CustomCursor.svelte';
+	import { tiltGroup } from '$lib/actions/tilt.js';
 	inject({ mode: dev ? 'development' : 'production' });
 	injectSpeedInsights();
 </script>
@@ -20,7 +21,7 @@
 	/>
 {/if}
 <CustomCursor />
-<main>
+<main use:tiltGroup>
 	<slot />
 </main>
 

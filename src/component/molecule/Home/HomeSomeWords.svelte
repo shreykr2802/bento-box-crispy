@@ -1,45 +1,49 @@
 <script>
-	import person1 from '../../../lib/images/memoji1.png';
-	import person2 from '../../../lib/images/memoji2.png';
-	import person3 from '../../../lib/images/memoji3.png';
 	import Carousel from '../../atoms/Carousel.svelte';
 
-	const slidesData = [
+	// ⚠️ PLACEHOLDER testimonials — realistic in format, but not real endorsements.
+	// Replace with genuine quotes (e.g. your LinkedIn recommendations) before launch,
+	// and add the recommender's profile link. Don't ship fabricated endorsements.
+	const testimonials = [
 		{
-			content: `
-			<div style="display: flex;align-items: center;margin-top: 0.5rem">
-				<img class="carousel-img" style="background-color: bisque; border-radius: 50%;" src="${person1}" alt="person1" />
-				<span class="carousel-title" style="align-self: center;">Arjun Mehta</span>
-			</div>
-			<span class="carousel-description">
-			Shrey's expertise in JavaScript and fullstack development transformed our project. His
-			innovative solutions and commitment to quality were outstanding. Highly recommend!
-			</span>`
+			quote:
+				'Shrey took our checkout rewrite from "someday" to shipped in six weeks. He\'s as sharp on Postgres query plans as he is on React render performance.',
+			name: 'Soumya Thomas',
+			title: 'Project Manager · Tavant',
+			initials: 'ST',
+			color: '#5b8def'
 		},
 		{
-			content: `
-			<div style="display: flex;align-items: center;margin-top: 0.5rem">
-				<img class="carousel-img" style="background-color: aquamarine; border-radius: 50%" src="${person2}" alt="person2" />
-				<span class="carousel-title" style="align-self: center;">Ravi Patel</span>
-			</div>
-			<span class="carousel-description">
-			Shrey is a phenomenal fullstack developer. His proficiency in both front-end and
-			back-end technologies ensured our project was a success. Truly a pleasure to work with!
-			</span>`
+			quote:
+				'We handed him an ambiguous spec and he came back with the right questions, then the right architecture. Front-end polish and back-end rigor in one person.',
+			name: 'Guang Wei',
+			title: 'Technical Architect · DOXA',
+			initials: 'GW',
+			color: '#e8804b'
 		},
 		{
-			content: `
-			<div style="display: flex;align-items: center;margin-top: 0.5rem">
-				<img class="carousel-img" style="background-color: salmon; border-radius: 50%" src="${person3}" alt="person3" />
-				<span class="carousel-title" style="align-self: center;">Neha Sharma</span>
-			</div>
-			<span class="carousel-description">
-			Shrey's skills in JavaScript and fullstack development are top-notch. He delivered
-			exceptional results, on time and beyond expectations. An invaluable asset to our team!
-			</span>`
+			quote:
+				"He shipped our TypeScript migration with zero downtime and left the codebase cleaner than he found it. One of the most reliable engineers I've worked with.",
+			name: 'Jithesh N',
+			title: 'Project Manager · Chimera',
+			initials: 'JN',
+			color: '#48b287'
 		}
 	];
-	const slidesToDisplay = slidesData.map((slide) => ({ content: slide.content }));
+
+	const slidesToDisplay = testimonials.map((t) => ({
+		content: `
+		<figure style="display:flex;flex-direction:column;gap:0.9rem;max-width:34rem;margin:0;padding:0 0.5rem;">
+			<blockquote style="margin:0;color:var(--color-text-dark);font-size:1.05rem;line-height:1.55;text-align:left;">&ldquo;${t.quote}&rdquo;</blockquote>
+			<figcaption style="display:flex;align-items:center;gap:0.6rem;">
+				<span style="width:42px;height:42px;flex-shrink:0;border-radius:50%;display:flex;align-items:center;justify-content:center;background:${t.color};color:#fff;font-family:var(--font-display);font-weight:700;font-size:0.95rem;">${t.initials}</span>
+				<span style="display:flex;flex-direction:column;line-height:1.25;text-align:left;">
+					<span style="color:var(--color-text-dark);font-weight:600;">${t.name}</span>
+					<span style="color:var(--color-text-light);font-size:0.8rem;">${t.title}</span>
+				</span>
+			</figcaption>
+		</figure>`
+	}));
 </script>
 
 <div class="box31">

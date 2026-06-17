@@ -1,14 +1,24 @@
 :root {
+	/* Spacing scale — 4px base. Prefer these over ad-hoc rem values. */
+	--space-1: 0.25rem; /* 4px */
+	--space-2: 0.5rem; /* 8px */
+	--space-3: 0.75rem; /* 12px */
+	--space-4: 1rem; /* 16px */
+	--space-5: 1.25rem; /* 20px */
+	--space-6: 1.5rem; /* 24px */
+	--space-7: 2rem; /* 32px */
+	--space-8: 3rem; /* 48px */
+
 	--box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.2);
 	--outer-box-border-radius: 2.2rem;
-	--outer-box-padding: 0.5rem;
-	--outer-box-margin: 1rem;
+	--outer-box-padding: var(--space-2);
+	--outer-box-margin: var(--space-4);
 	--inner-box-border-radius: 1.5rem;
 	--small-box-border-radius: 1rem;
-	--inner-box-margin: 0.5rem;
-	--inner-box-padding: 0.25rem;
+	--inner-box-margin: var(--space-2);
+	--inner-box-padding: var(--space-1);
 	--box-position: relative;
-	--diff-factor: 1.5rem;
+	--diff-factor: var(--space-6);
 	--font-basic: 'DM Sans', sans-serif;
 	--font-display: 'Space Grotesk', 'DM Sans', sans-serif;
 }
@@ -39,7 +49,6 @@ body {
 	font-weight: 400;
 	font-style: normal;
 	position: relative;
-	cursor: none;
 }
 
 body.light-mode {
@@ -161,7 +170,26 @@ a,
 button,
 select {
 	text-decoration: none;
-	cursor: none;
+}
+
+/* The custom cursor only replaces the native one on precise, non-touch pointers. */
+@media (hover: hover) and (pointer: fine) {
+	body,
+	a,
+	button,
+	select {
+		cursor: none;
+	}
+}
+
+/* Reduced-motion users keep the real cursor (must come after the rule above). */
+@media (prefers-reduced-motion: reduce) {
+	body,
+	a,
+	button,
+	select {
+		cursor: auto;
+	}
 }
 
 /* Keyboard focus must stay visible — the native cursor is hidden site-wide. */
