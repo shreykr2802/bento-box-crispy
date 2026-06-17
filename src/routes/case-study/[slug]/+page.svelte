@@ -1,14 +1,16 @@
 <script>
-	import CaseStudyMain from "../../../component/molecule/CaseStudy/CaseStudyMain.svelte";
+	import CaseStudyMain from '../../../component/molecule/CaseStudy/CaseStudyMain.svelte';
+	import Seo from '../../../component/atoms/Seo.svelte';
 	export let data;
 </script>
 
-<svelte:head>
-	<title>Shrey Kumar | Case Study</title>
-	<meta name="description" content={data.caseStudy.title} />
-</svelte:head>
+<Seo
+	title={`${data.caseStudy.title} — Shrey Kumar`}
+	description={data.caseStudy.description ?? data.caseStudy.title}
+	type="article"
+/>
 
-<CaseStudyMain data={data} />
+<CaseStudyMain {data} />
 
 <style>
 </style>

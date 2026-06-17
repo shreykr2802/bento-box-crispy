@@ -19,6 +19,15 @@
 	let textArrayIndex = 0;
 	let charIndex = 0;
 	onMount(() => {
+		const reduceMotion =
+			typeof window !== 'undefined' &&
+			window.matchMedia &&
+			window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+		if (reduceMotion) {
+			// Show a single role statically instead of running the typing loop.
+			if (typedTextSpan) typedTextSpan.textContent = textArray[0];
+			return;
+		}
 		if (textArray.length) setTimeout(type, newTextDelay + 250);
 	});
 	function type() {
@@ -132,8 +141,13 @@
 					justify-content: space-between;
 
 					h1 {
-						color: var(--color-red-neon);
-						font-size: 1rem;
+						color: var(--color-text-dark);
+						font-family: var(--font-display);
+						font-size: 1.4rem;
+						font-weight: 700;
+						letter-spacing: -0.02em;
+						line-height: 1.1;
+						margin: 0.1rem 0;
 					}
 
 					.available-to-work {

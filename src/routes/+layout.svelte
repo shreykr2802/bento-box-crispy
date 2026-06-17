@@ -31,5 +31,9 @@
 		height: 100%;
 		width: 100%;
 		background-color: var(--color-background);
+		background-image:
+			radial-gradient(58% 50% at 16% 0%, rgba(255, 59, 59, 0.08), transparent 70%),
+			radial-gradient(48% 45% at 100% 100%, rgba(255, 59, 59, 0.05), transparent 72%);
+		background-repeat: no-repeat;
 	}
 </style>
