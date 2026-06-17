@@ -2,58 +2,6 @@
 	import DownloadIcon from '../../Icons/DownloadIcon.svelte';
 	import HomeDetailsIcon from '../../Icons/HomeDetailsIcon.svelte';
 	import { PUBLIC_ASSETS_ENDPOINT_URL } from '$env/static/public';
-	import { onMount } from 'svelte';
-	let typedTextSpan;
-	let cursorSpan;
-	const textArray = [
-		'ship full-stack',
-		'write the API and the UI',
-		'turn specs into product',
-		'build for scale',
-		'debug it before you do',
-		'speak fluent React'
-	];
-	const typingDelay = 200;
-	const erasingDelay = 100;
-	const newTextDelay = 2000;
-	let textArrayIndex = 0;
-	let charIndex = 0;
-	onMount(() => {
-		const reduceMotion =
-			typeof window !== 'undefined' &&
-			window.matchMedia &&
-			window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-		if (reduceMotion) {
-			// Show a single role statically instead of running the typing loop.
-			if (typedTextSpan) typedTextSpan.textContent = textArray[0];
-			return;
-		}
-		if (textArray.length) setTimeout(type, newTextDelay + 250);
-	});
-	function type() {
-		if (charIndex < textArray[textArrayIndex].length) {
-			if (!cursorSpan.classList.contains('typing')) cursorSpan.classList.add('typing');
-			typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
-			charIndex++;
-			setTimeout(type, typingDelay);
-		} else {
-			cursorSpan.classList.remove('typing');
-			setTimeout(erase, newTextDelay);
-		}
-	}
-	function erase() {
-		if (charIndex > 0) {
-			if (!cursorSpan.classList.contains('typing')) cursorSpan.classList.add('typing');
-			typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex - 1);
-			charIndex--;
-			setTimeout(erase, erasingDelay);
-		} else {
-			cursorSpan.classList.remove('typing');
-			textArrayIndex++;
-			if (textArrayIndex >= textArray.length) textArrayIndex = 0;
-			setTimeout(type, typingDelay + 1100);
-		}
-	}
 </script>
 
 <div class="box11">
@@ -76,17 +24,12 @@
 					<DownloadIcon />
 				</a>
 				<div class="me-details">
-					<p>
-						I<span class="typed-text" bind:this={typedTextSpan}></span><span
-							class="cursor"
-							bind:this={cursorSpan}>&nbsp;</span
-						>
-					</p>
+					<p>End to end — UI to API.</p>
 				</div>
 			</div>
 		</div>
 		<div class="about-me">
-			<div class="specific"><HomeDetailsIcon iconName="mern" />MERN</div>
+			<div class="specific"><HomeDetailsIcon iconName="mern" />Node.js</div>
 			<div class="specific"><HomeDetailsIcon iconName="stack" />Full-Stack</div>
 			<div class="specific"><HomeDetailsIcon iconName="js" />JavaScript</div>
 			<div class="specific"><HomeDetailsIcon iconName="react" />React</div>

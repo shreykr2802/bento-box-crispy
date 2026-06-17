@@ -156,17 +156,17 @@
 		border-radius: var(--inner-box-border-radius);
 		width: calc(100% - var(--diff-factor));
 		margin: var(--inner-box-margin);
-		padding: 0.6rem;
+		padding: var(--space-2);
 		background-color: var(--color-box-background);
 		color: var(--color-text-dark);
 		display: flex;
 		flex-direction: column;
-		gap: 0.5rem;
+		gap: var(--space-2);
 
 		.ai-head {
 			display: flex;
 			align-items: center;
-			gap: 0.5rem;
+			gap: var(--space-2);
 
 			.box-sub-title {
 				margin: 0;
@@ -206,16 +206,16 @@
 		.messages {
 			display: flex;
 			flex-direction: column;
-			gap: 0.4rem;
+			gap: var(--space-2);
 			height: 190px;
 			overflow-y: auto;
-			padding: 0.25rem;
+			padding: var(--space-1);
 			scrollbar-width: thin;
 
 			.msg {
 				font-size: 0.8rem;
 				line-height: 1.4;
-				padding: 0.4rem 0.6rem;
+				padding: var(--space-2) var(--space-2);
 				border-radius: 12px;
 				max-width: 90%;
 				word-break: break-word;
@@ -277,7 +277,7 @@
 		.suggestions {
 			display: flex;
 			flex-wrap: wrap;
-			gap: 0.3rem;
+			gap: var(--space-1);
 
 			.chip {
 				font-family: inherit;
@@ -286,7 +286,7 @@
 				background-color: var(--color-box-background-hover);
 				border: var(--box-border);
 				border-radius: 999px;
-				padding: 0.2rem 0.55rem;
+				padding: var(--space-1) var(--space-2);
 				transition: all 0.15s ease;
 
 				&:hover:not(:disabled) {
@@ -302,11 +302,11 @@
 		.composer {
 			display: flex;
 			align-items: center;
-			gap: 0.4rem;
+			gap: var(--space-2);
 			border: var(--box-border);
 			border-radius: 12px;
 			background-color: var(--color-box-background-hover);
-			padding: 0.2rem 0.2rem 0.2rem 0.6rem;
+			padding: var(--space-1) var(--space-1) var(--space-1) var(--space-2);
 
 			input {
 				flex: 1;

@@ -370,7 +370,7 @@
 					}
 					.col-group {
 						div {
-							padding: 0.15rem;
+							padding: var(--space-1);
 							section {
 								margin: 0.5rem !important;
 							}
