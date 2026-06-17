@@ -4,8 +4,11 @@
 
 <a class="box42" href="/blog">
 	<section>
-		<h2 class="box-title">Blogs</h2>
-		<p class="box-description">In my free time I do write quite a few blogs.</p>
+		<h2 class="box-title">The blog</h2>
+		<p class="box-description">
+			Tech deep-dives, travel, and the occasional rabbit hole. Fair warning — you'll lose ten
+			minutes in here.
+		</p>
 		<ArrowButton navigateTo="blog" />
 	</section>
 </a>

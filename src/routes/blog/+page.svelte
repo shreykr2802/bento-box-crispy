@@ -4,8 +4,11 @@
 </script>
 
 <svelte:head>
-	<title>Shrey Kumar | Blogs</title>
-	<meta name="description" content="In My free time I write creative tech travel and geography related blogs. Check em out!" />
+	<title>Shrey Kumar — Writing</title>
+	<meta
+		name="description"
+		content="Tech deep-dives, travel, and the occasional rabbit hole. Fair warning: you'll lose ten minutes in here."
+	/>
 </svelte:head>
 
 <BlogsMain data={data}/>

@@ -11,7 +11,7 @@
 	import Shrey from '$lib/images/shrey.png?enhanced';
 	import CaseStudy1 from '$lib/images/casestudy1.png?enhanced';
 	import CaseStudy2 from '$lib/images/casestudy2.png?enhanced';
-	import HomeArrayVisual from './HomeArrayVisual.svelte';
+	import HomeAiTwin from './HomeAiTwin.svelte';
 </script>
 
 <div class="home-content">
@@ -23,9 +23,9 @@
 					<enhanced:img
 						class="case-study-1-img"
 						src={CaseStudy1}
-						alt="Ecommerce - SSR, SSG, ISR, CSR"
+						alt="Case study: rendering an ecommerce store with SSR, SSG, ISR and CSR"
 					/>
-					<p class="case-title">Ecommerce - SSR, SSG, ISR, CSR</p>
+					<p class="case-title">Same store, rendered 4 ways. One winner.</p>
 					<ArrowButton navigateTo="/case-study/ssr-ssg-isr-csr-ecommerce" />
 				</a>
 				<HomeBlog />
@@ -42,9 +42,9 @@
 				<enhanced:img
 					class="case-study-1-img"
 					src={CaseStudy2}
-					alt="Migrating a Legacy JavaScript Project to TypeScript"
+					alt="Case study: migrating a legacy JavaScript project to TypeScript"
 				/>
-				<p class="case-title">Migrating a Legacy JavaScript Project to TypeScript</p>
+				<p class="case-title">Legacy JS → TypeScript, no rewrite.</p>
 				<ArrowButton navigateTo="/case-study/migrating-javascript-to-typescript" />
 			</a>
 		</div>
@@ -58,14 +58,14 @@
 	<div class="right">
 		<HomeSocials />
 		<div class="group-right">
-			<HomeArrayVisual />
+			<HomeAiTwin />
 			<div class="box43"><DarkLightMode /></div>
 			<div class="box44">
 				<StackBox stackName="Svelte" />
 				<div>
 					<span>made with ♥️ in&nbsp;</span> <span class="svelte">svelte</span>
 				</div>
-				<div>created with the idea of <span class="svelte">bento-box</span></div>
+				<div>arranged like a <span class="svelte">bento-box</span> — every tile earns its spot</div>
 			</div>
 		</div>
 	</div>

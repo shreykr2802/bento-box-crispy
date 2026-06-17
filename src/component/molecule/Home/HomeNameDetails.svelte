@@ -5,7 +5,14 @@
 	import { onMount } from 'svelte';
 	let typedTextSpan;
 	let cursorSpan;
-	const textArray = ['JS Developer', 'Web Enthusiast', 'UI Dev', 'FullStack Dev'];
+	const textArray = [
+		'ship full-stack',
+		'write the API and the UI',
+		'turn specs into product',
+		'build for scale',
+		'debug it before you do',
+		'speak fluent React'
+	];
 	const typingDelay = 200;
 	const erasingDelay = 100;
 	const newTextDelay = 2000;
@@ -44,10 +51,10 @@
 	<section>
 		<div class="name-resume">
 			<div class="name-details">
-				<h1>Hi, there I am Shrey</h1>
+				<h1>I'm Shrey.</h1>
 				<div class="available-to-work">
 					<span class="outer-green-dot"><span class="green-dot" /></span>
-					<p>Available to Work</p>
+					<p>Open to work</p>
 				</div>
 			</div>
 			<div class="resume">
@@ -61,7 +68,7 @@
 				</a>
 				<div class="me-details">
 					<p>
-						I'm a<span class="typed-text" bind:this={typedTextSpan}></span><span
+						I<span class="typed-text" bind:this={typedTextSpan}></span><span
 							class="cursor"
 							bind:this={cursorSpan}>&nbsp;</span
 						>
@@ -71,19 +78,19 @@
 		</div>
 		<div class="about-me">
 			<div class="specific"><HomeDetailsIcon iconName="mern" />MERN</div>
-			<div class="specific"><HomeDetailsIcon iconName="stack" />FullStack</div>
-			<div class="specific"><HomeDetailsIcon iconName="js" />Javascript</div>
-			<div class="specific"><HomeDetailsIcon iconName="react" />ReactJs</div>
+			<div class="specific"><HomeDetailsIcon iconName="stack" />Full-Stack</div>
+			<div class="specific"><HomeDetailsIcon iconName="js" />JavaScript</div>
+			<div class="specific"><HomeDetailsIcon iconName="react" />React</div>
 			<div class="specific"><HomeDetailsIcon iconName="en" />English</div>
-			<div class="specific"><HomeDetailsIcon iconName="dev" />Software Developer</div>
+			<div class="specific"><HomeDetailsIcon iconName="dev" />Senior Engineer</div>
 			<div class="specific"><HomeDetailsIcon iconName="location" />India</div>
 		</div>
 		<div class="contact-now">
 			<a class="link-button" href="https://wa.me/+918951510227">
-				<HomeDetailsIcon iconName="whatsapp" />WhatsApp Me
+				<HomeDetailsIcon iconName="whatsapp" />Let's talk
 			</a>
 			<a class="link-button" href="mailto:shreykr2802@gmail.com">
-				<HomeDetailsIcon iconName="mail" />E-Mail Me
+				<HomeDetailsIcon iconName="mail" />Email me
 			</a>
 		</div>
 	</section>

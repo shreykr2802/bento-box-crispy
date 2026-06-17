@@ -44,7 +44,7 @@
 
 <div class="box31">
 	<section>
-		<h2 class="box-title">Some Words</h2>
+		<h2 class="box-title">Don't take my word for it</h2>
 		<Carousel {slidesToDisplay} indicatorPosition="bottom" />
 	</section>
 </div>

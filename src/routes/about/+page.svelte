@@ -4,8 +4,11 @@
 </script>
 
 <svelte:head>
-	<title>Shrey Kumar | About</title>
-	<meta name="description" content="Lets find out some details about me - Shrey Kumar" />
+	<title>Shrey Kumar — The full story</title>
+	<meta
+		name="description"
+		content="From C++ at 12 to senior engineer. The arc, the stack, and the receipts — Shrey Kumar."
+	/>
 </svelte:head>
 
 <AboutMain />

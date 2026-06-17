@@ -3,8 +3,11 @@
 </script>
 
 <svelte:head>
-	<title>Shrey Kumar | FullStackDev | shreykr2802</title>
-	<meta name="description" content="MERN Stack | Javascript | ReactJs" />
+	<title>Shrey Kumar — Full-Stack Engineer who ships | shreykr2802</title>
+	<meta
+		name="description"
+		content="Senior full-stack engineer. 7 years turning hard problems into shipped product — React, Node, TypeScript. Half this page is interactive; go press something."
+	/>
 </svelte:head>
 
 <HomeMain />

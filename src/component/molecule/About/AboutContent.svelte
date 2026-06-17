@@ -11,23 +11,23 @@
 	const slidesToDisplay = [
 		{
 			content: `
-        <span class="carousel-title">Javascript Expert</span>
+        <span class="carousel-title">JavaScript, to the core</span>
         <span class="carousel-description">
-			I've immersed myself in the depths of JavaScript for an extended duration, systematically unraveling its myriad concepts to achieve a comprehensive mastery.
+			Years deep in JavaScript — and not just the parts that work. I know why it behaves the way it does, the weird edge cases included.
         </span>`
 		},
 		{
 			content: `
-        <span class="carousel-title">Frontend Libraries</span>
+        <span class="carousel-title">React, Next & Svelte</span>
         <span class="carousel-description">
-			Whether it's React.js, Next.js, or Svelte, I delve into frontend libraries with an insatiable curiosity to learn and ultimately master their intricacies. 
+			I learn frameworks the way other people learn a city: until I know every shortcut. React, Next.js, Svelte — pick one, I'm fluent.
         </span>`
 		},
 		{
 			content: `
-        <span class="carousel-title">Take Challenge Personally</span>
+        <span class="carousel-title">I take it personally</span>
         <span class="carousel-description">
-			Taking on challenges personally drives my growth and learning, pushing boundaries to achieve deeper understanding and mastery.
+			Hand me the problem the team's been avoiding. That's the one I actually want.
         </span>`
 		}
 	];
@@ -51,21 +51,20 @@
 			<div class="col-group">
 				<div class="box1">
 					<section>
-						<h1 class="box-title">What I'm about?</h1>
+						<h1 class="box-title">What I'm about.</h1>
 						<Divider />
 						<h5 class="box-sub-title">MY STORY</h5>
 						<p class="box-description-small">
-							My passion for technology began at the age of 12 when I discovered C++. Since then, I
-							have continually pursued knowledge and exploration in technology and programming
-							languages. With a diverse skill set, I consistently deliver comprehensive solutions
-							across both front-end and back-end development. My journey is fueled by a commitment
-							to innovation and excellence. I approach every task with meticulous attention to
-							detail and a strong problem-solving mindset.
+							It started at 12 — the first time C++ did exactly what I told it to. I've chased that
+							feeling ever since: take something hard, make it work, then make it look easy.
+							Front-end or back-end, I don't pick a side; I ship the whole stack. Every build gets
+							the same two things — obsessive attention to detail, and a flat refusal to leave a
+							problem half-solved.
 						</p>
-						<h5 class="box-sub-title">WHAT I DO NOW</h5>
+						<h5 class="box-sub-title">WHAT I'M DOING NOW</h5>
 						<p class="box-description-small">
-							Today I'm a Senior Software Engineer at Chimera Technologies, providng them the best
-							solution.
+							Right now I'm a Senior Software Engineer at Baxter R&D, building the kind of
+							solutions that don't come back as bug tickets.
 						</p>
 					</section>
 				</div>
@@ -73,11 +72,14 @@
 			<div class="col-group">
 				<div class="box2">
 					<section>
-						<h5 class="box-sub-title">EXPERIENCE</h5>
+						<h5 class="box-sub-title">WHERE I'VE SHIPPED</h5>
 						<ul>
+							<li style="color: var(--color-red-neon);">Baxter R&D</li>
+							<li>Senior Software Engineer</li>
+							<li>Sep-2025 - current</li>
 							<li style="color: var(--color-red-neon);">Chimera Technologies</li>
 							<li>Senior Software Engineer</li>
-							<li>Nov-2021 - current</li>
+							<li>Nov-2021 - Sep-2025</li>
 							<li style="color: var(--color-red-neon);">Pepperfry</li>
 							<li>Senior Software Engineer</li>
 							<li>Aug-2021 - Nov-2021</li>
@@ -93,7 +95,7 @@
 			<div class="col-group">
 				<div class="box3">
 					<section>
-						<h5 class="box-sub-title">WHAT I DO BEST</h5>
+						<h5 class="box-sub-title">WHAT I'M BEST AT</h5>
 						<Carousel {slidesToDisplay} showButtons={false} indicatorPosition="bottom" />
 					</section>
 				</div>
@@ -139,7 +141,7 @@
 						<span>made with ♥️ in&nbsp;</span> <span class="svelte">svelte</span>
 					</div>
 					<div class="made-text">
-						created with the idea of <span class="svelte">bento-box</span>
+						arranged like a <span class="svelte">bento-box</span> — every tile earns its spot
 					</div>
 				</div>
 			</div>
