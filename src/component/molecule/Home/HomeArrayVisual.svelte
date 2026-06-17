@@ -231,7 +231,7 @@
 </script>
 
 <div class="array-visual">
-	<h5 class="box-sub-title">SELECT SORTING TECHNIQUE</h5>
+	<h5 class="box-sub-title">PICK ONE. WATCH IT SORT.</h5>
 	<div class="controls">
 		<select bind:value={sortSelection} class="sorting-select">
 			<option value="bubble">Bubble Sort</option>

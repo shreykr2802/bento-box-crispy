@@ -7,7 +7,7 @@
 	<section>
 		<h2 class="box-title" style="margin:1rem 0 0 1rem;">About</h2>
 		<p class="box-description" style="margin:1rem 0 0 1rem;">
-			Passionate about design and enjoy problem solving.
+			Senior engineer, 10 years in. The how, the why, and the receipts — all one click away.
 		</p>
 		<div class="about-more">
 			<div class="specific">
@@ -45,7 +45,7 @@
 			flex-direction: column;
 			width: 100%;
 			position: relative;
-            justify-content: space-between;
+			justify-content: space-between;
 
 			.about-more {
 				display: flex;
@@ -101,10 +101,10 @@
 
 				@media (max-width: 810px) {
 					padding: 0;
-                    flex-flow: row nowrap;
+					flex-flow: row nowrap;
 				}
 
-                @media (max-width: 550px) {
+				@media (max-width: 550px) {
 					.specific {
 						font-size: 0.5rem;
 						padding: 0.25rem;
@@ -114,7 +114,7 @@
 					}
 				}
 
-                @media (max-width: 480px) {
+				@media (max-width: 480px) {
 					.specific {
 						font-size: 0.5rem;
 						span {
@@ -136,7 +136,7 @@
 		@media (max-width: 750px) {
 			section {
 				justify-content: space-between;
-                padding: 0.5rem;
+				padding: 0.5rem;
 			}
 		}
 	}

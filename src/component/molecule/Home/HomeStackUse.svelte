@@ -3,7 +3,7 @@
 </script>
 
 <section class="stack-i-use">
-	<h2 class="box-title">Stack I use</h2>
+	<h2 class="box-title">Weapons of choice</h2>
 	<div class="stack-images">
 		<div class="stacks-used">
 			<StackBox stackName="AWS" />
