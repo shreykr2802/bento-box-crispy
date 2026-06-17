@@ -8,7 +8,7 @@
 	import HomeSocials from './HomeSocials.svelte';
 	import HomeSomeWords from './HomeSomeWords.svelte';
 	import HomeStackUse from './HomeStackUse.svelte';
-	import Shrey from '$lib/images/shrey.png?enhanced';
+	import Shrey from '$lib/images/shrey.new.png?enhanced';
 	import CaseStudy1 from '$lib/images/casestudy1.png?enhanced';
 	import CaseStudy2 from '$lib/images/casestudy2.png?enhanced';
 	import HomeAiTwin from './HomeAiTwin.svelte';
@@ -72,6 +72,17 @@
 </div>
 
 <style lang="scss">
+	@keyframes tileRise {
+		from {
+			opacity: 0;
+			transform: translateY(16px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
 	.home-content {
 		margin: var(--outer-box-margin);
 		padding: var(--outer-box-padding);
@@ -79,6 +90,7 @@
 		border: var(--box-border);
 		display: flex;
 		min-width: 0;
+		animation: none;
 
 		.left {
 			display: flex;
@@ -91,6 +103,17 @@
 				place-items: center;
 				justify-content: space-between;
 				height: calc(100% - var(--diff-factor));
+				animation: tileRise 0.6s cubic-bezier(0.22, 1, 0.36, 1) backwards;
+
+				&:nth-child(1) {
+					animation-delay: 0.06s;
+				}
+				&:nth-child(2) {
+					animation-delay: 0.14s;
+				}
+				&:nth-child(3) {
+					animation-delay: 0.22s;
+				}
 
 				.group {
 					display: flex;
@@ -243,6 +266,7 @@
 			flex-flow: column;
 			height: 100%;
 			width: 25%;
+			animation: tileRise 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.18s backwards;
 			.group-right {
 				display: flex;
 				flex-direction: column;

@@ -10,25 +10,29 @@
 	--box-position: relative;
 	--diff-factor: 1.5rem;
 	--font-basic: 'DM Sans', sans-serif;
+	--font-display: 'Space Grotesk', 'DM Sans', sans-serif;
 }
 
 body {
-	--color-background: #090909;
-	--color-border: #242424;
-	--color-box-background: #141414;
-	--color-box-background-hover: rgba(172, 172, 172, 0.1);
-	--color-text-dark: #cccccc;
-	--color-text-light: rgb(102, 102, 102);
-	--color-text-darker: #464646;
-	--color-stack-box: #4a4a4a;
-	--color-stack-box-hover: #8a8a8a;
-	--color-divider-background: #2d2d2d;
-	--color-carousel-indicator-background: #373737;
+	--color-background: #0a0b0e;
+	--color-border: #262a31;
+	--color-box-background: #14161c;
+	--color-box-background-hover: rgba(255, 255, 255, 0.055);
+	--color-surface-2: #1c1f27;
+	--color-text-dark: #cdd0d6;
+	--color-text-light: #9197a1;
+	--color-text-darker: #868c96;
+	--color-stack-box: #41454d;
+	--color-stack-box-hover: #8c919b;
+	--color-divider-background: #2a2e36;
+	--color-carousel-indicator-background: #373b43;
 	--color-orange: rgb(192, 117, 31);
-	--color-red-neon: #ff3131;
+	--color-red-neon: #ff3b3b;
 	--color-green-neon: #6dd33d;
-	--color-cursor: #717171;
+	--color-cursor: #717783;
 	--box-border: 1px solid var(--color-border);
+	--tile-shadow: 0 1px 2px rgba(0, 0, 0, 0.5), 0 14px 30px -18px rgba(0, 0, 0, 0.8);
+	--tile-highlight: inset 0 1px 0 rgba(255, 255, 255, 0.045);
 	margin: 0;
 	min-height: 100vh;
 	font-family: var(--font-basic);
@@ -39,16 +43,21 @@ body {
 }
 
 body.light-mode {
-	--color-background: #f4f4f4;
-	--color-box-background: #d4d4d4;
-	--color-border: #6c6c6c;
-	--color-text-dark: #515151;
-	--color-text-light: #303030;
-	--color-text-darker: #464646;
-	--color-stack-box: #bababa;
-	--color-stack-box-hover: #4c4c4c;
-	--color-divider-background: #2d2d2d;
+	--color-background: #f5f5f7;
+	--color-box-background: #ffffff;
+	--color-box-background-hover: rgba(16, 18, 32, 0.04);
+	--color-surface-2: #f0f0f3;
+	--color-border: #e4e4ea;
+	--color-text-dark: #2c2c33;
+	--color-text-light: #4a4a52;
+	--color-text-darker: #6a6a73;
+	--color-stack-box: #ececf0;
+	--color-stack-box-hover: #c4c4cc;
+	--color-divider-background: #e0e0e6;
 	--color-cursor: #2f2f2f;
+	--color-red-neon: #e11d2e;
+	--tile-shadow: 0 1px 2px rgba(16, 18, 32, 0.06), 0 12px 28px -16px rgba(16, 18, 32, 0.22);
+	--tile-highlight: inset 0 1px 0 rgba(255, 255, 255, 0.9);
 }
 
 img {
@@ -61,12 +70,14 @@ img {
 }
 
 .box-title {
-	font-weight: 500;
+	font-family: var(--font-display);
+	font-weight: 600;
+	font-size: 1.5rem;
+	line-height: 1.1;
 	color: var(--color-red-neon);
-	letter-spacing: 4px;
+	letter-spacing: -0.01em;
 	margin: 0;
 	padding: 0;
-	text-transform: capitalize;
 }
 
 .box-description {
@@ -78,9 +89,25 @@ img {
 }
 
 .box-sub-title {
+	font-family: var(--font-display);
 	font-weight: 700;
 	color: var(--color-text-darker);
-	letter-spacing: 4px;
+	letter-spacing: 2px;
+}
+
+/* Elevation: lift the tiles off the background instead of relying on hard borders. */
+.box11, .box12, .box21, .box22, .box23,
+.box31, .box32, .box42, .box43, .box44, .ai-twin,
+.box1, .box2, .box3, .box4, .box5, .box6, .box7 {
+	box-shadow: var(--tile-highlight), var(--tile-shadow);
+	transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.2s ease;
+}
+
+/* Interactive tiles lift on hover with a soft brand-tinted glow. */
+.box12:hover, .box22:hover, .box23:hover, .box42:hover {
+	transform: translateY(-4px);
+	box-shadow: var(--tile-highlight), 0 8px 18px rgba(0, 0, 0, 0.55),
+		0 22px 48px -18px rgba(255, 59, 59, 0.28);
 }
 
 .box-description-small {
@@ -96,6 +123,7 @@ img {
 }
 
 .carousel-title {
+	font-family: var(--font-display);
 	color: var(--color-red-neon);
 	align-self: flex-start;
 	margin: 0 0.5rem;
@@ -136,19 +164,43 @@ select {
 	cursor: none;
 }
 
+/* Keyboard focus must stay visible — the native cursor is hidden site-wide. */
+a:focus-visible,
+button:focus-visible,
+select:focus-visible,
+input:focus-visible,
+[tabindex]:focus-visible {
+	outline: 2px solid var(--color-red-neon);
+	outline-offset: 3px;
+	border-radius: 6px;
+}
+
+/* Respect users who ask for less motion: kill marquees, pulses, fades, transitions. */
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation: none !important;
+		transition: none !important;
+		scroll-behavior: auto !important;
+	}
+}
+
 code {
 	color: var(--color-green-neon);
 }
 
 div[class*='-content'] {
-	animation: animateOnLoad 1s ease 200ms backwards;
+	animation: animateOnLoad 0.7s cubic-bezier(0.22, 1, 0.36, 1) 150ms backwards;
 
 	@keyframes animateOnLoad {
 		from {
 			opacity: 0;
+			transform: translateY(14px);
 		}
 		to {
 			opacity: 1;
+			transform: translateY(0);
 		}
 	}
 }

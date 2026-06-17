@@ -1,14 +1,12 @@
 <script>
-	import BlogPostMain from "../../../component/molecule/BlogPost/BlogPostMain.svelte";
+	import BlogPostMain from '../../../component/molecule/BlogPost/BlogPostMain.svelte';
+	import Seo from '../../../component/atoms/Seo.svelte';
 	export let data;
 </script>
 
-<svelte:head>
-	<title>{data.post.title}</title>
-	<meta name="description" content="{data.post.description}" />
-</svelte:head>
+<Seo title={data.post.title} description={data.post.description} type="article" />
 
-<BlogPostMain data={data}/>
+<BlogPostMain {data} />
 
 <style>
 </style>
