@@ -7,6 +7,7 @@
 	import Outside3 from '$lib/images/Outside3.webp';
 	import DarkLightMode from '../../atoms/DarkLightMode.svelte';
 	import CircleProgress from '../../atoms/CircleProgress.svelte';
+	import GitHubActivity from './GitHubActivity.svelte';
 
 	const slidesToDisplay = [
 		{
@@ -135,6 +136,7 @@
 		</div>
 		<div class="column">
 			<div class="col-group">
+				<GitHubActivity />
 				<div class="box6">
 					<DarkLightMode />
 					<div class="made-text">

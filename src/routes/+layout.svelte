@@ -6,6 +6,7 @@
 	import { inject } from '@vercel/analytics';
 	import { injectSpeedInsights } from '@vercel/speed-insights/sveltekit';
 	import CustomCursor from '../component/atoms/CustomCursor.svelte';
+	import CommandPalette from '../component/atoms/CommandPalette.svelte';
 	import { tiltGroup } from '$lib/actions/tilt.js';
 	inject({ mode: dev ? 'development' : 'production' });
 	injectSpeedInsights();
@@ -15,12 +16,14 @@
 	<Header
 		goBackTo={$page.route.id === '/blog' ||
 		$page.route.id === '/about' ||
+		$page.route.id === '/tailor' ||
 		$page.route.id.includes('/case-study')
 			? '/'
 			: '/blog'}
 	/>
 {/if}
 <CustomCursor />
+<CommandPalette />
 <main use:tiltGroup>
 	<slot />
 </main>
