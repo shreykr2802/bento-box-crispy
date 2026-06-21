@@ -42,7 +42,7 @@
 			if (!res.ok || !res.body) {
 				messages[replyIndex].content =
 					res.status === 429
-						? "Easy — too many questions at once. Give it a minute, then ask away."
+						? 'Easy — too many questions at once. Give it a minute, then ask away.'
 						: "My twin's having a moment. Try again in a sec, or just email me: shreykr2802@gmail.com";
 				messages = messages;
 				return;
@@ -50,9 +50,13 @@
 
 			const reader = res.body.getReader();
 			const decoder = new TextDecoder();
-			while (true) {
+			let isDone = false;
+			while (!isDone) {
 				const { value, done } = await reader.read();
-				if (done) break;
+				if (done) {
+					isDone = true;
+					break;
+				}
 				messages[replyIndex].content += decoder.decode(value, { stream: true });
 				messages = messages;
 				scrollToBottom();
@@ -136,7 +140,13 @@
 			disabled={loading}
 			aria-label="Ask Shrey's AI twin a question"
 		/>
-		<button type="button" class="send" on:click={() => send()} disabled={loading || !input.trim()} aria-label="Send">
+		<button
+			type="button"
+			class="send"
+			on:click={() => send()}
+			disabled={loading || !input.trim()}
+			aria-label="Send"
+		>
 			<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
 				<path
 					d="M2.5 12 21 3.5 16 21l-4.5-6.5L4 13z"
@@ -334,7 +344,9 @@
 				border-radius: 9px;
 				background-color: var(--color-red-neon);
 				color: white;
-				transition: transform 0.15s ease, opacity 0.15s ease;
+				transition:
+					transform 0.15s ease,
+					opacity 0.15s ease;
 
 				&:hover:not(:disabled) {
 					transform: scale(1.08);
